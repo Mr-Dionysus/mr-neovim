@@ -1,6 +1,4 @@
 -- Adds git related signs to the gutter, as well as utilities for managing changes
--- NOTE: gitsigns is already included in init.lua but contains only the base
--- config. This will add also the recommended keymaps.
 
 return {
   {
@@ -96,5 +94,56 @@ return {
       'nvim-telescope/telescope.nvim', -- optional
     },
     config = true,
+  },
+
+  {
+    'sindrets/diffview.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' }, -- Required dependency
+    config = function()
+      -- Optional: Plugin configuration
+      require('diffview').setup {
+        -- Customize diffview settings here
+      }
+    end,
+  },
+
+  {
+    'kdheepak/lazygit.nvim',
+    lazy = true,
+    cmd = {
+      'LazyGit',
+      'LazyGitConfig',
+      'LazyGitCurrentFile',
+      'LazyGitFilter',
+      'LazyGitFilterCurrentFile',
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+      { '<leader>gl', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
+    },
+  },
+
+  {
+    'akinsho/git-conflict.nvim',
+    version = '*',
+    config = true,
+  },
+
+  {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      -- OR 'ibhagwan/fzf-lua',
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function()
+      require('octo').setup()
+    end,
   },
 }

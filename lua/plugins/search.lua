@@ -39,7 +39,7 @@ return {
       --  :Telescope help_tags
       --
       -- After running this command, a window will open up and you're able to
-      -- type in the prompt window. You'll see a list of `help_tags` options and
+      -- type in the prompt window. You'll see a list of `setup_tags` options and
       -- a corresponding preview of the help.
       --
       -- Two important keymaps to use while in Telescope are:
@@ -51,10 +51,10 @@ return {
       -- do as well as how to actually do it!
 
       -- [[ Configure Telescope ]]
-      -- See `:help telescope` and `:help telescope.setup()`
+      -- See `:help telescope` and `:help telescope.help()`
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
-        --  All the info you're looking for is in `:help telescope.setup()`
+        --  All the info you're looking for is in `:help telescope.help()`
         --
         -- defaults = {
         --   mappings = {
@@ -86,10 +86,10 @@ return {
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
-      vim.keymap.set('n', '<leader>dw', ':w<CR>', { desc = '[D]ocument [W]rite' })
-      vim.keymap.set('n', '<leader>dW', ':wq<CR>', { desc = 'Force [D]ocument [W]rite' })
-      vim.keymap.set('n', '<leader>dq', ':q<CR>', { desc = '[D]ocument [Q]uit' })
-      vim.keymap.set('n', '<leader>dQ', ':q!<CR>', { desc = 'Force [D]ocument [Q]uit' })
+      vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = '[W]rite' })
+      vim.keymap.set('n', '<leader>W', ':wq<CR>', { desc = 'Force [W]rite' })
+      vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = '[Q]uit' })
+      vim.keymap.set('n', '<leader>Q', ':q!<CR>', { desc = 'Force [Q]uit' })
       vim.keymap.set('n', '<leader>st', ':Telescope colorscheme<CR>', { desc = '[S]earch [T]heme' })
       vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = '[L]azy' })
       vim.keymap.set('n', '<leader>m', ':Mason<CR>', { desc = '[M]ason' })

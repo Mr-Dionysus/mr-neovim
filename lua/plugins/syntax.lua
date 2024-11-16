@@ -24,4 +24,32 @@ return {
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
+
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    after = 'nvim-treesitter',
+    requires = 'nvim-treesitter/nvim-treesitter',
+  },
+  {
+    'kylechui/nvim-surround',
+    version = '*', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup {
+        keymaps = {
+          insert = '<C-g>s',
+          insert_line = '<C-g>S',
+          normal = '?s',
+          normal_cur = 'yss',
+          normal_line = '?S',
+          normal_cur_line = '?SS',
+          visual = '?S',
+          visual_line = 'gS',
+          delete = '?d',
+          change = '?c',
+          change_line = '?C',
+        },
+      }
+    end,
+  },
 }

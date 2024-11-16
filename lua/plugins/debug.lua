@@ -51,7 +51,7 @@ return {
     local dapui = require 'dapui'
 
     require('mason-nvim-dap').setup {
-      -- Makes a best effort to setup the various debuggers with
+      -- Makes a best effort to help the various debuggers with
       -- reasonable debug configurations
       automatic_installation = true,
 

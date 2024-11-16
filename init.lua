@@ -97,8 +97,8 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('', '<leader>Dd', ':DiffviewOpen<CR>', '[D]ebug [D]iff View')
-
+vim.keymap.set('', '<leader>gd', ':DiffviewOpen<CR>', { desc = '[D]ebug [Diff] View' })
+vim.keymap.set('', '<leader>gD', ':DiffviewClose<CR>', { desc = 'Close [D]ebug [Diff] View' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
