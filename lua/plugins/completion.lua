@@ -53,6 +53,7 @@ return {
           format = require('lspkind').cmp_format {
             before = require('tailwind-tools.cmp').lspkind_format,
           },
+          format = require('nvim-highlight-colors').format,
         },
         completion = { completeopt = 'menu,menuone,noinsert' },
 

@@ -25,4 +25,12 @@ return {
       -- require('mini.ai').setup { n_lines = 500 }
     end,
   },
+
+  {
+    'rcarriga/nvim-notify',
+  },
+
+  {
+    'MunifTanjim/nui.nvim',
+  },
 }

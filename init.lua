@@ -22,7 +22,7 @@
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
+vim.opt.termguicolors = true
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -108,6 +108,8 @@ vim.keymap.set('', '<leader>t-', ':ToggleTerm direction=horizontal<CR>', { desc 
 vim.keymap.set('', '<leader>t|', ':ToggleTerm direction=vertical<CR>', { desc = '[T]erminal |||||' })
 vim.keymap.set('', '<leader>tz', ':ZenMode<CR>', { desc = '[T]oggle [Z]en' })
 vim.keymap.set('', '<leader>tf', ':TZFocus<CR>', { desc = '[T]oggle [F]ocus' })
+vim.keymap.set('', '<leader>td', ':Twilight<CR>', { desc = '[T]oggle [D]ark Twilight' })
+
 vim.keymap.set('', '<leader>gd', ':DiffviewOpen<CR>', { desc = '[D]ebug [Diff] View' })
 vim.keymap.set('', '<leader>gD', ':DiffviewClose<CR>', { desc = 'Close [D]ebug [Diff] View' })
 -- Diagnostic keymaps
