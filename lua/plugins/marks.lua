@@ -149,21 +149,9 @@ return {
       vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
         desc = 'Search current word',
       })
-      vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
-        desc = 'Search on current file',
+      vim.keymap.set('n', '<leader>si', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+        desc = '[S]earch [I]n File',
       })
-    end,
-  },
-
-  {
-
-    'MagicDuck/grug-far.nvim',
-    config = function()
-      require('grug-far').setup {
-        -- options, see Configuration section below
-        -- there are no required options atm
-        -- engine = 'ripgrep' is default, but 'astgrep' can be specified
-      }
     end,
   },
 }

@@ -50,7 +50,6 @@ vim.opt.showmode = false
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
-
 -- Enable break indent
 vim.opt.breakindent = true
 
@@ -75,6 +74,7 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+vim.opt.spellfile = 'en.utf-8.add'
 --test123
 
 --test123
@@ -103,6 +103,11 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('', '<leader>tt', ':ToggleTerm direction=float<CR>', { desc = '[T]oggle [T]erminal' })
+vim.keymap.set('', '<leader>t-', ':ToggleTerm direction=horizontal<CR>', { desc = '[T]erminal -----' })
+vim.keymap.set('', '<leader>t|', ':ToggleTerm direction=vertical<CR>', { desc = '[T]erminal |||||' })
+vim.keymap.set('', '<leader>tz', ':ZenMode<CR>', { desc = '[T]oggle [Z]en' })
+vim.keymap.set('', '<leader>tf', ':TZFocus<CR>', { desc = '[T]oggle [F]ocus' })
 vim.keymap.set('', '<leader>gd', ':DiffviewOpen<CR>', { desc = '[D]ebug [Diff] View' })
 vim.keymap.set('', '<leader>gD', ':DiffviewClose<CR>', { desc = 'Close [D]ebug [Diff] View' })
 -- Diagnostic keymaps
@@ -131,7 +136,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('i', 'jk', '<Esc>', {})
+vim.keymap.set('i', 'kj', '<Esc>', {})
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

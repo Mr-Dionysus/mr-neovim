@@ -2,5 +2,8 @@ tags
 test.sh
 .luarc.json
 nvim
+en.utf-8.add
+en.utf-8.add.spl
 
 spell/
+
