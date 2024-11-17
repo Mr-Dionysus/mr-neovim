@@ -125,4 +125,6 @@ return {
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
+
+  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
 }
