@@ -25,7 +25,15 @@ vim.g.maplocalleader = ' '
 vim.opt.termguicolors = true
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('n', 'n', 'nzz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'n', 'nzz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'N', 'Nzz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'N', 'Nzz', { noremap = true, silent = true })
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -107,7 +115,8 @@ vim.keymap.set('', '<leader>tt', ':ToggleTerm direction=float<CR>', { desc = '[T
 vim.keymap.set('', '<leader>t-', ':ToggleTerm direction=horizontal<CR>', { desc = '[T]erminal -----' })
 vim.keymap.set('', '<leader>t|', ':ToggleTerm direction=vertical<CR>', { desc = '[T]erminal |||||' })
 vim.keymap.set('', '<leader>tz', ':ZenMode<CR>', { desc = '[T]oggle [Z]en' })
-vim.keymap.set('', '<leader>tf', ':TZFocus<CR>', { desc = '[T]oggle [F]ocus' })
+vim.keymap.set('', '<leader>tF', ':TZFocus<CR>', { desc = '[T]oggle [F]ocus' })
+vim.keymap.set('', '<leader>tf', ':lua MiniFiles.open()<CR>', { desc = '[T]oggle [F]ile Manager' })
 vim.keymap.set('', '<leader>td', ':Twilight<CR>', { desc = '[T]oggle [D]ark Twilight' })
 
 vim.keymap.set('', '<leader>gd', ':DiffviewOpen<CR>', { desc = '[D]ebug [Diff] View' })
@@ -139,6 +148,7 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('i', 'kj', '<Esc>', {})
+vim.keymap.set('i', 'ло', '<Esc>', {})
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

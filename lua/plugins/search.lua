@@ -94,8 +94,9 @@ return {
       vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = '[Q]uit' })
       vim.keymap.set('n', '<leader>Q', ':q!<CR>', { desc = 'Force [Q]uit' })
       vim.keymap.set('n', '<leader>st', ':Telescope colorscheme<CR>', { desc = '[S]earch [T]heme' })
-      vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = '[L]azy' })
-      vim.keymap.set('n', '<leader>m', ':Mason<CR>', { desc = '[M]ason' })
+      vim.keymap.set('n', '<leader>sc', ':Telescope neoclip<CR>', { desc = '[S]earch [C]lipboard' })
+      vim.keymap.set('n', '<leader>tl', ':Lazy<CR>', { desc = '[T]oggle [L]azy' })
+      vim.keymap.set('n', '<leader>tm', ':Mason<CR>', { desc = '[T]oggle [M]ason' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
