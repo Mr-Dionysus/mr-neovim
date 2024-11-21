@@ -7,6 +7,8 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        javascript = { 'eslint' },
+        html = { 'htmlhint' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -152,7 +154,7 @@ return {
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
-          map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+          map('<leader>rn', ':IncRename ', '[R]e[n]ame')
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
@@ -341,9 +343,19 @@ return {
         },
         formatting = {
           format = require('lspkind').cmp_format {
-            before = require('tailwind-tools.cmp').lspkind_format,
+            mode = 'symbol_text',
+            maxwidth = {
+              -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+              -- can also be a function to dynamically calculate max width such as
+              -- menu = function() return math.floor(0.45 * vim.o.columns) end,
+              menu = 50, -- leading text (labelDetails)
+              abbr = 50, -- actual suggestion item
+            },
+            ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+            show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+            -- The function below will be called before any actual modifications from lspkind
+            -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
           },
-          format = require('nvim-highlight-colors').format,
         },
         completion = { completeopt = 'menu,menuone,noinsert' },
 
@@ -411,5 +423,146 @@ return {
         },
       }
     end,
+  },
+
+  -- { 'mfussenegger/nvim-jdtls' },
+  --
+  {
+    'nvim-java/nvim-java',
+    init = function()
+      require('java').setup()
+      require('lspconfig').jdtls.setup {}
+    end,
+  },
+
+  {
+    'smjonas/inc-rename.nvim',
+    config = function()
+      require('inc_rename').setup()
+    end,
+  },
+
+  {
+    'ray-x/lsp_signature.nvim',
+    event = 'VeryLazy',
+    opts = {},
+    config = function(_, opts)
+      require('lsp_signature').setup(opts)
+    end,
+  },
+
+  {
+    'onsails/lspkind.nvim',
+    init = function()
+      -- code
+    end,
+  },
+
+  {
+    'kosayoda/nvim-lightbulb',
+    init = function()
+      require('nvim-lightbulb').setup {
+        autocmd = { enabled = true },
+      }
+    end,
+  },
+
+  {
+    'rmagatti/goto-preview',
+    event = 'BufEnter',
+    config = true, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
+    init = function()
+      require('goto-preview').setup {
+        width = 120, -- Width of the floating window
+        height = 15, -- Height of the floating window
+        border = { '↖', '─', '┐', '│', '┘', '─', '└', '│' }, -- Border characters of the floating window
+        default_mappings = true, -- Bind default mappings
+        debug = false, -- Print debug information
+        opacity = nil, -- 0-100 opacity level of the floating window where 100 is fully transparent.
+        resizing_mappings = false, -- Binds arrow keys to resizing the floating window.
+        post_open_hook = nil, -- A function taking two arguments, a buffer and a window to be ran as a hook.
+        post_close_hook = nil, -- A function taking two arguments, a buffer and a window to be ran as a hook.
+        references = { -- Configure the telescope UI for slowing the references cycling window.
+          telescope = require('telescope.themes').get_dropdown { hide_preview = false },
+        },
+        -- These two configs can also be passed down to the goto-preview definition and implementation calls for one off "peak" functionality.
+        focus_on_open = true, -- Focus the floating window when opening it.
+        dismiss_on_move = false, -- Dismiss the floating window when moving the cursor.
+        force_close = true, -- passed into vim.api.nvim_win_close's second argument. See :h nvim_win_close
+        bufhidden = 'wipe', -- the bufhidden option to set on the floating window. See :h bufhidden
+        stack_floating_preview_windows = true, -- Whether to nest floating windows
+        preview_window_title = { enable = true, position = 'left' }, -- Whether to set the preview window title as the filename
+        zindex = 1, -- Starting zindex for the stack of floating windows
+      }
+    end,
+  },
+
+  {
+    'stevearc/aerial.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons',
+    },
+    init = function()
+      require('aerial').setup()
+    end,
+  },
+
+  {
+    'aznhe21/actions-preview.nvim',
+    config = function()
+      vim.keymap.set({ 'v', 'n' }, 'gf', require('actions-preview').code_actions)
+    end,
+  },
+
+  {
+    'jmbuhr/otter.nvim',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+    },
+    opts = {},
+  },
+
+  {
+    'folke/trouble.nvim',
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+
+    cmd = 'Trouble',
+
+    keys = {
+      {
+        '<leader>xx',
+        '<cmd>Trouble diagnostics toggle<cr>',
+        desc = 'Diagnostics (Trouble)',
+      },
+      {
+
+        '<leader>xX',
+        '<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
+        desc = 'Buffer Diagnostics (Trouble)',
+      },
+      {
+        '<leader>cs',
+        '<cmd>Trouble symbols toggle focus=false<cr>',
+        desc = 'Symbols (Trouble)',
+      },
+      {
+        '<leader>cl',
+        '<cmd>Trouble lsp toggle focus=false win.position=right<cr>',
+        desc = 'LSP Definitions / references / ... (Trouble)',
+      },
+      {
+        '<leader>xL',
+        '<cmd>Trouble loclist toggle<cr>',
+        desc = 'Location List (Trouble)',
+      },
+      {
+        '<leader>xQ',
+        '<cmd>Trouble qflist toggle<cr>',
+        desc = 'Quickfix List (Trouble)',
+      },
+    },
   },
 }
