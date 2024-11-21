@@ -10,8 +10,7 @@ return {
       -- vim.cmd.colorscheme 'cyberdream'
       -- vim.cmd.colorscheme 'fluoromachine'
       -- vim.cmd.colorscheme 'catppuccin-macchiato'
-      -- vim.cmd.colorscheme 'zephyr'
-      vim.cmd.colorscheme 'oxocarbon'
+      vim.cmd.colorscheme 'zephyr'
       -- vim.cmd.colorscheme 'sonokai'
       -- vim.cmd.colorscheme 'tokyonight-moon'
       -- vim.cmd.colorscheme 'dracula'
@@ -96,15 +95,6 @@ return {
 
   {
     'sainnhe/sonokai',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
-
-  {
-    'nyoom-engineering/oxocarbon.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- You can configure highlights by doing something like:
