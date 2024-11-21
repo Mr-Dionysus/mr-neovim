@@ -406,7 +406,7 @@ return {
             group_index = 0,
           },
           { name = 'nvim_lsp' },
-          { name = 'luasnip' },
+          { name = 'luasnip', priority = 1000 },
           { name = 'path' },
         },
       }

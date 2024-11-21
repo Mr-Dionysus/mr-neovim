@@ -39,14 +39,6 @@ return {
   },
 
   {
-    'L3MON4D3/LuaSnip',
-    keys = function()
-      -- Disable default tab keybinding in LuaSnip
-      return {}
-    end,
-  },
-
-  {
     'mawkler/modicator.nvim',
     dependencies = 'mawkler/onedark.nvim', -- Add your colorscheme plugin here
     init = function()
