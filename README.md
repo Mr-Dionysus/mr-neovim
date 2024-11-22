@@ -123,6 +123,6 @@ It's my view on Neovim
 3. Focus on Window [https://github.com/pocco81/true-zen.nvim] - 🦝 Clean and elegant distraction-free writing for NeoVim.
 4. Scrollbar [https://github.com/dstein64/nvim-scrollview] - A Neovim plugin that displays interactive vertical scrollbars and signs.
 5. Redesign [https://github.com/folke/noice.nvim] - 💥 Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
-6. ttt
+6. tttt
 
 
