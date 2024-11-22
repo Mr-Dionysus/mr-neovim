@@ -12,7 +12,7 @@ return {
       -- vim.cmd.colorscheme 'sonokai'
       -- vim.cmd.colorscheme 'zephyr'
       vim.cmd.colorscheme 'cyberdream'
-      -- vim.cmd.colorscheme 'fluoromachine'
+      -- vim.cmd.colorscheme 'oxocarbon'
       -- vim.cmd.colorscheme 'catppuccin-macchiato'
       -- vim.cmd.colorscheme 'tokyonight-moon'
       --
@@ -28,6 +28,17 @@ return {
       -- vim.cmd.colorscheme 'gruvbox-material'
       -- vim.cmd.colorscheme 'everforest'
 
+      -- You can configure highlights by doing something like:
+      vim.cmd.hi 'Comment gui=none'
+    end,
+  },
+
+  {
+
+    'nyoom-engineering/oxocarbon.nvim',
+    priority = 1000, -- Make sure to load this before all the other start plugins.
+
+    init = function()
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
@@ -192,26 +203,6 @@ return {
     'EdenEast/nightfox.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
-
-  {
-    'maxmx03/fluoromachine.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      --[[
-      require('fluoromachine').setup {
-        glow = true,
-        -- theme = 'retrowave',
-        theme = 'fluoromachine',
-        transparent = false,
-        plugins = {
-          neotree = false,
-        },
-      }
-      ]]
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,

@@ -176,12 +176,12 @@ return {
     end,
   },
 
-  -- {
-  --   'kosayoda/nvim-lightbulb',
-  --   init = function()
-  --     require('nvim-lightbulb').setup {
-  --       autocmd = { enabled = true },
-  --     }
-  --   end,
-  -- },
+  {
+    'kosayoda/nvim-lightbulb',
+    init = function()
+      require('nvim-lightbulb').setup {
+        autocmd = { enabled = true },
+      }
+    end,
+  },
 }
