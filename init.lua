@@ -16,9 +16,11 @@
 
   If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
 --]]
+-- vim.diagnostic.config { virtual_text = false }
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
+-- leaderrrrr
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -34,6 +36,7 @@ vim.api.nvim_set_keymap('n', 'n', 'nzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'n', 'nzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'N', 'Nzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'N', 'Nzz', { noremap = true, silent = true })
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -83,12 +86,6 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 vim.opt.spellfile = 'en.utf-8.add'
---test123
-
---test123
---
---test123
---test123
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
