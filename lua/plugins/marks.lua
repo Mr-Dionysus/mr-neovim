@@ -118,40 +118,4 @@ return {
       { '<leader>p', '<cmd>Grapple cycle_tags prev<cr>', desc = 'Grapple cycle previous tag' },
     },
   },
-
-  {
-    'kevinhwang91/nvim-hlslens',
-    init = function()
-      require('hlslens').setup()
-
-      local kopts = { noremap = true, silent = true }
-
-      vim.api.nvim_set_keymap('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], kopts)
-      vim.api.nvim_set_keymap('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], kopts)
-      vim.api.nvim_set_keymap('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], kopts)
-      vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
-      vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
-      vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
-
-      vim.api.nvim_set_keymap('n', '<Leader>H', '<Cmd>noh<CR>', kopts)
-    end,
-  },
-
-  {
-    'nvim-pack/nvim-spectre',
-    init = function()
-      vim.keymap.set('n', '<leader>sS', '<cmd>lua require("spectre").toggle()<CR>', {
-        desc = 'Toggle Spectre',
-      })
-      vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
-        desc = 'Search current word',
-      })
-      vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
-        desc = 'Search current word',
-      })
-      vim.keymap.set('n', '<leader>si', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
-        desc = '[S]earch [I]n File',
-      })
-    end,
-  },
 }

@@ -12,12 +12,6 @@ return {
     opts = {}, -- your configuration
   },
 
-  { 'mistweaverco/kulala.nvim', opts = {} },
-
-  {
-    'rest-nvim/rest.nvim',
-  },
-
   {
     'dmmulroy/ts-error-translator.nvim',
     init = function()
@@ -36,5 +30,19 @@ return {
     'pmizio/typescript-tools.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
     opts = {},
+  },
+
+  {
+    'uga-rosa/ccc.nvim',
+    init = function()
+      require('ccc').setup()
+    end,
+  },
+
+  {
+    'brenoprata10/nvim-highlight-colors',
+    init = function()
+      require('nvim-highlight-colors').setup {}
+    end,
   },
 }

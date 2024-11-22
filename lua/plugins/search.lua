@@ -219,4 +219,122 @@ return {
       require('neoclip').setup()
     end,
   },
+
+  {
+    'kevinhwang91/nvim-hlslens',
+    init = function()
+      require('hlslens').setup()
+
+      local kopts = { noremap = true, silent = true }
+
+      vim.api.nvim_set_keymap('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], kopts)
+      vim.api.nvim_set_keymap('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], kopts)
+      vim.api.nvim_set_keymap('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+      vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
+      vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+      vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
+
+      vim.api.nvim_set_keymap('n', '<Leader>H', '<Cmd>noh<CR>', kopts)
+    end,
+  },
+
+  {
+    'nvim-pack/nvim-spectre',
+    init = function()
+      vim.keymap.set('n', '<leader>sS', '<cmd>lua require("spectre").toggle()<CR>', {
+        desc = 'Toggle Spectre',
+      })
+      vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+        desc = 'Search current word',
+      })
+      vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+        desc = 'Search current word',
+      })
+      vim.keymap.set('n', '<leader>si', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+        desc = '[S]earch [I]n File',
+      })
+    end,
+  },
+
+  {
+    'gbprod/yanky.nvim',
+    dependencies = {
+      { 'kkharji/sqlite.lua' },
+    },
+    opts = {
+      ring = { storage = 'sqlite' },
+    },
+    keys = {
+      {
+        '<leader>p',
+        function()
+          require('telescope').extensions.yank_history.yank_history {}
+        end,
+        desc = 'Open Yank History',
+      },
+      { 'y', '<Plug>(YankyYank)', mode = { 'n', 'x' }, desc = 'Yank text' },
+      { 'p', '<Plug>(YankyPutAfter)', mode = { 'n', 'x' }, desc = 'Put yanked text after cursor' },
+      { 'P', '<Plug>(YankyPutBefore)', mode = { 'n', 'x' }, desc = 'Put yanked text before cursor' },
+      { 'gp', '<Plug>(YankyGPutAfter)', mode = { 'n', 'x' }, desc = 'Put yanked text after selection' },
+      { 'gP', '<Plug>(YankyGPutBefore)', mode = { 'n', 'x' }, desc = 'Put yanked text before selection' },
+      { '<c-p>', '<Plug>(YankyPreviousEntry)', desc = 'Select previous entry through yank history' },
+      { '<c-n>', '<Plug>(YankyNextEntry)', desc = 'Select next entry through yank history' },
+      { ']p', '<Plug>(YankyPutIndentAfterLinewise)', desc = 'Put indented after cursor (linewise)' },
+      { '[p', '<Plug>(YankyPutIndentBeforeLinewise)', desc = 'Put indented before cursor (linewise)' },
+      { ']P', '<Plug>(YankyPutIndentAfterLinewise)', desc = 'Put indented after cursor (linewise)' },
+      { '[P', '<Plug>(YankyPutIndentBeforeLinewise)', desc = 'Put indented before cursor (linewise)' },
+      { '>p', '<Plug>(YankyPutIndentAfterShiftRight)', desc = 'Put and indent right' },
+      { '<p', '<Plug>(YankyPutIndentAfterShiftLeft)', desc = 'Put and indent left' },
+      { '>P', '<Plug>(YankyPutIndentBeforeShiftRight)', desc = 'Put before and indent right' },
+      { '<P', '<Plug>(YankyPutIndentBeforeShiftLeft)', desc = 'Put before and indent left' },
+      { '=p', '<Plug>(YankyPutAfterFilter)', desc = 'Put after applying a filter' },
+      { '=P', '<Plug>(YankyPutBeforeFilter)', desc = 'Put before applying a filter' },
+    },
+  },
+
+  {
+    'cshuaimin/ssr.nvim',
+    module = 'ssr',
+    -- Calling setup is optional.
+    config = function()
+      require('ssr').setup {
+        border = 'rounded',
+        min_width = 50,
+        min_height = 5,
+        max_width = 120,
+        max_height = 25,
+        adjust_window = true,
+        keymaps = {
+          close = 'q',
+          next_match = 'n',
+          prev_match = 'N',
+          replace_confirm = '<cr>',
+          replace_all = '<leader><cr>',
+        },
+      }
+      vim.keymap.set({ 'n', 'x' }, '<leader>sR', function()
+        require('ssr').open()
+      end)
+    end,
+  },
+
+  {
+    'stevearc/aerial.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons',
+    },
+    init = function()
+      require('aerial').setup()
+    end,
+  },
+
+  {
+    'smjonas/inc-rename.nvim',
+    config = function()
+      require('inc_rename').setup()
+    end,
+  },
 }

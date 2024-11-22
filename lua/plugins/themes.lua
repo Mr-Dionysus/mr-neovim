@@ -8,13 +8,13 @@ return {
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       ---- DARK THEMES ----
-      -- vim.cmd.colorscheme 'cyberdream'
+      -- vim.cmd.colorscheme 'dracula'
+      -- vim.cmd.colorscheme 'sonokai'
+      -- vim.cmd.colorscheme 'zephyr'
+      vim.cmd.colorscheme 'cyberdream'
       -- vim.cmd.colorscheme 'fluoromachine'
       -- vim.cmd.colorscheme 'catppuccin-macchiato'
-      vim.cmd.colorscheme 'zephyr'
-      -- vim.cmd.colorscheme 'sonokai'
       -- vim.cmd.colorscheme 'tokyonight-moon'
-      -- vim.cmd.colorscheme 'dracula'
       --
       ---- LIGHT THEMES ----
       -- vim.o.background = 'light'

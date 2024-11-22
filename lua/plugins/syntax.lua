@@ -26,12 +26,6 @@ return {
   },
 
   {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    after = 'nvim-treesitter',
-    requires = 'nvim-treesitter/nvim-treesitter',
-  },
-
-  {
     'kylechui/nvim-surround',
     version = '*', -- Use for stability; omit to use `main` branch for the latest features
     event = 'VeryLazy',
@@ -53,4 +47,49 @@ return {
       }
     end,
   },
+
+  {
+    'dstein64/nvim-scrollview',
+  },
+
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    -- Optional dependency
+    dependencies = { 'hrsh7th/nvim-cmp' },
+    config = function()
+      require('nvim-autopairs').setup {}
+      -- If you want to automatically add `(` after selecting a function or method
+      local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
+      local cmp = require 'cmp'
+      cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+    end,
+  },
+
+  {
+    'windwp/nvim-ts-autotag',
+    init = function()
+      require('nvim-ts-autotag').setup {
+        opts = {
+
+          -- Defaults
+          enable_close = true, -- Auto close tags
+          enable_rename = true, -- Auto rename pairs of tags
+          enable_close_on_slash = false, -- Auto close on trailing </
+        },
+        -- Also override individual filetype configs, these take priority.
+        -- Empty by default, useful if one of the "opts" global settings
+        -- doesn't work well in a specific filetype
+        -- per_filetype = {
+        --   ['html'] = {
+        --     enable_close = true,
+        --   },
+        -- },
+      }
+    end,
+  },
+
+  { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
+
+  { 'kevinhwang91/promise-async' },
 }

@@ -309,4 +309,27 @@ return {
   --     }
   --   end,
   -- },
+  --
+
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    after = 'nvim-treesitter',
+    requires = 'nvim-treesitter/nvim-treesitter',
+  },
+
+  {
+    'echasnovski/mini.bracketed',
+    version = false,
+    init = function()
+      require('mini.bracketed').setup()
+    end,
+  },
+
+  {
+    'chrisgrieser/nvim-various-textobjs',
+    lazy = true,
+    keys = {
+      -- ...
+    },
+  },
 }
