@@ -78,5 +78,13 @@ return {
     init = function()
       require('mini.files').setup()
     end,
+    config = function()
+      vim.keymap.set(
+        '',
+        '<leader>tf',
+        ':lua MiniFiles.open()<CR>',
+        { desc = '[T]oggle [F]ile Manager' }
+      )
+    end,
   },
 }

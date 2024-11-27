@@ -1,13 +1,31 @@
 return {
-  'folke/zen-mode.nvim',
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
+  {
+    'folke/zen-mode.nvim',
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    config = function()
+      vim.keymap.set(
+        '',
+        '<leader>tz',
+        ':ZenMode<CR>',
+        { desc = '[T]oggle [Z]en' }
+      )
+    end,
   },
 
   {
     'pocco81/true-zen.nvim',
+    config = function()
+      vim.keymap.set(
+        '',
+        '<leader>tF',
+        ':TZFocus<CR>',
+        { desc = '[T]oggle [F]ocus' }
+      )
+    end,
   },
 
   {
@@ -79,6 +97,15 @@ return {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
+
+    config = function()
+      vim.keymap.set(
+        '',
+        '<leader>td',
+        ':Twilight<CR>',
+        { desc = '[T]oggle [D]ark Twilight' }
+      )
+    end,
   },
 
   {

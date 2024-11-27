@@ -1,83 +1,66 @@
---[[
-    After understanding a bit more about Lua, you can use `:help lua-guide` as a
-    reference for how Neovim integrates Lua.
-    - :help lua-guide
-    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
+--                                   ╭──────╮
+--                                   │ Help │
+--                                   ╰──────╯
 
-  Next, run AND READ `:help`.
-    This will open up a help window with some basic information
-    about reading, navigating and searching the builtin help documentation.
+-- General help: `:help`
+-- Options: `:help vim.opt`
+-- Options' list: `:help option-list`
+-- Lua's guide: `:help lua-guide`
+-- Check errors: `:checkhealth`
+-- Keymaps: `:help vim.keymap.set()`
+-- Autocommands: `:help lua-guide-autocommands`
 
-    This should be the first place you go to look when you're stuck or confused
-    with something. It's one of my favorite Neovim features.
+--                                ╭─────────────╮
+--                                │ Vim Options │
+--                                ╰─────────────╯
 
-    MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,
-    which is very useful when you're not exactly sure of what you're looking for.
-
-  If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
---]]
--- vim.diagnostic.config { virtual_text = false }
-
--- Set <space> as the leader key
--- See `:help mapleader`
--- leaderrrrr
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+-- Must happen before plugins are loaded (otherwise wrong leader will be used)
+-- <space> as the leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+
+-- Needs for optimal visual
 vim.opt.termguicolors = true
--- Set to true if you have a Nerd Font installed and selected in the terminal
+
+-- Nerd fonts
 vim.g.have_nerd_font = true
-vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', 'n', 'nzz', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', 'n', 'nzz', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'N', 'Nzz', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', 'N', 'Nzz', { noremap = true, silent = true })
-
--- [[ Setting options ]]
--- See `:help vim.opt`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
-
--- Make line numbers default
+-- Line numbers
 vim.opt.number = true
 
--- You can also add relative line numbers, to help with jumping.
+-- Relative numbers
 vim.opt.relativenumber = true
 
--- Enable mouse mode, can be useful for resizing splits for example!
+-- Mouse
 vim.opt.mouse = 'a'
 
--- Don't show the mode, since it's already in the status line
+-- NeoVim's mode
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
--- Enable break indent
+
+-- Break indent
 vim.opt.breakindent = true
 
--- Save undo history
+-- Undo history
 vim.opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- Keep signcolumn on by default
+-- Signcolumn
 vim.opt.signcolumn = 'yes'
 
--- Decrease update time
+-- Update time
 vim.opt.updatetime = 250
 
--- Decrease mapped sequence wait time
+-- Mapped sequence wait time
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 100
 
@@ -85,105 +68,151 @@ vim.opt.timeoutlen = 100
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+-- Spellfile
 vim.opt.spellfile = 'en.utf-8.add'
+
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
--- Preview substitutions live, as you type!
+-- Preview substitutions live
 vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
--- Minimal number of screen lines to keep above and below the cursor.
+-- Minimal number of screen lines to keep above and below the cursor
 vim.opt.scrolloff = 10
 
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+--                             ╭──────────────────╮
+--                             │ Neovim's Keymaps │
+--                             ╰──────────────────╯
+
+vim.keymap.set('i', 'kj', '<Esc>', {})
+vim.keymap.set('i', 'ло', '<Esc>', {})
+
+-- Always center screen when using Ctrl + u/d in normal and visual modes
+vim.api.nvim_set_keymap(
+  'n',
+  '<C-u>',
+  '<C-u>zz',
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  'v',
+  '<C-u>',
+  '<C-u>zz',
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  'n',
+  '<C-d>',
+  '<C-d>zz',
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  'v',
+  '<C-d>',
+  '<C-d>zz',
+  { noremap = true, silent = true }
+)
+
+-- Always center screen while searching via `n/N` in visual and normal modes
+vim.api.nvim_set_keymap('n', 'n', 'nzz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'n', 'nzz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'N', 'Nzz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'N', 'Nzz', { noremap = true, silent = true })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('', '<leader>tt', ':ToggleTerm direction=float<CR>', { desc = '[T]oggle [T]erminal' })
-vim.keymap.set('', '<leader>t-', ':ToggleTerm direction=horizontal<CR>', { desc = '[T]erminal -----' })
-vim.keymap.set('', '<leader>t|', ':ToggleTerm direction=vertical<CR>', { desc = '[T]erminal |||||' })
-vim.keymap.set('', '<leader>tz', ':ZenMode<CR>', { desc = '[T]oggle [Z]en' })
-vim.keymap.set('', '<leader>tF', ':TZFocus<CR>', { desc = '[T]oggle [F]ocus' })
-vim.keymap.set('', '<leader>tf', ':lua MiniFiles.open()<CR>', { desc = '[T]oggle [F]ile Manager' })
-vim.keymap.set('', '<leader>td', ':Twilight<CR>', { desc = '[T]oggle [D]ark Twilight' })
+vim.keymap.set(
+  'n',
+  '<leader>q',
+  vim.diagnostic.setloclist,
+  { desc = 'Open diagnostic [Q]uickfix list' }
+)
 
-vim.keymap.set('', '<leader>gd', ':DiffviewOpen<CR>', { desc = '[D]ebug [Diff] View' })
-vim.keymap.set('', '<leader>gD', ':DiffviewClose<CR>', { desc = 'Close [D]ebug [Diff] View' })
--- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
+-- Exit terminal mode in the builtin terminal with a shortcut.
+-- Otherwise, it's `<C-\><C-n>`
+-- This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
--- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set(
+  't',
+  '<Esc><Esc>',
+  '<C-\\><C-n>',
+  { desc = 'Exit terminal mode' }
+)
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
---
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set(
+  'n',
+  '<C-h>',
+  '<C-w><C-h>',
+  { desc = 'Move focus to the left window' }
+)
+vim.keymap.set(
+  'n',
+  '<C-l>',
+  '<C-w><C-l>',
+  { desc = 'Move focus to the right window' }
+)
+vim.keymap.set(
+  'n',
+  '<C-j>',
+  '<C-w><C-j>',
+  { desc = 'Move focus to the lower window' }
+)
+vim.keymap.set(
+  'n',
+  '<C-k>',
+  '<C-w><C-k>',
+  { desc = 'Move focus to the upper window' }
+)
 
-vim.keymap.set('i', 'kj', '<Esc>', {})
-vim.keymap.set('i', 'ло', '<Esc>', {})
+--                             ╭──────────────────╮
+--                             │   Autocommands   │
+--                             ╰──────────────────╯
 
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
-
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
+-- Highlight when yanking text
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  desc = 'Highlight when yanking text',
+  group = vim.api.nvim_create_augroup(
+    'kickstart-highlight-yank',
+    { clear = true }
+  ),
   callback = function()
     vim.highlight.on_yank()
   end,
 })
 
--- [[ Install `lazy.nvim` plugin manager ]]
+--                                   ╭──────╮
+--                                   │ Lazy │
+--                                   ╰──────╯
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-  local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
+  local out = vim.fn.system {
+    'git',
+    'clone',
+    '--filter=blob:none',
+    '--branch=stable',
+    lazyrepo,
+    lazypath,
+  }
   if vim.v.shell_error ~= 0 then
     error('Error cloning lazy.nvim:\n' .. out)
   end
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- [[ Configure and install plugins ]]
---
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help. Use `:q` to close the window
---
---  To update plugins you can run
---    :Lazy update
---
--- NOTE: PLUGINS
 require('lazy').setup({
   { import = 'plugins' },
   --

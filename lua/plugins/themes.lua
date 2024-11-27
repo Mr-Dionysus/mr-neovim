@@ -11,9 +11,7 @@ return {
       -- vim.cmd.colorscheme 'dracula'
       -- vim.cmd.colorscheme 'sonokai'
       -- vim.cmd.colorscheme 'zephyr'
-      vim.cmd.colorscheme 'cyberdream'
-      -- vim.cmd.colorscheme 'oxocarbon'
-      -- vim.cmd.colorscheme 'catppuccin-macchiato'
+      vim.cmd.colorscheme 'catppuccin-macchiato'
       -- vim.cmd.colorscheme 'tokyonight-moon'
       --
       ---- LIGHT THEMES ----
@@ -21,24 +19,11 @@ return {
       --
       -- vim.cmd.colorscheme 'bamboo'
       -- vim.cmd.colorscheme 'dayfox'
-      -- vim.cmd.colorscheme 'tokyonight-day'
       -- vim.cmd.colorscheme 'melange'
       -- vim.cmd.colorscheme 'onedark'
-      -- vim.cmd.colorscheme 'onelight'
       -- vim.cmd.colorscheme 'gruvbox-material'
       -- vim.cmd.colorscheme 'everforest'
 
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
-
-  {
-
-    'nyoom-engineering/oxocarbon.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-
-    init = function()
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
@@ -50,7 +35,7 @@ return {
     priority = 1000,
     init = function()
       require('dracula').setup {
-        -- -- customize dracula color palette
+        -- customize dracula color palette
         -- colors = {
         --   bg = '#282A36',
         --   fg = '#F8F8F2',
@@ -164,15 +149,6 @@ return {
   },
 
   {
-    'olimorris/onedarkpro.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
-
-  {
     'sainnhe/gruvbox-material',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
@@ -201,15 +177,6 @@ return {
 
   {
     'EdenEast/nightfox.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
-
-  {
-    'scottmckendry/cyberdream.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- You can configure highlights by doing something like:

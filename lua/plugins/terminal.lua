@@ -20,6 +20,27 @@ return {
         end
         vim.cmd 'autocmd! TermOpen term://* lua set_terminal_keymaps()'
       end,
+      config = function()
+        require('toggleterm').setup()
+        vim.keymap.set(
+          '',
+          '<leader>tt',
+          ':ToggleTerm direction=float<CR>',
+          { desc = '[T]oggle [T]erminal' }
+        )
+        vim.keymap.set(
+          '',
+          '<leader>t-',
+          ':ToggleTerm direction=horizontal<CR>',
+          { desc = '[T]erminal -----' }
+        )
+        vim.keymap.set(
+          '',
+          '<leader>t|',
+          ':ToggleTerm direction=vertical<CR>',
+          { desc = '[T]erminal |||||' }
+        )
+      end,
     },
   },
 
@@ -71,7 +92,9 @@ return {
 
                   -- If we're in a different wezterm pane/tab, switch to the current one
                   -- Requires willothy/wezterm.nvim
-                  require('wezterm').switch_pane.id(tonumber(os.getenv 'WEZTERM_PANE'))
+                  require('wezterm').switch_pane.id(
+                    tonumber(os.getenv 'WEZTERM_PANE')
+                  )
                 end
 
                 -- If the file is a git commit, create one-shot autocmd to delete its buffer on write
