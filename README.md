@@ -13,14 +13,12 @@ It's my view on Neovim
 3. **Zephyr** [https://github.com/nvimdev/zephyr-nvim]
 4. **Melange** [https://github.com/savq/melange-nvim]
 5. **OneDark** [https://github.com/navarasu/onedark.nvim]
-6. **OneDark** Pro [https://github.com/olimorris/onedarkpro.nvim]
-7. **Gruvbox** [https://github.com/sainnhe/gruvbox-material]
-8. **Everforest** [https://github.com/sainnhe/everforest]
-9. **Dracula** [https://github.com/Mofiqul/dracula.nvim]
-10. **Catppuccin** [https://github.com/catppuccin/nvim]
-11. **Nightfox** [https://github.com/EdenEast/nightfox.nvim]
-12. **Fluoromachine** [https://github.com/maxmx03/fluoromachine.nvim]
-13. **Bamboo** [https://github.com/ribru17/bamboo.nvim]
+6. **Gruvbox** [https://github.com/sainnhe/gruvbox-material]
+7. **Everforest** [https://github.com/sainnhe/everforest]
+8. **Dracula** [https://github.com/Mofiqul/dracula.nvim]
+9. **Catppuccin** [https://github.com/catppuccin/nvim]
+10. **Nightfox** [https://github.com/EdenEast/nightfox.nvim]
+11. **Bamboo** [https://github.com/ribru17/bamboo.nvim]
 
 ### Motions
 
