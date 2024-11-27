@@ -8,7 +8,7 @@ It's my view on Neovim
 
 ### Themes
 
-1. **Tokyo Night** [https://github.com/folke/tokyonight.nvim]
+1. [**Tokyo Night**](https://github.com/folke/tokyonight.nvim)
 2. **Sonokai** [https://github.com/sainnhe/sonokai] - Monokai-like
 3. **Zephyr** [https://github.com/nvimdev/zephyr-nvim]
 4. **Melange** [https://github.com/savq/melange-nvim]
