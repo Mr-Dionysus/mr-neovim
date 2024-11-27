@@ -93,6 +93,7 @@ It's my view on Neovim
 
 1. [Dashboard (dashboard-nvim)](https://github.com/nvimdev/dashboard-nvim) - Vim dashboard.
 2. [Custom Dashboard (startup)](https://github.com/max397574/startup.nvim) - A highly configurable neovim startup screen.
+3. [Custom Dashboard (alpha)](https://github.com/goolord/alpha-nvim) - a lua powered greeter like vim-startify / dashboard-nvim.
 
 ### Terminal
 

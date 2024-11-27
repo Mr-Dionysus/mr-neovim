@@ -765,6 +765,9 @@ require('lazy').setup({
   -- A highly configurable neovim startup screen.
   -- { import = 'plugins/startup/alpha' },
 
+  -- A highly configurable neovim startup screen
+  -- { import = 'plugins/startup/startup' },
+
   --                               ╭──────────────╮
   --                               │ Status Lines │
   --                               ╰──────────────╯
