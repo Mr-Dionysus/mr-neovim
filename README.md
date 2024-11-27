@@ -35,7 +35,6 @@ It's my view on Neovim
 1. **Status Line** [https://github.com/nvim-lualine/lualine.nvim] - A blazing fast and easy to configure neovim statusline plugin written in pure lua.
 2. **Breadcrumbs** [https://github.com/utilyre/barbecue.nvim] - Visual Studio Code inspired breadcrumbs plugin for the Neovim editor.
 3. **For Breadcrumbs** [https://github.com/SmiteshP/nvim-navic] - Simple winbar/statusline plugin that shows your current code context.
-4. **Status Line (Try Later)** [https://github.com/rebelot/heirline.nvim] - Heirline.nvim is a no-nonsense Neovim Statusline plugin designed around recursive inheritance to be exceptionally fast and versatile.
 
 ### Git
 
@@ -56,6 +55,7 @@ It's my view on Neovim
 5. **Autopair/Rename HTML Tags** [https://github.com/windwp/nvim-ts-autotag] - Use treesitter to autoclose and autorename html tag.
 6. **Folds** [https://github.com/kevinhwang91/nvim-ufo] - The goal of nvim-ufo is to make Neovim's fold look modern and keep high performance.
 7. **For Folds** [https://github.com/kevinhwang91/promise-async] - The goal of promise-async is to port Promise & Async from JavaScript to Lua.
+8. **Scrollbar** [https://github.com/dstein64/nvim-scrollview] - A Neovim plugin that displays interactive vertical scrollbars and signs.
 
 ### Cursor
 
@@ -107,7 +107,7 @@ It's my view on Neovim
 
 ### File Managers
 
-1. **Open Folders with** Neovim [https://github.com/stevearc/oil.nvim] - Neovim file explorer: edit your filesystem like a buffer.
+1. **Open Folders with Neovim** [https://github.com/stevearc/oil.nvim] - Neovim file explorer: edit your filesystem like a buffer.
 2. **File Manager** [https://github.com/nvim-neo-tree/neo-tree.nvim] - Neovim plugin to manage the file system and other tree like structures.
 3. **File Manager** [https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md] - Mini popup with folders and files.
 4. **yazi File Manager** [https://github.com/mikavilpas/yazi.nvim] - A Neovim Plugin for the yazi terminal file manager.
@@ -117,13 +117,12 @@ It's my view on Neovim
 1. **Icons** [https://github.com/nvim-tree/nvim-web-devicons] - Lua `fork` of vim-web-devicons for Neovim.
 2. **Zen Mode** [https://github.com/folke/zen-mode.nvim] - 🧘 Distraction-free coding for Neovim.
 3. **Focus on Window** [https://github.com/pocco81/true-zen.nvim] - 🦝 Clean and elegant distraction-free writing for NeoVim.
-4. **Scrollbar** [https://github.com/dstein64/nvim-scrollview] - A Neovim plugin that displays interactive vertical scrollbars and signs.
-5. **Redesign** [https://github.com/folke/noice.nvim] - 💥 Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
-6. **Redesign** [https://github.com/stevearc/dressing.nvim] - Neovim plugin to improve the default vim.ui interfaces.
-7. **Indent Guides** [https://github.com/lukas-reineke/indent-blankline.nvim] - This plugin adds indentation guides to Neovim. It uses Neovim's virtual text feature and no conceal.
-8. **Notifications** [https://github.com/rcarriga/nvim-notify] - A fancy, configurable, notification manager for NeoVim.
-9. **Transparent Background** [https://github.com/xiyaowong/transparent.nvim] - Remove all background colors to make nvim transparent.
-10. **Dim Inactive Code** [https://github.com/folke/twilight.nvim] - 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims inactive portions of the code you're editing using TreeSitter.
+4. **Redesign** [https://github.com/folke/noice.nvim] - 💥 Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+5. **Redesign** [https://github.com/stevearc/dressing.nvim] - Neovim plugin to improve the default vim.ui interfaces.
+6. **Indent Guides** [https://github.com/lukas-reineke/indent-blankline.nvim] - This plugin adds indentation guides to Neovim. It uses Neovim's virtual text feature and no conceal.
+7. **Notifications** [https://github.com/rcarriga/nvim-notify] - A fancy, configurable, notification manager for NeoVim.
+8. **Transparent Background** [https://github.com/xiyaowong/transparent.nvim] - Remove all background colors to make nvim transparent.
+9. **Dim Inactive Code** [https://github.com/folke/twilight.nvim] - 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims inactive portions of the code you're editing using TreeSitter.
 
 ### Keymaps
 
@@ -138,8 +137,10 @@ It's my view on Neovim
  3. **Postman-like** [https://github.com/mistweaverco/kulala.nvim] - A minimal 🤏 HTTP-client 🐼 interface 🖥️ for Neovim ❤️..
  4. **Plugin Manager** [https://github.com/folke/lazy.nvim] - 💤 A modern plugin manager for Neovim.
  5. **Increment/Decrement** [https://github.com/monaqa/dial.nvim] - Enhanced increment/decrement plugin for Neovim. 
- 6. **Macros** [Neovim plugin that simplifies macros, enhancing productivity with harmony.] - Neovim plugin that simplifies macros, enhancing productivity with harmony.
+ 6. **Macros** [https://github.com/ecthelionvi/NeoComposer.nvim] - Neovim plugin that simplifies macros, enhancing productivity with harmony.
  7. **Package Info** [https://github.com/vuki656/package-info.nvim] - ✍️ All the npm/yarn/pnpm commands I don't want to type.
+ 8. **a/i textobjects** [https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md] - Enhances a/i textobjects.
+ 9. **UI Components** [https://github.com/MunifTanjim/nui.nvim] - UI Component Library for Neovim.
 
 ### Format
 
@@ -173,7 +174,7 @@ It's my view on Neovim
 2. **Projects** [https://github.com/ahmedkhalf/project.nvim] - The superior project management solution for neovim.
 3. **Window Management** [https://github.com/nvim-focus/focus.nvim] - Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua. A full suite of window management enhancements. Vim splits on steroids!
 4. **Splits** [https://github.com/mrjones2014/smart-splits.nvim] - 🧠 Smart, seamless, directional navigation and resizing of Neovim + terminal multiplexer splits. Supports tmux, Wezterm, and Kitty. Think about splits in terms of "up/down/left/right".
-5. **tmux** [https://github.com/mrjones2014/smart-splits.nvim] - tmux integration for nvim features pane movement and resizing from within nvim.
+5. **tmux** [https://github.com/christoomey/vim-tmux-navigator] - tmux integration for nvim features pane movement and resizing from within nvim.
 
 ### Snippets
 
@@ -184,17 +185,19 @@ It's my view on Neovim
 ### LSP
 
 1. **All LSPs** [https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md]
-2. **Linter** [https://github.com/mfussenegger/nvim-lint] - An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support.
-3. **Completion** [https://github.com/hrsh7th/nvim-cmp] - A completion plugin for neovim coded in Lua.
-4. **Completion Hints** [https://github.com/ray-x/lsp_signature.nvim] - LSP signature hint as you type.
-5. **Completion Icons** [https://github.com/onsails/lspkind.nvim] - vscode-like pictograms for neovim lsp completion items.
-6. **Package Manager** [https://github.com/williamboman/mason.nvim] - Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters.
-7. **Java LSP 1** [https://github.com/mfussenegger/nvim-jdtls] - Extensions for the built-in LSP support in Neovim for eclipse.jdt.ls.
-8. **Java LSP 2** [https://github.com/nvim-java/nvim-java] - Painless Java in Neovim.
-9. **LSP Configs** [https://github.com/neovim/nvim-lspconfig] - Quickstart configs for Nvim LSP.
-10. **LSP goto** [https://github.com/rmagatti/goto-preview] - A small Neovim plugin for previewing definitions using floating windows.
-11. **LSP Notifications** [https://github.com/j-hui/fidget.nvim] - 💫 Extensible UI for Neovim notifications and LSP progress messages.
-12. **LSP Embedded** [https://github.com/jmbuhr/otter.nvim] - Just ask an otter! 🦦.
+2. **Faster Setup** [https://github.com/folke/lazydev.nvim] - Faster LuaLS setup for Neovim.
+3. **Luvit** [https://github.com/Bilal2453/luvit-meta] - Meta type definitions for the Lua platform Luvit.
+4. **Linter** [https://github.com/mfussenegger/nvim-lint] - An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support.
+5. **Completion** [https://github.com/hrsh7th/nvim-cmp] - A completion plugin for neovim coded in Lua.
+6. **Completion Hints** [https://github.com/ray-x/lsp_signature.nvim] - LSP signature hint as you type.
+7. **Completion Icons** [https://github.com/onsails/lspkind.nvim] - vscode-like pictograms for neovim lsp completion items.
+8. **Package Manager** [https://github.com/williamboman/mason.nvim] - Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters.
+9. **Java LSP 1** [https://github.com/mfussenegger/nvim-jdtls] - Extensions for the built-in LSP support in Neovim for eclipse.jdt.ls.
+10. **Java LSP 2** [https://github.com/nvim-java/nvim-java] - Painless Java in Neovim.
+11. **LSP Configs** [https://github.com/neovim/nvim-lspconfig] - Quickstart configs for Nvim LSP.
+12. **LSP goto** [https://github.com/rmagatti/goto-preview] - A small Neovim plugin for previewing definitions using floating windows.
+13. **LSP Notifications** [https://github.com/j-hui/fidget.nvim] - 💫 Extensible UI for Neovim notifications and LSP progress messages.
+14. **LSP Embedded** [https://github.com/jmbuhr/otter.nvim] - Just ask an otter! 🦦.
 
 ### Notes
 
@@ -211,7 +214,7 @@ It's my view on Neovim
 2. **Debug Virtual Text** [https://github.com/theHamsta/nvim-dap-virtual-text] - This plugin adds virtual text support to nvim-dap. nvim-treesitter is used to find variable definitions.
 3. **Debug** [https://github.com/mfussenegger/nvim-dap] - Debug Adapter Protocol client implementation for Neovim.
 4. **Debug UI** [https://github.com/rcarriga/nvim-dap-ui] - A UI for nvim-dap.
-5. **Debug** [https://github.com/sakhnik/nvim-gdb?tab=readme-ov-file] - Neovim thin wrapper for GDB, LLDB, PDB/PDB++ and BashDB.
+5. **Debug** [https://github.com/sakhnik/nvim-gdb] - Neovim thin wrapper for GDB, LLDB, PDB/PDB++ and BashDB.
 6. **LSP Actions** [https://github.com/aznhe21/actions-preview.nvim] - Fully customizable previewer for LSP code actions.
 7. **LSP Lightbulb Action** [https://github.com/kosayoda/nvim-lightbulb] - VSCode 💡 for neovim's built-in LSP.
 8. **LSP Diagnostic** [https://github.com/folke/trouble.nvim] - 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
@@ -223,9 +226,9 @@ It's my view on Neovim
 3. **Build** [https://github.com/stevearc/overseer.nvim] - A task runner and job management plugin for Neovim.
 4. **REPL** [https://github.com/Vigemus/iron.nvim] - Interactive Repl Over Neovim.
 5. **Compiler** [https://github.com/Zeioth/compiler.nvim] - Neovim compiler for building and running your code without having to configure anything.
-6. **Jupyter Notebook** [https://github.com/benlubas/molten-nvim?tab=readme-ov-file] - A neovim plugin for interactively running code with the jupyter kernel. Fork of magma-nvim with improvements in image rendering, performance, and more.
+6. **Jupyter Notebook** [https://github.com/benlubas/molten-nvim] - A neovim plugin for interactively running code with the jupyter kernel. Fork of magma-nvim with improvements in image rendering, performance, and more.
 
-### Games 
+### Training 
 
 1. **Tutorial** [https://github.com/ThePrimeagen/vim-be-good] - vim-be-good is a nvim plugin designed to make you better at Vim Movements.
 2. **Crush Bad Habits** [https://github.com/m4xshen/hardtime.nvim] - Establish good command workflow and quit bad habit.
