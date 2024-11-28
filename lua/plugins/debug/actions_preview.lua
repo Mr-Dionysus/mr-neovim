@@ -1,3 +1,7 @@
+--                                ╭─────────────╮
+--                                │ LSP Actions │
+--                                ╰─────────────╯
+-- Fully customizable previewer for LSP code actions.
 return {
   'aznhe21/actions-preview.nvim',
   config = function()

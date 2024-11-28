@@ -1,3 +1,7 @@
+--                             ╭──────────────────╮
+--                             │ Notes Management │
+--                             ╰──────────────────╯
+-- Orgmode clone written in Lua for Neovim 0.9+.
 return {
   'nvim-orgmode/orgmode',
   event = 'VeryLazy',

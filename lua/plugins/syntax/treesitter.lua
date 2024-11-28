@@ -1,3 +1,8 @@
+--                                 ╭───────────╮
+--                                 │ Highlight │
+--                                 ╰───────────╯
+-- Nvim Treesitter configurations and abstraction layer.
+
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',

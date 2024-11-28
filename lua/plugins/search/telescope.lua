@@ -1,4 +1,9 @@
-return { -- Fuzzy Finder (files, lsp, etc)
+--                                  ╭────────╮
+--                                  │ Search │
+--                                  ╰────────╯
+-- Find, Filter, Preview, Pick. All lua, all the time.
+
+return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
   branch = '0.1.x',
@@ -165,7 +170,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>tl', ':Lazy<CR>', { desc = '[T]oggle [L]azy' })
     vim.keymap.set(
       'n',
-      '<leader>tm',
+      '<leader>tM',
       ':Mason<CR>',
       { desc = '[T]oggle [M]ason' }
     )

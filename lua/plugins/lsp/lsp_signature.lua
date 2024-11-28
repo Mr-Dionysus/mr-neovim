@@ -1,3 +1,7 @@
+--                             ╭──────────────────╮
+--                             │ Completion Hints │
+--                             ╰──────────────────╯
+-- LSP signature hint as you type.
 return {
   'ray-x/lsp_signature.nvim',
   event = 'VeryLazy',

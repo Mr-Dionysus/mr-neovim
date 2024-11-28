@@ -1,3 +1,7 @@
+--                                 ╭──────────╮
+--                                 │ Projects │
+--                                 ╰──────────╯
+-- The superior project management solution for neovim.
 return {
   'ahmedkhalf/project.nvim',
   init = function()

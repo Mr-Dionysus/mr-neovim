@@ -1,3 +1,7 @@
+--                                   ╭───────╮
+--                                   │ Tests │
+--                                   ╰───────╯
+-- An extensible framework for interacting with tests within NeoVim.
 return {
   'nvim-neotest/neotest',
   dependencies = {

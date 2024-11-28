@@ -1,3 +1,8 @@
+--                                 ╭───────────╮
+--                                 │ Pin Files │
+--                                 ╰───────────╯
+-- Neovim plugin for tagging important files.
+
 return {
   'cbochs/grapple.nvim',
   opts = {

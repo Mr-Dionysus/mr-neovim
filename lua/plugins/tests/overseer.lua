@@ -1,3 +1,7 @@
+--                                   ╭───────╮
+--                                   │ Build │
+--                                   ╰───────╯
+-- A task runner and job management plugin for Neovim.
 return {
   'stevearc/overseer.nvim',
   commit = '6271cab7ccc4ca840faa93f54440ffae3a3918bd',

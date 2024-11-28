@@ -1,3 +1,8 @@
+--                            ╭─────────────────────╮
+--                            │ File Manager (Yazi) │
+--                            ╰─────────────────────╯
+-- A Neovim Plugin for the yazi terminal file manager.
+
 return {
   'mikavilpas/yazi.nvim',
   event = 'VeryLazy',

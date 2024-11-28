@@ -1,3 +1,7 @@
+--                                   ╭──────╮
+--                                   │ Java │
+--                                   ╰──────╯
+-- Painless Java in Neovim.
 return {
   'nvim-java/nvim-java',
   init = function()

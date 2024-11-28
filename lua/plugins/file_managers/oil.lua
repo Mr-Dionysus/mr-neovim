@@ -1,3 +1,8 @@
+--                         ╭──────────────────────────╮
+--                         │ Open Folders with Neovim │
+--                         ╰──────────────────────────╯
+-- Neovim file explorer: edit your filesystem like a buffer.
+
 return {
   'stevearc/oil.nvim',
   ---@module 'oil'

@@ -1,3 +1,8 @@
+--                                 ╭──────────╮
+--                                 │ Tailwind │
+--                                 ╰──────────╯
+-- An unofficial Tailwind CSS integration and tooling for Neovim.
+
 return {
   'luckasRanarison/tailwind-tools.nvim',
   name = 'tailwind-tools',

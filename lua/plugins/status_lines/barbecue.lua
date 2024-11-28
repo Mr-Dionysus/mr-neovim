@@ -1,3 +1,8 @@
+--                                ╭─────────────╮
+--                                │ Breadcrumbs │
+--                                ╰─────────────╯
+-- Visual Studio Code inspired breadcrumbs plugin for the Neovim editor.
+
 return {
   'utilyre/barbecue.nvim',
   name = 'barbecue',

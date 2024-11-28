@@ -1,3 +1,7 @@
+--                               ╭──────────────╮
+--                               │ Code Outline │
+--                               ╰──────────────╯
+-- Neovim plugin for a code outline window.
 return {
   'stevearc/aerial.nvim',
   opts = {},

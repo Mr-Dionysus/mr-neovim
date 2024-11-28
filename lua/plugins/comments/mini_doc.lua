@@ -1,3 +1,8 @@
+--                               ╭───────────────╮
+--                               │ Documentation │
+--                               ╰───────────────╯
+-- To generate documentation.
+
 return {
   'echasnovski/mini.doc',
   version = false,

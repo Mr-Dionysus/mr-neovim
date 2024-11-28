@@ -1,3 +1,8 @@
+--                                   ╭──────╮
+--                                   │ Tmux │
+--                                   ╰──────╯
+-- Tmux integration for nvim features pane movement and
+-- resizing from within nvim.
 return {
   'christoomey/vim-tmux-navigator',
   cmd = {

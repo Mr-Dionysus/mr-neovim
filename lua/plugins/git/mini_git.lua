@@ -1,3 +1,8 @@
+--                                    ╭─────╮
+--                                    │ Git │
+--                                    ╰─────╯
+-- Git commands inside Neovim.
+
 return {
   'echasnovski/mini-git',
   version = false,

@@ -1,10 +1,10 @@
+--                           ╭───────────────────────╮
+--                           │ Yank & Put Plus ULTRA │
+--                           ╰───────────────────────╯
+-- Improved Yank and Put functionalities for Neovim.
 return {
   'gbprod/yanky.nvim',
-  dependencies = {
-    { 'kkharji/sqlite.lua' },
-  },
   opts = {
-    ring = { storage = 'sqlite' },
     highlight = {
       on_put = false,
       on_yank = false,

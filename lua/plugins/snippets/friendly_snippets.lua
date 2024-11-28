@@ -1,3 +1,7 @@
+--                            ╭─────────────────────╮
+--                            │ Predefined Snippets │
+--                            ╰─────────────────────╯
+-- Set of preconfigured snippets for different languages.
 return {
   'rafamadriz/friendly-snippets',
   init = function()

@@ -1,3 +1,8 @@
+--                                 ╭──────────╮
+--                                 │ Autopair │
+--                                 ╰──────────╯
+-- Autopairs for neovim written in lua.
+
 return {
   'windwp/nvim-autopairs',
   event = 'InsertEnter',

@@ -1,3 +1,9 @@
+--                               ╭──────────────╮
+--                               │ Paste Images │
+--                               ╰──────────────╯
+-- Effortlessly embed images into any markup language, like LaTeX,
+-- Markdown or Typst.
+
 return {
   'HakonHarnes/img-clip.nvim',
   event = 'VeryLazy',

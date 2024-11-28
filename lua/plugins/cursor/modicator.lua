@@ -1,3 +1,8 @@
+--                                ╭─────────────╮
+--                                │ Cursor Line │
+--                                ╰─────────────╯
+-- Cursor line number mode indicator plugin for Neovim.
+
 return {
   'mawkler/modicator.nvim',
   dependencies = 'mawkler/onedark.nvim', -- Add your colorscheme plugin here

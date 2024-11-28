@@ -1,3 +1,8 @@
+--                                ╭─────────────╮
+--                                │ Code Runner │
+--                                ╰─────────────╯
+-- A Neovim plugin to run lines/blocs of code (independently
+-- of the rest of the file), supporting multiples languages.
 return {
   'michaelb/sniprun',
   branch = 'master',

@@ -1,3 +1,8 @@
+--                                 ╭───────────╮
+--                                 │ Dashboard │
+--                                 ╰───────────╯
+-- Vim dashboard.
+
 return {
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',

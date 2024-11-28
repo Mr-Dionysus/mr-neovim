@@ -1,3 +1,7 @@
+--                             ╭──────────────────╮
+--                             │ Find and Replace │
+--                             ╰──────────────────╯
+-- Find the enemy and replace them with dark power.
 return {
   'nvim-pack/nvim-spectre',
   init = function()

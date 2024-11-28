@@ -1,3 +1,9 @@
+--                      ╭─────────────────────────────────╮
+--                      │ Exit from Quotes, Brackets, etc │
+--                      ╰─────────────────────────────────╯
+-- Supercharge your workflow and start tabbing out from
+-- parentheses, quotes, and similar contexts today.
+
 return {
   'abecodes/tabout.nvim',
   lazy = false,

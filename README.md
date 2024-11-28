@@ -8,17 +8,9 @@ It's my view on Neovim
 
 ### Themes
 
-1. [Tokyo Night](https://github.com/folke/tokyonight.nvim)
-2. [Sonokai](https://github.com/sainnhe/sonokai) - Monokai-like
-3. [Zephyr](https://github.com/nvimdev/zephyr-nvim)
-4. [Melange](https://github.com/savq/melange-nvim)
-5. [OneDark](https://github.com/navarasu/onedark.nvim)
-6. [Gruvbox](https://github.com/sainnhe/gruvbox-material)
-7. [Everforest](https://github.com/sainnhe/everforest)
-8. [Dracula](https://github.com/Mofiqul/dracula.nvim)
-9. [Catppuccin](https://github.com/catppuccin/nvim)
-10. [Nightfox](https://github.com/EdenEast/nightfox.nvim)
-11. [Bamboo](https://github.com/ribru17/bamboo.nvim)
+1. [Sonokai](https://github.com/sainnhe/sonokai) - Monokai-like
+2. [Dracula](https://github.com/Mofiqul/dracula.nvim)
+3. [Catppuccin](https://github.com/catppuccin/nvim)
 
 ### Motions
 
@@ -27,7 +19,7 @@ It's my view on Neovim
 3. [Go Forward/Backward (mini-bracketed)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md) - Go forward/backward with square brackets.
 4. [Motions (Hop)](https://github.com/smoka7/hop.nvim) - Hop is an EasyMotion-like plugin allowing you to jump anywhere in a document with as few keystrokes as possible.
 5. [For Hop (nvim-treehopper)](https://github.com/mfussenegger/nvim-treehopper) - A Plugin that provides region selection using hints on the abstract syntax tree of a document.
-6. [Motions (Leap)](https://github.com/ggandor/leap.nvim) - Leap is a general-purpose motion plugin for Neovim, building and improving primarily on vim-sneak, with the ultimate goal of establishing a new standard interface for moving around in the visible area in Vim-like modal editors. It allows you to reach any target in a very fast, uniform way, and minimizes the required focus level while executing a jump.
+6. [Motions (Leap)](https://github.com/ggandor/leap.nvim) - Leap is a general-purpose motion plugin for Neovim, building and improving primarily on vim-sneak, with the ultimate goal of establishing a new standard interface for moving around in the visible area in Vim-like modal editors.
 7. [Motions (Flash | Try Later)](https://github.com/folke/flash.nvim) - Navigate your code with search labels, enhanced character motions and Treesitter integration
 
 ### Status Line
@@ -89,7 +81,7 @@ It's my view on Neovim
 5. [Annotation Generator (neogen)](https://github.com/danymat/neogen) - A better annotation generator. Supports multiple languages and annotation conventions.
 6. [Documentation (mini-doc)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-doc.md) - To generate documentation.
 
-### Startup
+### Dashboards
 
 1. [Dashboard (dashboard-nvim)](https://github.com/nvimdev/dashboard-nvim) - Vim dashboard.
 2. [Custom Dashboard (startup)](https://github.com/max397574/startup.nvim) - A highly configurable neovim startup screen.
@@ -111,7 +103,7 @@ It's my view on Neovim
 1. [Open Folders with Neovim (oil)](https://github.com/stevearc/oil.nvim) - Neovim file explorer: edit your filesystem like a buffer.
 2. [File Manager (neo-tree)](https://github.com/nvim-neo-tree/neo-tree.nvim) - Neovim plugin to manage the file system and other tree like structures.
 3. [File Manager (mini-files)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md) - Mini popup with folders and files.
-4. [yazi File Manager (yazi)](https://github.com/mikavilpas/yazi.nvim) - A Neovim Plugin for the yazi terminal file manager.
+4. [File Manager (Yazi)](https://github.com/mikavilpas/yazi.nvim) - A Neovim Plugin for the yazi terminal file manager.
 
 ### Design
 
@@ -223,7 +215,7 @@ It's my view on Neovim
 ### Tests
 
 1. [Tests (neotest)](https://github.com/nvim-neotest/neotest) - An extensible framework for interacting with tests within NeoVim.
-2. [Code Runnder (sniprun)](https://github.com/michaelb/sniprun) - A Neovim plugin to run lines/blocs of code (independently of the rest of the file), supporting multiples languages.
+2. [Code Runner (sniprun)](https://github.com/michaelb/sniprun) - A Neovim plugin to run lines/blocs of code (independently of the rest of the file), supporting multiples languages.
 3. [Build (overseer)](https://github.com/stevearc/overseer.nvim) - A task runner and job management plugin for Neovim.
 4. [REPL (iron)](https://github.com/Vigemus/iron.nvim) - Interactive Repl Over Neovim.
 5. [Compiler (compiler)](https://github.com/Zeioth/compiler.nvim) - Neovim compiler for building and running your code without having to configure anything.

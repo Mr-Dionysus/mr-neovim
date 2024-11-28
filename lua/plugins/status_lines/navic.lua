@@ -1,3 +1,8 @@
+--                              ╭─────────────────╮
+--                              │ For Breadcrumbs │
+--                              ╰─────────────────╯
+-- Simple winbar/statusline plugin that shows your current code context.
+
 return {
   'SmiteshP/nvim-navic',
   requires = 'neovim/nvim-lspconfig',

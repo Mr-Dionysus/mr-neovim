@@ -1,8 +1,12 @@
+--                                 ╭───────────╮
+--                                 │ Clipboard │
+--                                 ╰───────────╯
+-- Clipboard manager neovim plugin with telescope integration.
 return {
   'AckslD/nvim-neoclip.lua',
   dependencies = {
     -- you'll need at least one of these
-    -- {'nvim-telescope/telescope.nvim'},
+    { 'nvim-telescope/telescope.nvim' },
     -- {'ibhagwan/fzf-lua'},
   },
   config = function()

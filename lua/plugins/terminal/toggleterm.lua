@@ -1,3 +1,8 @@
+--                                 ╭──────────╮
+--                                 │ Terminal │
+--                                 ╰──────────╯
+-- A neovim lua plugin to help easily manage multiple terminal windows.
+
 return {
   'akinsho/toggleterm.nvim',
   version = '*',

@@ -1,3 +1,7 @@
+--                             ╭──────────────────╮
+--                             │ Highlight Search │
+--                             ╰──────────────────╯
+-- Hlsearch Lens for Neovim.
 return {
   'kevinhwang91/nvim-hlslens',
   init = function()

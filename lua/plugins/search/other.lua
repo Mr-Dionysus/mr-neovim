@@ -1,3 +1,8 @@
+--                                ╭────────────╮
+--                                │ Open Files │
+--                                ╰────────────╯
+-- Open alternative files for the current buffer.
+
 return {
   'rgroli/other.nvim',
   init = function()

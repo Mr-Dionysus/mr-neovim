@@ -1,3 +1,8 @@
+--                                ╭─────────────╮
+--                                │ Search Undo │
+--                                ╰─────────────╯
+-- A telescope extension to view and search your undo tree 🌴.
+
 return {
   'debugloop/telescope-undo.nvim',
   dependencies = { -- note how they're inverted to above example

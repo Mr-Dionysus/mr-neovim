@@ -1,4 +1,8 @@
--- Highlight todo, notes, etc in comments
+--                               ╭───────────────╮
+--                               │ Todo Comments │
+--                               ╰───────────────╯
+-- ✅ Highlight, list and search todo comments in your projects.
+
 return {
   'folke/todo-comments.nvim',
   event = 'VimEnter',

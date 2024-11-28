@@ -1,3 +1,8 @@
+--                                ╭────────────╮
+--                                │ Lazygit UI │
+--                                ╰────────────╯
+-- Plugin for calling lazygit from within Neovim.
+
 return {
   'kdheepak/lazygit.nvim',
   lazy = true,

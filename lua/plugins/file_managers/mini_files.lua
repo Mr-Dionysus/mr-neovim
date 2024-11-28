@@ -1,3 +1,8 @@
+--                               ╭──────────────╮
+--                               │ File Manager │
+--                               ╰──────────────╯
+-- Mini popup with folders and files.
+
 return {
   'echasnovski/mini.files',
   version = false,

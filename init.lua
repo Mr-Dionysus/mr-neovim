@@ -1,7 +1,6 @@
 --                                   ╭──────╮
 --                                   │ Help │
 --                                   ╰──────╯
-
 -- General help: `:help`
 -- Options: `:help vim.opt`
 -- Options' list: `:help option-list`
@@ -9,11 +8,9 @@
 -- Check errors: `:checkhealth`
 -- Keymaps: `:help vim.keymap.set()`
 -- Autocommands: `:help lua-guide-autocommands`
-
 --                                ╭─────────────╮
 --                                │ Vim Options │
 --                                ╰─────────────╯
-
 -- Must happen before plugins are loaded (otherwise wrong leader will be used)
 -- <space> as the leader key
 vim.g.mapleader = ' '
@@ -85,11 +82,9 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor
 vim.opt.scrolloff = 10
-
 --                             ╭──────────────────╮
 --                             │ Neovim's Keymaps │
 --                             ╰──────────────────╯
-
 vim.keymap.set('i', 'kj', '<Esc>', {})
 vim.keymap.set('i', 'ло', '<Esc>', {})
 
@@ -174,11 +169,9 @@ vim.keymap.set(
   '<C-w><C-k>',
   { desc = 'Move focus to the upper window' }
 )
-
 --                             ╭──────────────────╮
 --                             │   Autocommands   │
 --                             ╰──────────────────╯
-
 -- Highlight when yanking text
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -191,11 +184,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
-
---                                  ╭─────────╮
---                                  │ PLUGINS │
---                                  ╰─────────╯
---    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+--                              ╭────────────────╮
+--                              │ Plugin Manager │
+--                              ╰────────────────╯
+-- 💤 A modern plugin manager for Neovim.
+-- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -214,103 +207,79 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-
   --                                  ╭────────╮
   --                                  │ Themes │
   --                                  ╰────────╯
-
-  { import = 'plugins/themes/tokyonight' },
   { import = 'plugins/themes/sonokai' },
-  { import = 'plugins/themes/zephyr' },
-  { import = 'plugins/themes/melange' },
-  { import = 'plugins/themes/onedark' },
-  { import = 'plugins/themes/gruvbox' },
-  { import = 'plugins/themes/everforest' },
   { import = 'plugins/themes/catppuccin' },
-  { import = 'plugins/themes/nightfox' },
-  { import = 'plugins/themes/bamboo' },
   {
     'Mofiqul/dracula.nvim',
     name = 'dracula',
     priority = 1000,
-    init = function()
-      ---- DARK THEMES ----
-      -- vim.cmd.colorscheme 'dracula'
+    config = function()
+      vim.cmd.colorscheme 'dracula'
       -- vim.cmd.colorscheme 'sonokai'
-      -- vim.cmd.colorscheme 'zephyr'
       -- vim.cmd.colorscheme 'catppuccin-macchiato'
-      vim.cmd.colorscheme 'tokyonight-moon'
-      --
-      ---- LIGHT THEMES ----
-      -- vim.o.background = 'light'
-      --
-      -- vim.cmd.colorscheme 'bamboo'
-      -- vim.cmd.colorscheme 'dayfox'
-      -- vim.cmd.colorscheme 'melange'
-      -- vim.cmd.colorscheme 'onedark'
-      -- vim.cmd.colorscheme 'gruvbox-material'
-      -- vim.cmd.colorscheme 'everforest'
 
-      require('dracula').setup {
+      local dracula = require 'dracula'
+      dracula.setup {
         -- customize dracula color palette
-        -- colors = {
-        --   bg = '#282A36',
-        --   fg = '#F8F8F2',
-        --   selection = '#44475A',
-        --   comment = '#6272A4',
-        --   red = '#FF5555',
-        --   orange = '#FFB86C',
-        --   yellow = '#F1FA8C',
-        --   green = '#50fa7b',
-        --   purple = '#BD93F9',
-        --   cyan = '#8BE9FD',
-        --   pink = '#FF79C6',
-        --   bright_red = '#FF6E6E',
-        --   bright_green = '#69FF94',
-        --   bright_yellow = '#FFFFA5',
-        --   bright_blue = '#D6ACFF',
-        --   bright_magenta = '#FF92DF',
-        --   bright_cyan = '#A4FFFF',
-        --   bright_white = '#FFFFFF',
-        --   menu = '#21222C',
-        --   visual = '#3E4452',
-        --   gutter_fg = '#4B5263',
-        --   nontext = '#3B4048',
-        --   white = '#ABB2BF',
-        --   black = '#191A21',
+        colors = {
+          bg = '#282A36',
+          fg = '#F8F8F2',
+          selection = '#44475A',
+          comment = '#6272A4',
+          red = '#FF5555',
+          orange = '#FFB86C',
+          yellow = '#F1FA8C',
+          green = '#50fa7b',
+          purple = '#BD93F9',
+          cyan = '#8BE9FD',
+          pink = '#FF79C6',
+          bright_red = '#FF6E6E',
+          bright_green = '#69FF94',
+          bright_yellow = '#FFFFA5',
+          bright_blue = '#D6ACFF',
+          bright_magenta = '#FF92DF',
+          bright_cyan = '#A4FFFF',
+          bright_white = '#FFFFFF',
+          menu = '#21222C',
+          visual = '#3E4452',
+          gutter_fg = '#4B5263',
+          nontext = '#3B4048',
+          white = '#ABB2BF',
+          black = '#191A21',
+        },
+        -- show the '~' characters after the end of buffers
+        show_end_of_buffer = true, -- default false
+        -- use transparent background
+        transparent_bg = false, -- default false
+        -- set custom lualine background color
+        lualine_bg_color = '#44475a', -- default nil
+        -- set italic comment
+        italic_comment = false, -- default false
+        -- overrides the default highlights with table see `:h synIDattr`
+        overrides = {},
+        -- You can use overrides as table like this
+        -- overrides = {
+        --   NonText = { fg = "white" }, -- set NonText fg to white
+        --   NvimTreeIndentMarker = { link = "NonText" }, -- link to NonText highlight
+        --   Nothing = {} -- clear highlight of Nothing
         -- },
-        -- -- show the '~' characters after the end of buffers
-        -- show_end_of_buffer = true, -- default false
-        -- -- use transparent background
-        -- transparent_bg = false, -- default false
-        -- -- set custom lualine background color
-        -- lualine_bg_color = '#44475a', -- default nil
-        -- -- set italic comment
-        -- italic_comment = true, -- default false
-        -- -- overrides the default highlights with table see `:h synIDattr`
-        -- overrides = {},
-        -- -- You can use overrides as table like this
-        -- -- overrides = {
-        -- --   NonText = { fg = "white" }, -- set NonText fg to white
-        -- --   NvimTreeIndentMarker = { link = "NonText" }, -- link to NonText highlight
-        -- --   Nothing = {} -- clear highlight of Nothing
-        -- -- },
-        -- -- Or you can also use it like a function to get color from theme
-        -- -- overrides = function (colors)
-        -- --   return {
-        -- --     NonText = { fg = colors.white }, -- set NonText fg to white of theme
-        -- --   }
-        -- -- end,
+        -- Or you can also use it like a function to get color from theme
+        -- overrides = function (colors)
+        --   return {
+        --     NonText = { fg = colors.white }, -- set NonText fg to white of theme
+        --   }
+        -- end,
       }
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-
   --                                  ╭─────────╮
   --                                  │ Windows │
   --                                  ╰─────────╯
-
   -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua.
   -- A full suite of window management enhancements. Vim splits on steroids!
   { import = 'plugins/windows/focus' },
@@ -328,11 +297,9 @@ require('lazy').setup({
   -- terminal multiplexer splits. Supports tmux, Wezterm, and Kitty.
   -- Think about splits in terms of "up/down/left/right"
   -- { import = 'plugins/windows/smart_splits' },
-
   --                                 ╭──────────╮
   --                                 │ Comments │
   --                                 ╰──────────╯
-
   -- ✅ Highlight, list and search todo comments in your projects.
   { import = 'plugins/comments/todo_comments' },
 
@@ -353,15 +320,13 @@ require('lazy').setup({
 
   -- A better annotation generator. Supports multiple languages
   -- and annotation conventions.
-  { import = 'plugins/comments/neoget' },
+  { import = 'plugins/comments/neogen' },
 
   -- Documentation generator.
   { import = 'plugins/comments/mini_doc' },
-
   --                                  ╭────────╮
   --                                  │ Cursor │
   --                                  ╰────────╯
-
   -- Multiple cursors plugin for Vim/Neovim.
   { import = 'plugins/cursor/visual_multi' },
 
@@ -376,11 +341,9 @@ require('lazy').setup({
   -- uses of the word under the cursor using either LSP,
   -- Tree-sitter, or regex matching.
   { import = 'plugins/cursor/illuminate' },
-
   --                                   ╭───────╮
   --                                   │ Debug │
   --                                   ╰───────╯
-
   -- Debug Adapter Protocol client implementation for Neovim.
   { import = 'plugins/debug/dap' },
 
@@ -406,11 +369,9 @@ require('lazy').setup({
 
   -- VSCode 💡 for neovim's built-in LSP.
   { import = 'plugins/debug/lightbulb' },
-
   --                                  ╭────────╮
   --                                  │ Design │
   --                                  ╰────────╯
-
   -- Distraction-free coding for Neovim.
   { import = 'plugins/design/zen_mode' },
 
@@ -440,11 +401,9 @@ require('lazy').setup({
   -- This plugin adds indentation guides to Neovim. It uses
   -- Neovim's virtual text feature and no conceal.
   { import = 'plugins/design/indent_blankline' },
-
   --                               ╭───────────────╮
   --                               │ File Managers │
   --                               ╰───────────────╯
-
   -- Neovim plugin to manage the file system and other tree
   -- like structures.
   { import = 'plugins/file_managers/neo_tree' },
@@ -457,11 +416,9 @@ require('lazy').setup({
 
   -- Mini popup with folders and files.
   { import = 'plugins/file_managers/mini_files' },
-
   --                                  ╭────────╮
   --                                  │ Format │
   --                                  ╰────────╯
-
   -- Lightweight yet powerful formatter plugin for Neovim.
   { import = 'plugins/format/conform' },
 
@@ -471,14 +428,16 @@ require('lazy').setup({
   -- The Refactoring library based off the Refactoring book
   -- by Martin Fowler.
   { import = 'plugins/format/refactoring' },
-
   --                                 ╭──────────╮
   --                                 │ Frontend │
   --                                 ╰──────────╯
-
   -- An unofficial Tailwind CSS integration and tooling for
   -- Neovim.
   { import = 'plugins/frontend/tailwind_tools' },
+
+  -- 🌈 A Neovim plugin to add vscode-style TailwindCSS completion
+  -- to nvim-cmp.
+  { import = 'plugins/frontend/tailwindcss_colorizer_cmp' },
 
   -- A Neovim port of Matt Pocock's ts-error-translator for
   -- VSCode for turning messy and confusing TypeScript errors
@@ -497,11 +456,9 @@ require('lazy').setup({
 
   -- Highlight colors for Neovim.
   { import = 'plugins/frontend/highlight_colors' },
-
   --                                 ╭──────────╮
-  --                                 │ training │
+  --                                 │ Training │
   --                                 ╰──────────╯
-
   -- vim-be-good is a nvim plugin designed to make you better
   -- at Vim Movements.
   { import = 'plugins/training/vim_be_good' },
@@ -516,11 +473,9 @@ require('lazy').setup({
 
   -- A Neovim plugin enabling you to solve LeetCode problems.
   { import = 'plugins/training/leetcode' },
-
   --                                    ╭─────╮
   --                                    │ Git │
   --                                    ╰─────╯
-
   -- Super fast git decorations implemented purely in Lua.
   { import = 'plugins/git/gitsigns' },
 
@@ -544,11 +499,9 @@ require('lazy').setup({
 
   -- Git commands inside Neovim.
   { import = 'plugins/git/mini_git' },
-
   --                                  ╭────────╮
   --                                  │ Images │
   --                                  ╰────────╯
-
   -- 📸 Snapshot plugin with rich features that can make
   -- pretty code snapshots for Neovim.
   { import = 'plugins/images/codesnap' },
@@ -559,11 +512,9 @@ require('lazy').setup({
   -- Effortlessly embed images into any markup language,
   -- like LaTeX, Markdown or Typst.
   -- { import = 'plugins/images/img-clip' },
-
   --                                  ╭─────────╮
   --                                  │ Keymaps │
   --                                  ╰─────────╯
-
   -- 💥 Create key bindings that stick. WhichKey helps you
   -- remember your Neovim keymaps, by showing available
   -- keybindings in a popup as you type.
@@ -575,11 +526,9 @@ require('lazy').setup({
 
   -- Map keys without delay when typing.
   { import = 'plugins/keymaps/better_escape' },
-
   --                                    ╭─────╮
   --                                    │ LSP │
   --                                    ╰─────╯
-
   -- An asynchronous linter plugin for Neovim complementary
   -- to the built-in Language Server Protocol support.
   { import = 'plugins/lsp/lint' },
@@ -615,11 +564,9 @@ require('lazy').setup({
   -- Extensions for the built-in LSP support in Neovim for
   -- eclipse.jdt.ls.
   -- { import = 'plugins/lsp/jdtls' },
-
   --                                   ╭───────╮
   --                                   │ Marks │
   --                                   ╰───────╯
-
   -- A better user experience for viewing and interacting
   -- with Vim marks.
   { import = 'plugins/marks/marks' },
@@ -629,7 +576,6 @@ require('lazy').setup({
 
   -- Pin files and switch between them with ease.
   -- { import = 'plugins/marks/harpoon' },
-
   --                                  ╭─────────╮
   --                                  │ Motions │
   --                                  ╰─────────╯
@@ -660,11 +606,9 @@ require('lazy').setup({
   -- Navigate your code with search labels, enhanced
   -- character motions and Treesitter integration
   -- { import = 'plugins/motions/flash' },
-
   --                                   ╭───────╮
   --                                   │ Notes │
   --                                   ╰───────╯
-
   -- Modernity meets insane extensibility. The future
   -- of organizing your life in Neovim.
   { import = 'plugins/notes/neorg' },
@@ -685,11 +629,9 @@ require('lazy').setup({
 
   -- Obsidian 🤝 Neovim.
   { import = 'plugins/notes/obsidian' },
-
   --                                  ╭────────╮
   --                                  │ Remote │
   --                                  ╰────────╯
-
   -- 🚧 (Alpha stage software) Edit files, run programs,
   -- and work with LSP on a remote machine from the comfort
   -- of your local environment 🚧.
@@ -700,11 +642,9 @@ require('lazy').setup({
 
   --Develop inside docker containers, just like VSCode.
   -- { import = 'plugins/remote/remote_containers' },
-
   --                                  ╭────────╮
   --                                  │ Search │
   --                                  ╰────────╯
-
   -- Find, Filter, Preview, Pick. All lua, all the time.
   { import = 'plugins/search/telescope' },
 
@@ -741,11 +681,9 @@ require('lazy').setup({
   -- Incremental LSP renaming based on Neovim's
   -- command-preview feature.
   { import = 'plugins/search/inc_rename' },
-
   --                                 ╭──────────╮
   --                                 │ Snippets │
   --                                 ╰──────────╯
-
   -- Snippet Engine for Neovim written in Lua.
   { import = 'plugins/snippets/luasnip' },
 
@@ -754,24 +692,20 @@ require('lazy').setup({
 
   -- Automagical editing and creation of snippets.
   -- { import = 'plugins/snippets/scissors' },
-
-  --                                  ╭─────────╮
-  --                                  │ Startup │
-  --                                  ╰─────────╯
-
+  --                                 ╭───────────╮
+  --                                 │ Dashboard │
+  --                                 ╰───────────╯
   -- Vim dashboard.
-  { import = 'plugins/startup/dashboard' },
+  { import = 'plugins/dashboards/dashboard' },
 
   -- A highly configurable neovim startup screen.
-  -- { import = 'plugins/startup/alpha' },
+  -- { import = 'plugins/dashboards/alpha' },
 
   -- A highly configurable neovim startup screen
-  -- { import = 'plugins/startup/startup' },
-
+  -- { import = 'plugins/dashboards/startup' },
   --                               ╭──────────────╮
   --                               │ Status Lines │
   --                               ╰──────────────╯
-
   -- A blazing fast and easy to configure neovim statusline
   -- plugin written in pure lua.
   { import = 'plugins/status_lines/lualine' },
@@ -783,11 +717,9 @@ require('lazy').setup({
   -- Visual Studio Code inspired breadcrumbs plugin for the
   -- Neovim editor.
   { import = 'plugins/status_lines/barbecue' },
-
   --                                  ╭────────╮
   --                                  │ Syntax │
   --                                  ╰────────╯
-
   -- Nvim Treesitter configurations and abstraction layer.
   { import = 'plugins/syntax/treesitter' },
 
@@ -815,11 +747,9 @@ require('lazy').setup({
 
   -- Rainbow delimiters for Neovim with Tree-sitter.
   { import = 'plugins/syntax/rainbow_delimiters' },
-
   --                                 ╭──────────╮
   --                                 │ Termianl │
   --                                 ╰──────────╯
-
   -- A neovim lua plugin to help easily manage multiple
   -- terminal windows.
   { import = 'plugins/terminal/toggleterm' },
@@ -827,11 +757,9 @@ require('lazy').setup({
   -- Open files and command output from wezterm, kitty,
   -- and neovim terminals in your current neovim instance.
   { import = 'plugins/terminal/flatten' },
-
   --                                   ╭───────╮
   --                                   │ Tests │
   --                                   ╰───────╯
-
   -- An extensible framework for interacting with tests
   -- within NeoVim.
   { import = 'plugins/tests/neotest' },
@@ -854,11 +782,9 @@ require('lazy').setup({
   -- the jupyter kernel. Fork of magma-nvim with improvements
   -- in image rendering, performance, and more.
   -- { import = 'plugins/tests/molten' },
-
   --                                   ╭───────╮
   --                                   │ Utils │
   --                                   ╰───────╯
-
   -- Ecnhances a/i textobjects
   { import = 'plugins/utils/mini_ai' },
 

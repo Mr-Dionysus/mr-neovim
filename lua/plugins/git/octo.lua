@@ -1,3 +1,9 @@
+--                                  ╭────────╮
+--                                  │ GitHub │
+--                                  ╰────────╯
+-- Edit and review GitHub issues and pull requests
+-- from the comfort of your favorite editor.
+
 return {
   'pwntester/octo.nvim',
   requires = {

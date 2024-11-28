@@ -1,3 +1,7 @@
+--                               ╭──────────────╮
+--                               │ Zk Assistant │
+--                               ╰──────────────╯
+-- Neovim extension for zk.
 return {
   'zk-org/zk-nvim',
   config = function()

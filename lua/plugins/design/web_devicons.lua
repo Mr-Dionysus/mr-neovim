@@ -1,3 +1,8 @@
+--                                   ╭───────╮
+--                                   │ Icons │
+--                                   ╰───────╯
+-- Lua fork of vim-web-devicons for Neovim.
+
 return {
   'nvim-tree/nvim-web-devicons',
   init = function()

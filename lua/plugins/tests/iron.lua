@@ -1,3 +1,7 @@
+--                                   ╭──────╮
+--                                   │ REPL │
+--                                   ╰──────╯
+-- Interactive Repl Over Neovim.
 return {
   'Vigemus/iron.nvim',
   init = function()

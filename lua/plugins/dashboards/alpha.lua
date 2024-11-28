@@ -1,3 +1,8 @@
+--                             ╭──────────────────╮
+--                             │ Custom Dashboard │
+--                             ╰──────────────────╯
+-- A lua powered greeter like vim-startify / dashboard-nvim.
+
 return {
   'goolord/alpha-nvim',
   -- dependencies = { 'echasnovski/mini.icons' },

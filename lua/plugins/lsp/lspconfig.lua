@@ -1,13 +1,25 @@
+--                                ╭─────────────╮
+--                                │ LSP Configs │
+--                                ╰─────────────╯
+-- Quickstart configs for Nvim LSP.
 return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
   dependencies = {
+    --                              ╭─────────────────╮
+    --                              │ Package Manager │
+    --                              ╰─────────────────╯
     -- Automatically install LSPs and related tools to stdpath for Neovim
+    -- Portable package manager for Neovim that runs everywhere Neovim runs.
+    -- Easily install and manage LSP servers, DAP servers, linters, and formatters.
     { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
 
-    -- Useful status updates for LSP.
+    --                             ╭───────────────────╮
+    --                             │ LSP Notifications │
+    --                             ╰───────────────────╯
+    -- 💫 Extensible UI for Neovim notifications and LSP progress messages.
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
     { 'j-hui/fidget.nvim', opts = {} },
 

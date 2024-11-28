@@ -1,3 +1,8 @@
+--                         ╭───────────────────────────╮
+--                         │ Autopair/Rename HTML Tags │
+--                         ╰───────────────────────────╯
+-- Use treesitter to autoclose and autorename html tag.
+
 return {
   'windwp/nvim-ts-autotag',
   init = function()

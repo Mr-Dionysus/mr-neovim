@@ -1,3 +1,8 @@
+--                            ╭─────────────────────╮
+--                            │ Increment/Decrement │
+--                            ╰─────────────────────╯
+-- Enhanced increment/decrement plugin for Neovim.
+
 return {
   'monaqa/dial.nvim',
   init = function()

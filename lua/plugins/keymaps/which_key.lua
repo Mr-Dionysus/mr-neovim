@@ -1,27 +1,23 @@
--- NOTE: Plugins can also be configured to run Lua code when they are loaded.
---
--- For example, in the following configuration, we use:
---  event = 'VimEnter'
---
--- which loads which-key before all the UI elements are loaded. Events can be
--- normal autocommands events (`:help autocmd-events`).
---
--- Then, because we use the `config` key, the configuration only runs
--- after the plugin has been loaded:
---  config = function() ... end
-return
--- NOTE: Plugins can also be configured to run Lua code when they are loaded.
---
--- For example, in the following configuration, we use:
---  event = 'VimEnter'
---
--- which loads which-key before all the UI elements are loaded. Events can be
--- normal autocommands events (`:help autocmd-events`).
---
--- Then, because we use the `config` key, the configuration only runs
--- after the plugin has been loaded:
---  config = function() ... end
-{ -- Useful plugin to show you pending keybinds.
+--                                  ╭─────────╮
+--                                  │ Keymaps │
+--                                  ╰─────────╯
+-- 💥 Create key bindings that stick. WhichKey helps you remember
+-- your Neovim keymaps, by showing available keybindings in a popup
+-- as you type.
+
+return {
+  -- Plugins can also be configured to run Lua code when they are loaded.
+  --
+  -- For example, in the following configuration, we use:
+  --  event = 'VimEnter'
+  --
+  -- which loads which-key before all the UI elements are loaded. Events can be
+  -- normal autocommands events (`:help autocmd-events`).
+  --
+  -- Then, because we use the `config` key, the configuration only runs
+  -- after the plugin has been loaded:
+  --  config = function() ... end
+  -- Useful plugin to show you pending keybinds.
   'folke/which-key.nvim',
   event = 'VimEnter', -- Sets the loading event to 'VimEnter'
   opts = {

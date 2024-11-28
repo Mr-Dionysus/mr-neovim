@@ -1,3 +1,7 @@
+--                             ╭──────────────────╮
+--                             │ Find and Replace │
+--                             ╰──────────────────╯
+-- Treesitter based structural search and replace plugin for Neovim.
 return {
   'cshuaimin/ssr.nvim',
   module = 'ssr',

@@ -1,3 +1,7 @@
+--                                 ╭──────────╮
+--                                 │ LeetCode │
+--                                 ╰──────────╯
+-- A Neovim plugin enabling you to solve LeetCode problems.
 return {
   'kawre/leetcode.nvim',
   build = ':TSUpdate html',

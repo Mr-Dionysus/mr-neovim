@@ -1,3 +1,8 @@
+--                              ╭─────────────────╮
+--                              │ Focus on Window │
+--                              ╰─────────────────╯
+-- 🧘 Distraction-free coding for Neovim.
+
 return {
   'pocco81/true-zen.nvim',
   config = function()

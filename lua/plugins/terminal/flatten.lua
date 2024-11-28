@@ -1,3 +1,9 @@
+--                           ╭──────────────────────╮
+--                           │ Terminal Ingetration │
+--                           ╰──────────────────────╯
+-- Open files and command output from wezterm, kitty, and
+-- neovim terminals in your current neovim instance.
+
 return {
   'willothy/flatten.nvim',
   config = true,

@@ -1,3 +1,7 @@
+--                                 ╭──────────╮
+--                                 │ LSP goto │
+--                                 ╰──────────╯
+-- A small Neovim plugin for previewing definitions using floating windows.
 return {
   'rmagatti/goto-preview',
   event = 'BufEnter',

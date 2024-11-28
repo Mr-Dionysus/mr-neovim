@@ -1,3 +1,8 @@
+--                             ╭──────────────────╮
+--                             │ Fast File Switch │
+--                             ╰──────────────────╯
+-- Pin files and switch between them with ease.
+
 return {
   'ThePrimeagen/harpoon',
   branch = 'harpoon2',

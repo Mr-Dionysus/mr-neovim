@@ -1,3 +1,9 @@
+--                                  ╭─────────╮
+--                                  │ For Hop │
+--                                  ╰─────────╯
+-- A Plugin that provides region selection using hints
+-- on the abstract syntax tree of a document.
+
 return {
   'mfussenegger/nvim-treehopper',
   keys = {
