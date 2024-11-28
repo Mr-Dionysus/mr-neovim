@@ -59,7 +59,6 @@
   "mini.doc": { "branch": "main", "commit": "bb73a3d1ff390f7e2740027ea2567017099a237c" },
   "mini.files": { "branch": "main", "commit": "6abe854f1410fc6aec69897a78b1db994c32d9c6" },
   "mini.icons": { "branch": "main", "commit": "54686be7d58807906cb2c8c2216e0bf9c044f19a" },
-  "mini.nvim": { "branch": "main", "commit": "c8922aef8207137e66c80acdb9523668599ba62a" },
   "mkdnflow.nvim": { "branch": "main", "commit": "d459bd7ce68910272038ed037c028180161fd14d" },
   "modicator.nvim": { "branch": "main", "commit": "e349636d905e03305f1eda9c081e63560598f118" },
   "neo-tree.nvim": { "branch": "main", "commit": "a77af2e764c5ed4038d27d1c463fa49cd4794e07" },

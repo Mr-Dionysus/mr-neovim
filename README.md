@@ -114,8 +114,7 @@ It's my view on Neovim
 5. [Redesign (dressing)](https://github.com/stevearc/dressing.nvim) - Neovim plugin to improve the default vim.ui interfaces.
 6. [Indent Guides (indent-blankline)](https://github.com/lukas-reineke/indent-blankline.nvim) - This plugin adds indentation guides to Neovim. It uses Neovim's virtual text feature and no conceal.
 7. [Notifications (nvim-notify)](https://github.com/rcarriga/nvim-notify) - A fancy, configurable, notification manager for NeoVim.
-8. [Transparent Background (transparent)](https://github.com/xiyaowong/transparent.nvim) - Remove all background colors to make nvim transparent.
-9. [Dim Inactive Code (twilight)](https://github.com/folke/twilight.nvim) - 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims inactive portions of the code you're editing using TreeSitter.
+8. [Dim Inactive Code (twilight)](https://github.com/folke/twilight.nvim) - 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims inactive portions of the code you're editing using TreeSitter.
 
 ### Keymaps
 
