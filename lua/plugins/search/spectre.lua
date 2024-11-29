@@ -7,10 +7,10 @@ return {
   init = function()
     vim.keymap.set(
       'n',
-      '<leader>sS',
+      '<leader>rS',
       '<cmd>lua require("spectre").toggle()<CR>',
       {
-        desc = 'Toggle Spectre',
+        desc = '[T]oggle [S]pectre',
       }
     )
     vim.keymap.set(
@@ -18,7 +18,7 @@ return {
       '<leader>sw',
       '<cmd>lua require("spectre").open_visual({select_word=true})<CR>',
       {
-        desc = 'Search current word',
+        desc = '[S]earch Current [W]ord',
       }
     )
     vim.keymap.set(
@@ -26,7 +26,7 @@ return {
       '<leader>sw',
       '<esc><cmd>lua require("spectre").open_visual()<CR>',
       {
-        desc = 'Search current word',
+        desc = '[S]earch Current [W]ord',
       }
     )
     vim.keymap.set(
@@ -35,6 +35,9 @@ return {
       '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
       {
         desc = '[S]earch [I]n File',
+      },
+      require('spectre').setup {
+        use_trouble_qf = true,
       }
     )
   end,

@@ -22,8 +22,8 @@ return {
         replace_all = '<leader><cr>',
       },
     }
-    vim.keymap.set({ 'n', 'x' }, '<leader>sR', function()
+    vim.keymap.set({ 'n', 'x' }, '<leader>rF', function()
       require('ssr').open()
-    end)
+    end, { desc = '[R]ename in [F]ile' })
   end,
 }

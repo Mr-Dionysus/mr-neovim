@@ -149,10 +149,9 @@ It's my view on Neovim
 5. [Highlight Search (nvim-hlslens)](https://github.com/kevinhwang91/nvim-hlslens) - Hlsearch Lens for Neovim.
 6. [Find and Replace (nvim-spectre)](https://github.com/nvim-pack/nvim-spectre) - Find the enemy and replace them with dark power.
 7. [Find and Replace (ssr)](https://github.com/cshuaimin/ssr.nvim) - Treesitter based structural search and replace plugin for Neovim.
-8. [Replace (inc-rename)](https://github.com/smjonas/inc-rename.nvim) - Incremental LSP renaming based on Neovim's command-preview feature.
-9. [Clipboard (nvim-neoclip)](https://github.com/AckslD/nvim-neoclip.lua) - Clipboard manager neovim plugin with telescope integration.
-10. [Yank & Put Plus ULTRA (yanky)](https://github.com/gbprod/yanky.nvim) - Improved Yank and Put functionalities for Neovim.
-11. [Code Outline (aerial)](https://github.com/stevearc/aerial.nvim) - Neovim plugin for a code outline window.
+8. [Clipboard (nvim-neoclip)](https://github.com/AckslD/nvim-neoclip.lua) - Clipboard manager neovim plugin with telescope integration.
+9. [Yank & Put Plus ULTRA (yanky)](https://github.com/gbprod/yanky.nvim) - Improved Yank and Put functionalities for Neovim.
+10. [Code Outline (aerial)](https://github.com/stevearc/aerial.nvim) - Neovim plugin for a code outline window.
 
 ### Remote
 
