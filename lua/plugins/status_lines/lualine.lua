@@ -11,7 +11,8 @@ return {
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = 'horizon',
+        theme = 'catppuccin',
+        --theme = 'horizon',
         -- theme = 'material',
         -- theme = 'modus-vivendi',
         -- theme = 'palenight',

@@ -53,6 +53,7 @@ vim.opt.smartcase = true
 
 -- Signcolumn
 vim.opt.signcolumn = 'yes'
+vim.opt.numberwidth = 4 -- Adjust width if needed
 
 -- Update time
 vim.opt.updatetime = 250
@@ -530,6 +531,9 @@ require('lazy').setup({
   -- Bundle of more than 30 new textobjects for Neovim.
   { import = 'plugins/motions/various_textobjs' },
 
+  -- Ecnhances a/i textobjects
+  { import = 'plugins/motions/mini_ai' },
+
   -- Leap is a general-purpose motion plugin for Neovim,
   -- building and improving primarily on vim-sneak, with
   -- the ultimate goal of establishing a new standard
@@ -715,9 +719,6 @@ require('lazy').setup({
   --                                   ╭───────╮
   --                                   │ Utils │
   --                                   ╰───────╯
-  -- Ecnhances a/i textobjects
-  { import = 'plugins/utils/mini_ai' },
-
   -- UI Component Library for Neovim.
   { import = 'plugins/utils/nui' },
 

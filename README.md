@@ -21,6 +21,7 @@ It's my view on Neovim
 5. [For Hop (nvim-treehopper)](https://github.com/mfussenegger/nvim-treehopper) - A Plugin that provides region selection using hints on the abstract syntax tree of a document.
 6. [Motions (Leap)](https://github.com/ggandor/leap.nvim) - Leap is a general-purpose motion plugin for Neovim, building and improving primarily on vim-sneak, with the ultimate goal of establishing a new standard interface for moving around in the visible area in Vim-like modal editors.
 7. [Motions (Flash | Try Later)](https://github.com/folke/flash.nvim) - Navigate your code with search labels, enhanced character motions and Treesitter integration
+8. [a/i textobjects (mini-ai)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md) - Enhances a/i textobjects.
 
 ### Status Line
 
@@ -131,8 +132,7 @@ It's my view on Neovim
  5. [Increment/Decrement (dial)](https://github.com/monaqa/dial.nvim) - Enhanced increment/decrement plugin for Neovim. 
  6. [Macros (NeoComposer)](https://github.com/ecthelionvi/NeoComposer.nvim) - Neovim plugin that simplifies macros, enhancing productivity with harmony.
  7. [Package Info (package-info)](https://github.com/vuki656/package-info.nvim) - ✍️ All the npm/yarn/pnpm commands I don't want to type.
- 8. [a/i textobjects (mini-ai)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md) - Enhances a/i textobjects.
- 9. [UI Components (nui)](https://github.com/MunifTanjim/nui.nvim) - UI Component Library for Neovim.
+ 8. [UI Components (nui)](https://github.com/MunifTanjim/nui.nvim) - UI Component Library for Neovim.
 
 ### Format
 
