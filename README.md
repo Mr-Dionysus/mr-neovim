@@ -185,10 +185,11 @@ It's my view on Neovim
 8. [Package Manager (mason)](https://github.com/williamboman/mason.nvim) - Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters.
 9. [Java LSP 1 (nvim-jdtls)](https://github.com/mfussenegger/nvim-jdtls) - Extensions for the built-in LSP support in Neovim for eclipse.jdt.ls.
 10. [Java LSP 2 (nvim-java)](https://github.com/nvim-java/nvim-java) - Painless Java in Neovim.
-11. [LSP Configs (nvim-lspconfig)](https://github.com/neovim/nvim-lspconfig) - Quickstart configs for Nvim LSP.
-12. [LSP goto (goto-preview)](https://github.com/rmagatti/goto-preview) - A small Neovim plugin for previewing definitions using floating windows.
-13. [LSP Notifications (fidget)](https://github.com/j-hui/fidget.nvim) - 💫 Extensible UI for Neovim notifications and LSP progress messages.
-14. [LSP Embedded (otter)](https://github.com/jmbuhr/otter.nvim) - Just ask an otter! 🦦.
+11. [Golang (go.nvim)](https://github.com/ray-x/go.nvim) - G'day Nvimer, Joyful Gopher: Discover the Feature-Rich Go Plugin for Neovim
+12. [LSP Configs (nvim-lspconfig)](https://github.com/neovim/nvim-lspconfig) - Quickstart configs for Nvim LSP.
+13. [LSP goto (goto-preview)](https://github.com/rmagatti/goto-preview) - A small Neovim plugin for previewing definitions using floating windows.
+14. [LSP Notifications (fidget)](https://github.com/j-hui/fidget.nvim) - 💫 Extensible UI for Neovim notifications and LSP progress messages.
+15. [LSP Embedded (otter)](https://github.com/jmbuhr/otter.nvim) - Just ask an otter! 🦦.
 
 ### Notes
 
