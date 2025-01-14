@@ -211,25 +211,60 @@ require('lazy').setup({
   --                                  ╭────────╮
   --                                  │ Themes │
   --                                  ╰────────╯
-  { import = 'plugins/themes/sonokai' },
-  { import = 'plugins/themes/catppuccin' },
-  { import = 'plugins/themes/dracula' },
+  {
+    import = 'plugins/themes/sonokai',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
+  {
+    import = 'plugins/themes/catppuccin',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
+  {
+    import = 'plugins/themes/dracula',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --
   --                                  ╭─────────╮
   --                                  │ Windows │
   --                                  ╰─────────╯
   -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua.
   -- A full suite of window management enhancements. Vim splits on steroids!
-  { import = 'plugins/windows/focus' },
+  {
+    import = 'plugins/windows/focus',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A small automated session manager for Neovim.
-  { import = 'plugins/windows/auto_session' },
+  {
+    import = 'plugins/windows/auto_session',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- The superior project management solution for neovim.
-  { import = 'plugins/windows/project' },
+  {
+    import = 'plugins/windows/project',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Seamless navigation between tmux panes and vim splits
-  { import = 'plugins/windows/vim_tmux_navigator' },
+  {
+    import = 'plugins/windows/vim_tmux_navigator',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Smart, seamless, directional navigation and resizing of Neovim +
   -- terminal multiplexer splits. Supports tmux, Wezterm, and Kitty.
@@ -239,390 +274,841 @@ require('lazy').setup({
   --                                 │ Comments │
   --                                 ╰──────────╯
   -- ✅ Highlight, list and search todo comments in your projects.
-  { import = 'plugins/comments/todo_comments' },
+  {
+    import = 'plugins/comments/todo_comments',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- ✨ Clarify and beautify your comments and plain text files using boxes
   -- and lines.
   {
     import = 'plugins/comments/comment_box',
+    cond = function()
+      return not vim.g.vscode
+    end,
   },
 
   -- 🧠 💪 // Smart and powerful comment plugin for neovim.
   -- Supports treesitter, dot repeat, left-right/up-down motions,
   -- hooks, and more.
-  { import = 'plugins/comments/comment' },
+  {
+    import = 'plugins/comments/comment',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim treesitter plugin for setting the commentstring based
   -- on the cursor location in a file.
-  { import = 'plugins/comments/ts_context_commentstring' },
+  {
+    import = 'plugins/comments/ts_context_commentstring',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A better annotation generator. Supports multiple languages
   -- and annotation conventions.
-  { import = 'plugins/comments/neogen' },
+  {
+    import = 'plugins/comments/neogen',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Documentation generator.
-  { import = 'plugins/comments/mini_doc' },
+  {
+    import = 'plugins/comments/mini_doc',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                  ╭────────╮
   --                                  │ Cursor │
   --                                  ╰────────╯
   -- Multiple cursors plugin for Vim/Neovim.
-  { import = 'plugins/cursor/visual_multi' },
+  {
+    import = 'plugins/cursor/visual_multi',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Supercharge your workflow and start tabbing out
   -- from parentheses, quotes, and similar contexts today.
-  { import = 'plugins/cursor/tabout' },
+  {
+    import = 'plugins/cursor/tabout',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Cursor line number mode indicator plugin for Neovim.
-  { import = 'plugins/cursor/modicator' },
+  {
+    import = 'plugins/cursor/modicator',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- (Neo)Vim plugin for automatically highlighting other
   -- uses of the word under the cursor using either LSP,
   -- Tree-sitter, or regex matching.
-  { import = 'plugins/cursor/illuminate' },
+  {
+    import = 'plugins/cursor/illuminate',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                   ╭───────╮
   --                                   │ Debug │
   --                                   ╰───────╯
   -- Debug Adapter Protocol client implementation for Neovim.
-  { import = 'plugins/debug/dap' },
+  {
+    import = 'plugins/debug/dap',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A Neovim plugin that display prettier diagnostic messages.
   -- Display diagnostic messages where the cursor is, with icons
   -- and colors.
-  { import = 'plugins/debug/tiny_inline_diagnostic' },
+  {
+    import = 'plugins/debug/tiny_inline_diagnostic',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- This plugin adds virtual text support to nvim-dap.
   -- nvim-treesitter is used to find variable definitions.
-  { import = 'plugins/debug/dap_virtual_text' },
+  {
+    import = 'plugins/debug/dap_virtual_text',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim thin wrapper for GDB, LLDB, PDB/PDB++ and BashDB.
-  { import = 'plugins/debug/gdb' },
+  {
+    import = 'plugins/debug/gdb',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- 🚦 A pretty diagnostics, references, telescope results,
   -- quickfix and location list to help you solve all the
   -- trouble your code is causing.
-  { import = 'plugins/debug/trouble' },
+  {
+    import = 'plugins/debug/trouble',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Fully customizable previewer for LSP code actions.
-  { import = 'plugins/debug/actions_preview' },
+  {
+    import = 'plugins/debug/actions_preview',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- VSCode 💡 for neovim's built-in LSP.
-  { import = 'plugins/debug/lightbulb' },
+  {
+    import = 'plugins/debug/lightbulb',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                  ╭────────╮
   --                                  │ Design │
   --                                  ╰────────╯
   -- Distraction-free coding for Neovim.
-  { import = 'plugins/design/zen_mode' },
+  {
+    import = 'plugins/design/zen_mode',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- 🦝 Clean and elegant distraction-free writing for NeoVim.
-  { import = 'plugins/design/true_zen' },
+  {
+    import = 'plugins/design/true_zen',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- 💥 Highly experimental plugin that completely replaces
   -- the UI for messages, cmdline and the popupmenu.
-  { import = 'plugins/design/noice' },
+  {
+    import = 'plugins/design/noice',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   --  Neovim plugin to improve the default vim.ui interfaces.
-  { import = 'plugins/design/dressing' },
+  {
+    import = 'plugins/design/dressing',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims
   -- inactive portions of the code you're editing using TreeSitter.
-  { import = 'plugins/design/twilight' },
+  {
+    import = 'plugins/design/twilight',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Lua fork of vim-web-devicons for Neovim.
-  { import = 'plugins/design/web_devicons' },
+  {
+    import = 'plugins/design/web_devicons',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A fancy, configurable, notification manager for NeoVim.
-  { import = 'plugins/design/notify' },
+  {
+    import = 'plugins/design/notify',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- This plugin adds indentation guides to Neovim. It uses
   -- Neovim's virtual text feature and no conceal.
-  { import = 'plugins/design/indent_blankline' },
+  {
+    import = 'plugins/design/indent_blankline',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                               ╭───────────────╮
   --                               │ File Managers │
   --                               ╰───────────────╯
   -- Neovim plugin to manage the file system and other tree
   -- like structures.
-  { import = 'plugins/file_managers/neo_tree' },
+  {
+    import = 'plugins/file_managers/neo_tree',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim file explorer: edit your filesystem like a buffer.
-  { import = 'plugins/file_managers/oil' },
+  {
+    import = 'plugins/file_managers/oil',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A Neovim Plugin for the yazi terminal file manager.
-  { import = 'plugins/file_managers/yazi' },
+  {
+    import = 'plugins/file_managers/yazi',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Mini popup with folders and files.
-  { import = 'plugins/file_managers/mini_files' },
+  {
+    import = 'plugins/file_managers/mini_files',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                  ╭────────╮
   --                                  │ Format │
   --                                  ╰────────╯
   -- Lightweight yet powerful formatter plugin for Neovim.
-  { import = 'plugins/format/conform' },
+  {
+    import = 'plugins/format/conform',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim plugin for splitting/joining blocks of code.
-  { import = 'plugins/format/treesj' },
+  {
+    import = 'plugins/format/treesj',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- The Refactoring library based off the Refactoring book
   -- by Martin Fowler.
-  { import = 'plugins/format/refactoring' },
+  {
+    import = 'plugins/format/refactoring',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                 ╭──────────╮
   --                                 │ Frontend │
   --                                 ╰──────────╯
   -- An unofficial Tailwind CSS integration and tooling for
   -- Neovim.
-  { import = 'plugins/frontend/tailwind_tools' },
+  {
+    import = 'plugins/frontend/tailwind_tools',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- 🌈 A Neovim plugin to add vscode-style TailwindCSS completion
   -- to nvim-cmp.
-  { import = 'plugins/frontend/tailwindcss_colorizer_cmp' },
+  {
+    import = 'plugins/frontend/tailwindcss_colorizer_cmp',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A Neovim port of Matt Pocock's ts-error-translator for
   -- VSCode for turning messy and confusing TypeScript errors
   -- into plain English.
-  { import = 'plugins/frontend/ts_error_translator' },
+  {
+    import = 'plugins/frontend/ts_error_translator',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A Neovim plugin for seamless, asynchronous project-wide
   -- TypeScript type-checking using the TypeScript compiler (tsc).
-  { import = 'plugins/frontend/tsc' },
+  {
+    import = 'plugins/frontend/tsc',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- ⚡ TypeScript integration NeoVim deserves ⚡.
-  { import = 'plugins/frontend/typescript_tools' },
+  {
+    import = 'plugins/frontend/typescript_tools',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Color picker and highlighter plugin for Neovim.
-  { import = 'plugins/frontend/ccc' },
+  {
+    import = 'plugins/frontend/ccc',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Highlight colors for Neovim.
-  { import = 'plugins/frontend/highlight_colors' },
+  {
+    import = 'plugins/frontend/highlight_colors',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                 ╭──────────╮
   --                                 │ Training │
   --                                 ╰──────────╯
   -- vim-be-good is a nvim plugin designed to make you better
   -- at Vim Movements.
-  { import = 'plugins/training/vim_be_good' },
+  {
+    import = 'plugins/training/vim_be_good',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Establish good command workflow and quit bad habit.
-  { import = 'plugins/training/hardtime' },
+  {
+    import = 'plugins/training/hardtime',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- CompetiTest.nvim is a Neovim plugin for Competitive
   -- Programming: it can manage and check testcases, download
   -- problems and contests from online judges and much more.
-  { import = 'plugins/training/competitest' },
+  {
+    import = 'plugins/training/competitest',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A Neovim plugin enabling you to solve LeetCode problems.
-  { import = 'plugins/training/leetcode' },
+  {
+    import = 'plugins/training/leetcode',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                    ╭─────╮
   --                                    │ Git │
   --                                    ╰─────╯
   -- Super fast git decorations implemented purely in Lua.
-  { import = 'plugins/git/gitsigns' },
+  {
+    import = 'plugins/git/gitsigns',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- An interactive and powerful Git interface for Neovim,
   -- inspired by Magit.
-  { import = 'plugins/git/neogit' },
+  {
+    import = 'plugins/git/neogit',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Single tabpage interface for easily cycling through
   -- diffs for all modified files for any git rev.
-  { import = 'plugins/git/diffview' },
+  {
+    import = 'plugins/git/diffview',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Plugin for calling lazygit from within Neovim.
-  { import = 'plugins/git/lazygit' },
+  {
+    import = 'plugins/git/lazygit',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A plugin to visualise and resolve merge conflicts in Neovim.
-  { import = 'plugins/git/git_conflict' },
+  {
+    import = 'plugins/git/git_conflict',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Edit and review GitHub issues and pull requests from the
   -- comfort of your favorite editor.
-  { import = 'plugins/git/octo' },
+  {
+    import = 'plugins/git/octo',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Git commands inside Neovim.
-  { import = 'plugins/git/mini_git' },
+  {
+    import = 'plugins/git/mini_git',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                  ╭────────╮
   --                                  │ Images │
   --                                  ╰────────╯
   -- 📸 Snapshot plugin with rich features that can make
   -- pretty code snapshots for Neovim.
-  { import = 'plugins/images/codesnap' },
+  {
+    import = 'plugins/images/codesnap',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- 🖼️ Bringing images to Neovim.
-  -- { import = 'plugins/images/image' },
+  -- { import = 'plugins/images/image', cond = (function() return not vim.g.vscode end) },
 
   -- Effortlessly embed images into any markup language,
   -- like LaTeX, Markdown or Typst.
-  -- { import = 'plugins/images/img-clip' },
+  -- { import = 'plugins/images/img-clip', cond = (function() return not vim.g.vscode end) },
   --                                  ╭─────────╮
   --                                  │ Keymaps │
   --                                  ╰─────────╯
   -- 💥 Create key bindings that stick. WhichKey helps you
   -- remember your Neovim keymaps, by showing available
   -- keybindings in a popup as you type.
-  { import = 'plugins/keymaps/which_key' },
+  {
+    import = 'plugins/keymaps/which_key',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- 🗺️ A legend for your keymaps, commands, and autocmds,
   -- integrates with which-key.nvim, lazy.nvim, and more.
-  { import = 'plugins/keymaps/legendary' },
+  {
+    import = 'plugins/keymaps/legendary',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Map keys without delay when typing.
-  { import = 'plugins/keymaps/better_escape' },
+  {
+    import = 'plugins/keymaps/better_escape',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                    ╭─────╮
   --                                    │ LSP │
   --                                    ╰─────╯
   -- An asynchronous linter plugin for Neovim complementary
   -- to the built-in Language Server Protocol support.
-  { import = 'plugins/lsp/lint' },
+  {
+    import = 'plugins/lsp/lint',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Faster LuaLS setup for Neovim
-  { import = 'plugins/lsp/lazydev' },
+  {
+    import = 'plugins/lsp/lazydev',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Meta type definitions for the Lua platform Luvit.
-  { import = 'plugins/lsp/luvit_meta' },
+  {
+    import = 'plugins/lsp/luvit_meta',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Quickstart configs for Nvim LSP.
-  { import = 'plugins/lsp/lspconfig' },
+  {
+    import = 'plugins/lsp/lspconfig',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A completion plugin for neovim coded in Lua.
-  { import = 'plugins/lsp/cmp' },
+  {
+    import = 'plugins/lsp/cmp',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Painless Java in Neovim.
-  { import = 'plugins/lsp/java' },
+  {
+    import = 'plugins/lsp/java',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
+
+  -- G'day Nvimer, Joyful Gopher: Discover the Feature-Rich Go Plugin for Neovim
+  {
+    import = 'plugins/lsp/go',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- LSP signature hint as you type.
-  { import = 'plugins/lsp/lsp_signature' },
+  {
+    import = 'plugins/lsp/lsp_signature',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- vscode-like pictograms for neovim lsp completion items.
-  { import = 'plugins/lsp/lspkind' },
+  {
+    import = 'plugins/lsp/lspkind',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A small Neovim plugin for previewing definitions using
   -- floating windows.
-  { import = 'plugins/lsp/goto_preview' },
+  {
+    import = 'plugins/lsp/goto_preview',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Just ask an otter! 🦦.
-  { import = 'plugins/lsp/otter' },
+  {
+    import = 'plugins/lsp/otter',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Extensions for the built-in LSP support in Neovim for
   -- eclipse.jdt.ls.
-  -- { import = 'plugins/lsp/jdtls' },
+  -- { import = 'plugins/lsp/jdtls', cond = (function() return not vim.g.vscode end) },
   --                                   ╭───────╮
   --                                   │ Marks │
   --                                   ╰───────╯
   -- A better user experience for viewing and interacting
   -- with Vim marks.
-  { import = 'plugins/marks/marks' },
+  {
+    import = 'plugins/marks/marks',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim plugin for tagging important files.
-  { import = 'plugins/marks/grapple' },
+  {
+    import = 'plugins/marks/grapple',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Pin files and switch between them with ease.
-  -- { import = 'plugins/marks/harpoon' },
+  -- { import = 'plugins/marks/harpoon', cond = (function() return not vim.g.vscode end) },
   --                                  ╭─────────╮
   --                                  │ Motions │
   --                                  ╰─────────╯
   -- Hop is an EasyMotion-like plugin allowing you to jump
   -- anywhere in a document with as few keystrokes as possible.
-  { import = 'plugins/motions/hop' },
+  { import = 'plugins/motions/hop', cond = true },
 
   -- A Plugin that provides region selection using hints on
   -- the abstract syntax tree of a document.
-  { import = 'plugins/motions/treehopper' },
+  {
+    import = 'plugins/motions/treehopper',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Syntax aware text-objects, select, move, swap, and peek support.
-  { import = 'plugins/motions/treesitter_textobjects' },
+  {
+    import = 'plugins/motions/treesitter_textobjects',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Go forward/backward with square brackets.
-  { import = 'plugins/motions/mini_bracketed' },
+  {
+    import = 'plugins/motions/mini_bracketed',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Bundle of more than 30 new textobjects for Neovim.
-  { import = 'plugins/motions/various_textobjs' },
+  {
+    import = 'plugins/motions/various_textobjs',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Ecnhances a/i textobjects
-  { import = 'plugins/motions/mini_ai' },
+  {
+    import = 'plugins/motions/mini_ai',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Leap is a general-purpose motion plugin for Neovim,
   -- building and improving primarily on vim-sneak, with
   -- the ultimate goal of establishing a new standard
   -- interface for moving around in the visible area in
   -- Vim-like modal editors.
-  -- { import = 'plugins/motions/leap' },
+  -- { import = 'plugins/motions/leap', cond = (function() return not vim.g.vscode end) },
 
   -- Navigate your code with search labels, enhanced
   -- character motions and Treesitter integration
-  -- { import = 'plugins/motions/flash' },
+  -- { import = 'plugins/motions/flash', cond = (function() return not vim.g.vscode end) },
   --                                   ╭───────╮
   --                                   │ Notes │
   --                                   ╰───────╯
   -- Modernity meets insane extensibility. The future
   -- of organizing your life in Neovim.
-  { import = 'plugins/notes/neorg' },
+  {
+    import = 'plugins/notes/neorg',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Orgmode clone written in Lua for Neovim 0.9+.
-  { import = 'plugins/notes/orgmode' },
+  {
+    import = 'plugins/notes/orgmode',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A Neovim (lua) plugin for working with a markdown
   -- zettelkasten / wiki and mixing it with a journal,
   -- based on telescope.nvim.
-  { import = 'plugins/notes/telekasten' },
+  {
+    import = 'plugins/notes/telekasten',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim extension for zk.
-  { import = 'plugins/notes/zk' },
+  {
+    import = 'plugins/notes/zk',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Fluent navigation and management of markdown notebooks.
-  { import = 'plugins/notes/mkdnflow' },
+  {
+    import = 'plugins/notes/mkdnflow',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Obsidian 🤝 Neovim.
-  { import = 'plugins/notes/obsidian' },
+  {
+    import = 'plugins/notes/obsidian',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                  ╭────────╮
   --                                  │ Remote │
   --                                  ╰────────╯
   -- 🚧 (Alpha stage software) Edit files, run programs,
   -- and work with LSP on a remote machine from the comfort
   -- of your local environment 🚧.
-  -- { import = 'plugins/remote/distant' },
+  -- { import = 'plugins/remote/distant', cond = (function() return not vim.g.vscode end) },
 
   -- Neovim (Lua powered) Network Resource Manager.
-  -- { import = 'plugins/remote/netman' },
+  -- { import = 'plugins/remote/netman', cond = (function() return not vim.g.vscode end) },
 
   --Develop inside docker containers, just like VSCode.
-  -- { import = 'plugins/remote/remote_containers' },
+  -- { import = 'plugins/remote/remote_containers', cond = (function() return not vim.g.vscode end) },
   --                                  ╭────────╮
   --                                  │ Search │
   --                                  ╰────────╯
   -- Find, Filter, Preview, Pick. All lua, all the time.
-  { import = 'plugins/search/telescope' },
+  {
+    import = 'plugins/search/telescope',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Better quickfix window in Neovim, polish old quickfix
   -- window.
-  { import = 'plugins/search/bqf' },
+  {
+    import = 'plugins/search/bqf',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Open alternative files for the current buffer.
-  { import = 'plugins/search/other' },
+  {
+    import = 'plugins/search/other',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A telescope extension to view and search your undo
   -- tree 🌴.
-  { import = 'plugins/search/telescope_undo' },
+  {
+    import = 'plugins/search/telescope_undo',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Clipboard manager neovim plugin with telescope integration.
-  { import = 'plugins/search/neoclip' },
+  {
+    import = 'plugins/search/neoclip',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Hlsearch Lens for Neovim.
-  { import = 'plugins/search/hlslens' },
+  {
+    import = 'plugins/search/hlslens',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Find the enemy and replace them with dark power.
-  { import = 'plugins/search/spectre' },
+  {
+    import = 'plugins/search/spectre',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Improved Yank and Put functionalities for Neovim.
-  { import = 'plugins/search/yanky' },
+  {
+    import = 'plugins/search/yanky',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Treesitter based structural search and replace plugin
   -- for Neovim.
-  { import = 'plugins/search/ssr' },
+  {
+    import = 'plugins/search/ssr',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim plugin for a code outline window.
-  { import = 'plugins/search/aerial' },
+  {
+    import = 'plugins/search/aerial',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                 ╭──────────╮
   --                                 │ Snippets │
   --                                 ╰──────────╯
   -- Snippet Engine for Neovim written in Lua.
-  { import = 'plugins/snippets/luasnip' },
+  {
+    import = 'plugins/snippets/luasnip',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Set of preconfigured snippets for different languages.
-  { import = 'plugins/snippets/friendly_snippets' },
+  {
+    import = 'plugins/snippets/friendly_snippets',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Automagical editing and creation of snippets.
   -- { import = 'plugins/snippets/scissors' },
@@ -630,117 +1116,247 @@ require('lazy').setup({
   --                                 │ Dashboard │
   --                                 ╰───────────╯
   -- Vim dashboard.
-  { import = 'plugins/dashboards/dashboard' },
+  {
+    import = 'plugins/dashboards/dashboard',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A highly configurable neovim startup screen.
-  -- { import = 'plugins/dashboards/alpha' },
+  -- { import = 'plugins/dashboards/alpha', cond = (function() return not vim.g.vscode end) },
 
   -- A highly configurable neovim startup screen
-  -- { import = 'plugins/dashboards/startup' },
+  -- { import = 'plugins/dashboards/startup', cond = (function() return not vim.g.vscode end) },
   --                               ╭──────────────╮
   --                               │ Status Lines │
   --                               ╰──────────────╯
   -- A blazing fast and easy to configure neovim statusline
   -- plugin written in pure lua.
-  { import = 'plugins/status_lines/lualine' },
+  {
+    import = 'plugins/status_lines/lualine',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Simple winbar/statusline plugin that shows your current
   -- code context.
-  { import = 'plugins/status_lines/navic' },
+  {
+    import = 'plugins/status_lines/navic',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Visual Studio Code inspired breadcrumbs plugin for the
   -- Neovim editor.
-  { import = 'plugins/status_lines/barbecue' },
+  {
+    import = 'plugins/status_lines/barbecue',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                  ╭────────╮
   --                                  │ Syntax │
   --                                  ╰────────╯
   -- Nvim Treesitter configurations and abstraction layer.
-  { import = 'plugins/syntax/treesitter' },
+  {
+    import = 'plugins/syntax/treesitter',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Add/change/delete surrounding delimiter pairs with ease.
   -- Written with ❤️ in Lua.
-  { import = 'plugins/syntax/surround' },
+  {
+    import = 'plugins/syntax/surround',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A Neovim plugin that displays interactive vertical
   -- scrollbars and signs.
-  { import = 'plugins/syntax/scrollview' },
+  {
+    import = 'plugins/syntax/scrollview',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Autopairs for neovim written in lua.
-  { import = 'plugins/syntax/autopairs' },
+  {
+    import = 'plugins/syntax/autopairs',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Use treesitter to autoclose and autorename html tag.
-  { import = 'plugins/syntax/ts_autotag' },
+  {
+    import = 'plugins/syntax/ts_autotag',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- The goal of nvim-ufo is to make Neovim's fold look
   -- modern and keep high performance.
-  { import = 'plugins/syntax/ufo' },
+  {
+    import = 'plugins/syntax/ufo',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- The goal of promise-async is to port Promise & Async
   -- from JavaScript to Lua.
-  { import = 'plugins/syntax/promise_async' },
+  {
+    import = 'plugins/syntax/promise_async',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Rainbow delimiters for Neovim with Tree-sitter.
-  { import = 'plugins/syntax/rainbow_delimiters' },
+  {
+    import = 'plugins/syntax/rainbow_delimiters',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                 ╭──────────╮
   --                                 │ Termianl │
   --                                 ╰──────────╯
   -- A neovim lua plugin to help easily manage multiple
   -- terminal windows.
-  { import = 'plugins/terminal/toggleterm' },
+  {
+    import = 'plugins/terminal/toggleterm',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Open files and command output from wezterm, kitty,
   -- and neovim terminals in your current neovim instance.
-  { import = 'plugins/terminal/flatten' },
+  {
+    import = 'plugins/terminal/flatten',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                   ╭───────╮
   --                                   │ Tests │
   --                                   ╰───────╯
   -- An extensible framework for interacting with tests
   -- within NeoVim.
-  { import = 'plugins/tests/neotest' },
+  {
+    import = 'plugins/tests/neotest',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A Neovim plugin to run lines/blocs of code (independently
   -- of the rest of the file), supporting multiples languages.
-  { import = 'plugins/tests/sniprun' },
+  {
+    import = 'plugins/tests/sniprun',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Interactive Repl Over Neovim.
-  { import = 'plugins/tests/iron' },
+  {
+    import = 'plugins/tests/iron',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim compiler for building and running your code
   -- without having to configure anything.
-  { import = 'plugins/tests/compiler' },
+  {
+    import = 'plugins/tests/compiler',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A task runner and job management plugin for Neovim.
-  { import = 'plugins/tests/overseer' },
+  {
+    import = 'plugins/tests/overseer',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A neovim plugin for interactively running code with
   -- the jupyter kernel. Fork of magma-nvim with improvements
   -- in image rendering, performance, and more.
-  -- { import = 'plugins/tests/molten' },
+  -- { import = 'plugins/tests/molten', cond = (function() return not vim.g.vscode end) },
   --                                   ╭───────╮
   --                                   │ Utils │
   --                                   ╰───────╯
   -- UI Component Library for Neovim.
-  { import = 'plugins/utils/nui' },
+  {
+    import = 'plugins/utils/nui',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Enhanced increment/decrement plugin for Neovim.
-  { import = 'plugins/utils/dial' },
+  {
+    import = 'plugins/utils/dial',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- ✍️ All the npm/yarn/pnpm commands I don't want to type.
-  { import = 'plugins/utils/package_info' },
+  {
+    import = 'plugins/utils/package_info',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Neovim plugin that simplifies macros, enhancing
   -- productivity with harmony.
-  { import = 'plugins/utils/neocomposer' },
+  {
+    import = 'plugins/utils/neocomposer',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A minimal 🤏 HTTP-client 🐼 interface 🖥️ for Neovim ❤️..
-  { import = 'plugins/utils/kulala' },
+  {
+    import = 'plugins/utils/kulala',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- A very fast, powerful, extensible and asynchronous
   -- Neovim HTTP client written in Lua.
-  { import = 'plugins/utils/rest' },
+  {
+    import = 'plugins/utils/rest',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Plugin to improve viewing Markdown files in Neovim.
-  { import = 'plugins/utils/render_markdown' },
+  {
+    import = 'plugins/utils/render_markdown',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!

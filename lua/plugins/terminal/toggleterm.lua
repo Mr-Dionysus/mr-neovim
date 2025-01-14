@@ -28,7 +28,7 @@ return {
       '',
       '<leader>tt',
       ':ToggleTerm direction=float<CR>',
-      { desc = '[T]oggle [T]erminal' }
+      { desc = '[T]oggle [T]erminal', silent = true }
     )
     vim.keymap.set(
       '',

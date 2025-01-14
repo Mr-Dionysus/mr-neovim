@@ -39,6 +39,6 @@ return {
         hint_offset = 1,
       }
     end, { remap = true })
-    vim.keymap.set('', 's', ':HopChar1<CR>', { remap = true })
+    vim.keymap.set('', 's', ':HopChar1<CR>', { remap = true, silent = true })
   end,
 }
