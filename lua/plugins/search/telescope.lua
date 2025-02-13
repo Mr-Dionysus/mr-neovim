@@ -144,12 +144,6 @@ return {
       builtin.oldfiles,
       { desc = '[S]earch Recent Files ("." for repeat)' }
     )
-    vim.keymap.set(
-      'n',
-      '<leader><leader>',
-      builtin.buffers,
-      { desc = '[ ] Find existing buffers' }
-    )
 
     vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = '[W]rite' })
     vim.keymap.set('n', '<leader>W', ':wq<CR>', { desc = 'Force [W]rite' })

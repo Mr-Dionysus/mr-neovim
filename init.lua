@@ -16,6 +16,12 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Default line width
+vim.opt.textwidth = 80
+
+-- Hide Markdown syntax
+vim.opt.conceallevel = 2
+
 -- Needs for optimal visual
 vim.opt.termguicolors = true
 
@@ -243,12 +249,12 @@ require('lazy').setup({
   },
 
   -- A small automated session manager for Neovim.
-  {
-    import = 'plugins/windows/auto_session',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
+  -- {
+  --   import = 'plugins/windows/auto_session',
+  --   cond = function()
+  --     return not vim.g.vscode
+  --   end,
+  -- },
 
   -- The superior project management solution for neovim.
   {
@@ -368,6 +374,16 @@ require('lazy').setup({
   -- Debug Adapter Protocol client implementation for Neovim.
   {
     import = 'plugins/debug/dap',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
+
+  -- An extension for nvim-dap, providing default configurations
+  -- for python and methods to debug individual test methods or
+  -- classes.
+  {
+    import = 'plugins/debug/nvim_dap_python',
     cond = function()
       return not vim.g.vscode
     end,

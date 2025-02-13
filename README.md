@@ -129,7 +129,7 @@ It's my view on Neovim
  2. [Postman-like (rest)](https://github.com/rest-nvim/rest.nvim) - A very fast, powerful, extensible and asynchronous Neovim HTTP client written in Lua.
  3. [Postman-like (kulala)](https://github.com/mistweaverco/kulala.nvim) - A minimal 🤏 HTTP-client 🐼 interface 🖥️ for Neovim ❤️..
  4. [Plugin Manager (lazy)](https://github.com/folke/lazy.nvim) - 💤 A modern plugin manager for Neovim.
- 5. [Increment/Decrement (dial)](https://github.com/monaqa/dial.nvim) - Enhanced increment/decrement plugin for Neovim. 
+ 5. [Increment/Decrement (dial)](https://github.com/monaqa/dial.nvim) - Enhanced increment/decrement plugin for Neovim.
  6. [Macros (NeoComposer)](https://github.com/ecthelionvi/NeoComposer.nvim) - Neovim plugin that simplifies macros, enhancing productivity with harmony.
  7. [Package Info (package-info)](https://github.com/vuki656/package-info.nvim) - ✍️ All the npm/yarn/pnpm commands I don't want to type.
  8. [UI Components (nui)](https://github.com/MunifTanjim/nui.nvim) - UI Component Library for Neovim.
@@ -159,7 +159,7 @@ It's my view on Neovim
 2. [Remote (netman)](https://github.com/miversen33/netman.nvim) - Neovim (Lua powered) Network Resource Manager.
 3. [Inside Docker (nvim-remote-containers)](https://github.com/jamestthompson3/nvim-remote-containers) - Develop inside docker containers, just like VSCode.
 
-### Windows 
+### Windows
 
 1. [Auto-Session (auto-session)](https://github.com/rmagatti/auto-session) - A small automated session manager for Neovim.
 2. [Projects (project)](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
@@ -205,11 +205,14 @@ It's my view on Neovim
 1. [Diagnostics (tiny-inline-diagnostic)](https://github.com/rachartier/tiny-inline-diagnostic.nvim) - A Neovim plugin that display prettier diagnostic messages. Display diagnostic messages where the cursor is, with icons and colors.
 2. [Debug Virtual Text (nvim-dap-virtual-text)](https://github.com/theHamsta/nvim-dap-virtual-text) - This plugin adds virtual text support to nvim-dap. nvim-treesitter is used to find variable definitions.
 3. [Debug (nvim-dap)](https://github.com/mfussenegger/nvim-dap) - Debug Adapter Protocol client implementation for Neovim.
-4. [Debug UI (nvim-dap-ui)](https://github.com/rcarriga/nvim-dap-ui) - A UI for nvim-dap.
-5. [Debug (nvim-gdb)](https://github.com/sakhnik/nvim-gdb) - Neovim thin wrapper for GDB, LLDB, PDB/PDB++ and BashDB.
-6. [LSP Actions (actions-preview)](https://github.com/aznhe21/actions-preview.nvim) - Fully customizable previewer for LSP code actions.
-7. [LSP Lightbulb Action (nvim-lightbulb)](https://github.com/kosayoda/nvim-lightbulb) - VSCode 💡 for neovim's built-in LSP.
-8. [LSP Diagnostic (trouble)](https://github.com/folke/trouble.nvim) - 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+4. [Debug Python (nvim-dap-python)](https://github.com/mfussenegger/nvim-dap-python) - An extension for nvim-dap, providing default configurations
+for python and methods to debug individual test methods or
+classes.
+5. [Debug UI (nvim-dap-ui)](https://github.com/rcarriga/nvim-dap-ui) - A UI for nvim-dap.
+6. [Debug (nvim-gdb)](https://github.com/sakhnik/nvim-gdb) - Neovim thin wrapper for GDB, LLDB, PDB/PDB++ and BashDB.
+7. [LSP Actions (actions-preview)](https://github.com/aznhe21/actions-preview.nvim) - Fully customizable previewer for LSP code actions.
+8. [LSP Lightbulb Action (nvim-lightbulb)](https://github.com/kosayoda/nvim-lightbulb) - VSCode 💡 for neovim's built-in LSP.
+9. [LSP Diagnostic (trouble)](https://github.com/folke/trouble.nvim) - 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 
 ### Tests
 
@@ -220,7 +223,7 @@ It's my view on Neovim
 5. [Compiler (compiler)](https://github.com/Zeioth/compiler.nvim) - Neovim compiler for building and running your code without having to configure anything.
 6. [Jupyter Notebook (molten-nvim)](https://github.com/benlubas/molten-nvim) - A neovim plugin for interactively running code with the jupyter kernel. Fork of magma-nvim with improvements in image rendering, performance, and more.
 
-### Training 
+### Training
 
 1. [Tutorial (vim-be-good)](https://github.com/ThePrimeagen/vim-be-good) - vim-be-good is a nvim plugin designed to make you better at Vim Movements.
 2. [Crush Bad Habits (hardtime)](https://github.com/m4xshen/hardtime.nvim) - Establish good command workflow and quit bad habit.

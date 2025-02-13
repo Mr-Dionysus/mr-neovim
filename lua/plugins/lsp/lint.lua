@@ -9,9 +9,18 @@ return {
   config = function()
     local lint = require 'lint'
     lint.linters_by_ft = {
+      python = { 'ruff' },
       markdown = { 'markdownlint' },
       javascript = { 'eslint' },
       html = { 'htmlhint' },
+    }
+
+    local markdownlint = require('lint').linters.markdownlint
+    markdownlint.args = {
+      '--disable',
+      'MD013',
+      'MD007',
+      '--', -- Required
     }
 
     -- To allow other plugins to add linters to require('lint').linters_by_ft,
