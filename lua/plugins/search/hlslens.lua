@@ -1,3 +1,4 @@
+local options = require 'vim.filetype.options'
 --                             ╭──────────────────╮
 --                             │ Highlight Search │
 --                             ╰──────────────────╯
@@ -45,7 +46,5 @@ return {
       [[g#<Cmd>lua require('hlslens').start()<CR>]],
       kopts
     )
-
-    vim.api.nvim_set_keymap('n', '<Leader>H', '<Cmd>noh<CR>', kopts)
   end,
 }

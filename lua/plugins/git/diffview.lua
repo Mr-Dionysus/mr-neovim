@@ -15,13 +15,13 @@ return {
         '',
         '<leader>gd',
         ':DiffviewOpen<CR>',
-        { desc = '[D]ebug [Diff] View' }
+        { desc = '[D]iff in Files (Open)', silent = true }
       ),
       vim.keymap.set(
         '',
         '<leader>gD',
         ':DiffviewClose<CR>',
-        { desc = 'Close [D]ebug [Diff] View' }
+        { desc = '[D]iff in Files (Close)', silent = true }
       ),
     }
   end,

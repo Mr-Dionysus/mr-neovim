@@ -8,9 +8,9 @@ return {
   config = function()
     vim.keymap.set(
       '',
-      '<leader>tF',
+      '<leader>tf',
       ':TZFocus<CR>',
-      { desc = '[T]oggle [F]ocus' }
+      { desc = '[F]ocus', silent = true }
     )
   end,
 }

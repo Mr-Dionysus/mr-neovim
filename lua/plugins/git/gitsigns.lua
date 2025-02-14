@@ -63,56 +63,36 @@ return {
       -- visual mode
       map('v', '<leader>gs', function()
         gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
-      end, { desc = '[G]it [S]tage Hunk' })
+      end, { desc = '[S]tage Hunk' })
       map('v', '<leader>gr', function()
         gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
-      end, { desc = '[G]it [R]eset Hunk' })
+      end, { desc = '[R]eset Hunk' })
       -- normal mode
-      map(
-        'n',
-        '<leader>gs',
-        gitsigns.stage_hunk,
-        { desc = '[G]it [S]tage Hunk' }
-      )
-      map(
-        'n',
-        '<leader>gr',
-        gitsigns.reset_hunk,
-        { desc = '[G]it [R]eset Hunk' }
-      )
-      map(
-        'n',
-        '<leader>gS',
-        gitsigns.stage_buffer,
-        { desc = '[G]it [S]tage Buffer' }
-      )
+      map('n', '<leader>gs', gitsigns.stage_hunk, { desc = '[S]tage Hunk' })
+      map('n', '<leader>gr', gitsigns.reset_hunk, { desc = '[R]eset Hunk' })
+      map('n', '<leader>gS', gitsigns.stage_buffer, { desc = '[S]tage Buffer' })
       -- map(
       --   'n',
       --   '<leader>gu',
       --   gitsigns.undo_stage_hunk,
       --   { desc = '[G]it [U]ndo stage hunk' }
       -- )
-      map(
-        'n',
-        '<leader>gR',
-        gitsigns.reset_buffer,
-        { desc = '[G]it [R]eset Buffer' }
-      )
+      map('n', '<leader>gR', gitsigns.reset_buffer, { desc = '[R]eset Buffer' })
       map(
         'n',
         '<leader>gu',
         gitsigns.diffthis,
-        { desc = '[G]it Diff [U]nstaged Changes' }
+        { desc = '[U]nstaged Changes in Diff' }
       )
       map('n', '<leader>ga', function()
         gitsigns.diffthis '@'
-      end, { desc = '[G]it Diff [A]ll Changes' })
+      end, { desc = '[A]ll Changes in Diff' })
       -- Toggles
       map(
         'n',
         '<leader>gb',
         gitsigns.toggle_current_line_blame,
-        { desc = '[G]it Toggle [B]lame line' }
+        { desc = '[B]lame Line' }
       )
       -- map(
       --   'n',

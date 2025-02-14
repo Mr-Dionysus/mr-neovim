@@ -17,7 +17,7 @@ return {
       '',
       '<leader>td',
       ':Twilight<CR>',
-      { desc = '[T]oggle [D]ark Twilight' }
+      { desc = '[D]ark Twilight', silent = true }
     )
   end,
 }

@@ -73,7 +73,7 @@ return {
             mode,
             keys,
             func,
-            { buffer = event.buf, desc = 'LSP: ' .. desc }
+            { buffer = event.buf, desc = '' .. desc }
           )
         end
 
@@ -105,37 +105,37 @@ return {
         --  Useful when you're not sure what type a variable is and you want to see
         --  the definition of its *type*, not where it was *defined*.
         map(
-          '<leader>D',
+          '<leader>lt',
           require('telescope.builtin').lsp_type_definitions,
-          'Type [D]efinition'
+          '[T]ype Definition'
         )
 
         -- Fuzzy find all the symbols in your current document.
         --  Symbols are things like variables, functions, types, etc.
         map(
-          '<leader>sF',
+          '<leader>ld',
           require('telescope.builtin').lsp_document_symbols,
-          '[S]earch [F]ile Symbols'
+          '[D]ocument (/) Symbols'
         )
 
         -- Fuzzy find all the symbols in your current workspace.
         --  Similar to document symbols, except searches over your entire project.
         map(
-          '<leader>sW',
+          '<leader>lw',
           require('telescope.builtin').lsp_dynamic_workspace_symbols,
-          '[S]earch [W]orkspace Symbols'
+          '[W]orkspace (/) Symbols'
         )
 
         -- Rename the variable under your cursor.
         --  Most Language Servers support renaming across files, etc.
-        map('<leader>rn', ':IncRename ', '[R]e[n]ame')
+        map('<leader>iS', ':IncRename ', "[L]SP's Rename in Files")
 
         -- Execute a code action, usually your cursor needs to be on top of an error
         -- or a suggestion from your LSP for this to activate.
         map(
-          '<leader>ca',
+          '<leader>la',
           vim.lsp.buf.code_action,
-          '[C]ode [A]ction',
+          '[A]ctions on Code',
           { 'n', 'x' }
         )
 
@@ -200,7 +200,7 @@ return {
             vim.lsp.inlay_hint.enable(
               not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }
             )
-          end, '[T]oggle Inlay [H]ints')
+          end, '[H]ints')
         end
       end,
     })

@@ -28,19 +28,19 @@ return {
       '',
       '<leader>tt',
       ':ToggleTerm direction=float<CR>',
-      { desc = '[T]oggle [T]erminal', silent = true }
+      { desc = '[T]erminal', silent = true }
     )
     vim.keymap.set(
       '',
       '<leader>t-',
       ':ToggleTerm direction=horizontal<CR>',
-      { desc = '[T]erminal -----' }
+      { desc = '[-] Terminal', silent = true }
     )
     vim.keymap.set(
       '',
       '<leader>t|',
       ':ToggleTerm direction=vertical<CR>',
-      { desc = '[T]erminal |||||' }
+      { desc = '[|] Terminal', silent = true }
     )
   end,
 }

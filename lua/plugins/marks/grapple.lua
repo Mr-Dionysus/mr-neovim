@@ -11,21 +11,25 @@ return {
   event = { 'BufReadPost', 'BufNewFile' },
   cmd = 'Grapple',
   keys = {
-    { '<leader>M', '<cmd>Grapple toggle<cr>', desc = 'Grapple toggle tag' },
     {
-      '<leader>m',
+      '<leader>T',
+      '<cmd>Grapple toggle<cr>',
+      desc = '[T]oggle Tag',
+    },
+    {
+      '<leader>c',
       '<cmd>Grapple toggle_tags<cr>',
-      desc = 'Grapple open tags window',
+      desc = '[C]hange Buffers',
     },
     {
       '<leader>n',
       '<cmd>Grapple cycle_tags next<cr>',
-      desc = 'Grapple cycle next tag',
+      desc = '[N]ext Buffer',
     },
     {
       '<leader>p',
       '<cmd>Grapple cycle_tags prev<cr>',
-      desc = 'Grapple cycle previous tag',
+      desc = '[P]revious Buffer',
     },
   },
 }

@@ -15,7 +15,7 @@ return {
       '',
       '<leader>tz',
       ':ZenMode<CR>',
-      { desc = '[T]oggle [Z]en' }
+      { desc = '[Z]en', silent = true }
     )
   end,
 }

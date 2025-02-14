@@ -11,6 +11,12 @@ return {
     require('orgmode').setup {
       org_agenda_files = '~/orgfiles/**/*',
       org_default_notes_file = '~/orgfiles/refile.org',
+      mappings = {
+        global = {
+          org_agenda = { '<leader>oA', desc = '[A]genda via Org' },
+          org_capture = { '<leader>oC', desc = '[C]apture via Org' },
+        },
+      },
     }
 
     -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option

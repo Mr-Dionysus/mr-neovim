@@ -12,9 +12,9 @@ return {
   config = function()
     vim.keymap.set(
       '',
-      '<leader>tf',
+      '<leader>se',
       ':lua MiniFiles.open()<CR>',
-      { desc = '[T]oggle [F]ile Manager' }
+      { desc = '[E]xplorer', silent = true }
     )
   end,
 }

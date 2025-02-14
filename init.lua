@@ -133,9 +133,9 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set(
   'n',
-  '<leader>q',
+  '<leader>mq',
   vim.diagnostic.setloclist,
-  { desc = 'Open diagnostic [Q]uickfix list' }
+  { desc = '[Q]uickfix List' }
 )
 
 -- Exit terminal mode in the builtin terminal with a shortcut.

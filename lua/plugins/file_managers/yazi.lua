@@ -8,9 +8,9 @@ return {
   keys = {
     {
       -- Open in the current working directory
-      '<leader>cw',
+      '<leader>sh',
       '<cmd>Yazi cwd<cr>',
-      desc = "Open the file manager in nvim's working directory",
+      desc = '[H]ere via Yazy',
     },
     {
       -- NOTE: this requires a version of yazi that includes

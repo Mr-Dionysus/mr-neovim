@@ -54,9 +54,23 @@ return {
     }
 
     -- iron also has a list of commands, see :h iron-commands for all available commands
-    vim.keymap.set('n', '<space>rs', '<cmd>IronRepl<cr>')
-    vim.keymap.set('n', '<space>rr', '<cmd>IronRestart<cr>')
-    vim.keymap.set('n', '<space>rf', '<cmd>IronFocus<cr>')
-    vim.keymap.set('n', '<space>rh', '<cmd>IronHide<cr>')
+    vim.keymap.set(
+      'n',
+      '<space>oi',
+      '<cmd>IronRepl<cr>',
+      { desc = '[I]ron REPL (Start)' }
+    )
+    vim.keymap.set(
+      'n',
+      '<space>oR',
+      '<cmd>IronRestart<cr>',
+      { desc = '[R]estart Iron REPL' }
+    )
+    vim.keymap.set(
+      'n',
+      '<space>oH',
+      '<cmd>IronHide<cr>',
+      { desc = '[H]ide Iron REPL' }
+    )
   end,
 }
