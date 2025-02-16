@@ -22,8 +22,14 @@ return {
   event = 'VimEnter', -- Sets the loading event to 'VimEnter'
   opts = {
     preset = 'modern',
-    delay = 0,
+    delay = 100,
+    win = {
+      col = 0.5,
+      width = 0.7,
+    },
     icons = {
+      rules = false,
+      notify = true,
       -- set icon mappings to true if you have a Nerd Font
       mappings = vim.g.have_nerd_font,
       -- If you are using a Nerd Font: set icons.keys to an empty table which will use the
@@ -64,12 +70,72 @@ return {
     spec = {
       { '<leader>d', group = '[D]ebug', icon = '' },
       { '<leader>g', group = '[G]it', icon = '󰊢' },
-      { '<leader>t', group = '[T]oggle', icon = '' },
+      { '<leader>t', group = '[T]oggle', icon = '' },
       { '<leader>m', group = '[M]essages', icon = '󰍢' },
       { '<leader>l', group = '[L]SP', icon = '' },
-      { '<leader>s', group = '[S]earch Files', icon = '' },
-      { '<leader>i', group = '[I]n Files', icon = '' },
+      { '<leader>s', group = '[S]earch Files', icon = '' },
+      { '<leader>i', group = '[I]n Files', icon = '' },
       { '<leader>o', group = '[O]ther', icon = '󰘥' },
+
+      -- Single Char
+      {
+        '<leader>c',
+        name = '[C]hange Buffer',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>f',
+        name = '[F]ormat',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>n',
+        name = '[N]ext Buffer',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>p',
+        name = '[P]revious Buffer',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>q',
+        name = '[Q]uit',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>Q',
+        name = '[Q]uit Force',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>T',
+        name = '[T]oggle Tag',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>u',
+        name = '[U]ndo History',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>w',
+        name = '[W]rite',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
+        '<leader>W',
+        name = '[W]rite and Quit',
+        icon = { icon = '', color = 'grey' },
+      },
     },
   },
 }
+
+-- <C + w> - Windows
+-- <C + i/o> - Jumps
+-- <S + k> - Documentation
+-- g* - GOTO
+-- z* - Window/View Manipulations
+-- [ and ] - Move Between ...
+-- * / # - Search Current Word Forward/Backward
