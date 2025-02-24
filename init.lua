@@ -900,12 +900,6 @@ require('lazy').setup({
   --                                  ╭─────────╮
   --                                  │ Motions │
   --                                  ╰─────────╯
-  -- A Plugin that provides region selection using hints on
-  -- the abstract syntax tree of a document.
-  {
-    import = 'plugins/motions/treehopper',
-  },
-
   -- Syntax aware text-objects, select, move, swap, and peek support.
   {
     import = 'plugins/motions/treesitter_textobjects',

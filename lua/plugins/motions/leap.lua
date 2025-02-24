@@ -22,7 +22,13 @@ return {
         or ch0:match '%w' and ch1:match '%w' and ch2:match '%w'
       )
     end
-    -- Or just set to grey directly, e.g. { fg = '#777777' },
+    -- vim.api.nvim_set_hl(0, 'LeapLabelPrimary', { fg = '#ec0868', bold = true })
+    vim.api.nvim_set_hl(0, 'LeapLabelPrimary', { fg = '#ffea00', bold = true })
+    vim.api.nvim_set_hl(
+      0,
+      'LeapLabelSecondary',
+      { fg = '#ff5500', bold = true }
+    )
     -- if Comment is saturated.
     -- vim.api.nvim_set_hl(0, 'LeapBackdrop', { link = 'Comment' })
   end,
