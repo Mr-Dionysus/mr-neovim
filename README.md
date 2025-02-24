@@ -8,9 +8,10 @@ It's my view on Neovim
 
 ### Themes
 
-1. [Sonokai](https://github.com/sainnhe/sonokai) - Monokai-like
+1. [Sonokai (Monokai-like)](https://github.com/sainnhe/sonokai)
 2. [Dracula](https://github.com/Mofiqul/dracula.nvim)
 3. [Catppuccin](https://github.com/catppuccin/nvim)
+4. [Tokyo Night](https://github.com/folke/tokyonight.nvim)
 
 ### Motions
 
@@ -91,18 +92,22 @@ It's my view on Neovim
 ### Terminal
 
 1. [Terminal (toggleterm)](https://github.com/akinsho/toggleterm.nvim) - A neovim lua plugin to help easily manage multiple terminal windows.
-2. [Terminal Integration (flatten)](https://github.com/willothy/flatten.nvim) - Open files and command output from wezterm, kitty, and neovim terminals in your current neovim instance.
+2. [Terminal Integration (flatten)](https://github.com/willothy/flatten.nvim) - Open files and command output from wezterm,
+kitty, and neovim terminals in your current neovim instance.
 
 ### Images
 
-1. [Code Snapshots (codesnap)](https://github.com/mistricky/codesnap.nvim) - 📸 Snapshot plugin with rich features that can make pretty code snapshots for Neovim.
+1. [Code Snapshots (codesnap)](https://github.com/mistricky/codesnap.nvim) - 📸 Snapshot plugin with rich features that can
+make pretty code snapshots for Neovim.
 2. [Image Viewer (image)](https://github.com/3rd/image.nvim) - 🖼️ Bringing images to Neovim.
-3. [Paste Images (img-clip)](https://github.com/HakonHarnes/img-clip.nvim) - Effortlessly embed images into any markup language, like LaTeX, Markdown or Typst.
+3. [Paste Images (img-clip)](https://github.com/HakonHarnes/img-clip.nvim) - Effortlessly embed images into any markup language,
+like LaTeX, Markdown or Typst.
 
 ### File Managers
 
 1. [Open Folders with Neovim (oil)](https://github.com/stevearc/oil.nvim) - Neovim file explorer: edit your filesystem like a buffer.
-2. [File Manager (neo-tree)](https://github.com/nvim-neo-tree/neo-tree.nvim) - Neovim plugin to manage the file system and other tree like structures.
+2. [File Manager (neo-tree)](https://github.com/nvim-neo-tree/neo-tree.nvim) - Neovim plugin to manage the file system and other
+tree like structures.
 3. [File Manager (mini-files)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md) - Mini popup with folders and files.
 4. [File Manager (Yazi)](https://github.com/mikavilpas/yazi.nvim) - A Neovim Plugin for the yazi terminal file manager.
 
@@ -111,26 +116,34 @@ It's my view on Neovim
 1. [Icons (nvim-web-devicons)](https://github.com/nvim-tree/nvim-web-devicons) - Lua `fork` of vim-web-devicons for Neovim.
 2. [Zen Mode (zen-mode)](https://github.com/folke/zen-mode.nvim) - 🧘 Distraction-free coding for Neovim.
 3. [Focus on Window (true-zen)](https://github.com/pocco81/true-zen.nvim) - 🦝 Clean and elegant distraction-free writing for NeoVim.
-4. [Redesign (noice)](https://github.com/folke/noice.nvim) - 💥 Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+4. [Redesign (noice)](https://github.com/folke/noice.nvim) - 💥 Highly experimental plugin that completely replaces the UI
+for messages, cmdline and the popupmenu.
 5. [Redesign (dressing)](https://github.com/stevearc/dressing.nvim) - Neovim plugin to improve the default vim.ui interfaces.
-6. [Indent Guides (indent-blankline)](https://github.com/lukas-reineke/indent-blankline.nvim) - This plugin adds indentation guides to Neovim. It uses Neovim's virtual text feature and no conceal.
+6. [Indent Guides (indent-blankline)](https://github.com/lukas-reineke/indent-blankline.nvim) - This plugin adds indentation guides to
+Neovim. It uses Neovim's virtual text feature and no conceal.
 7. [Notifications (nvim-notify)](https://github.com/rcarriga/nvim-notify) - A fancy, configurable, notification manager for NeoVim.
-8. [Dim Inactive Code (twilight)](https://github.com/folke/twilight.nvim) - 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims inactive portions of the code you're editing using TreeSitter.
+8. [Dim Inactive Code (twilight)](https://github.com/folke/twilight.nvim) - 🌅 Twilight is a Lua plugin for Neovim 0.5
+that dims inactive portions of the code you're editing using TreeSitter.
 
 ### Keymaps
 
-1. [Keymaps (which-key)](https://github.com/folke/which-key.nvim) - 💥 Create key bindings that stick. WhichKey helps you remember your Neovim keymaps, by showing available keybindings in a popup as you type.
-2. [Keymaps (legendary)](https://github.com/mrjones2014/legendary.nvim) - 🗺️ A legend for your keymaps, commands, and autocmds, integrates with which-key.nvim, lazy.nvim, and more.
+1. [Keymaps (which-key)](https://github.com/folke/which-key.nvim) - 💥 Create key bindings that stick. WhichKey helps you
+remember your Neovim keymaps, by showing available keybindings in a popup as you type.
+2. [Keymaps (legendary)](https://github.com/mrjones2014/legendary.nvim) - 🗺️ A legend for your keymaps, commands, and autocmds,
+integrates with which-key.nvim, lazy.nvim, and more.
 3. [Map Keys with Minimum Delay (better-escape)](https://github.com/max397574/better-escape.nvim) - Map keys without delay when typing.
 
 ### Utils
 
- 1. [Markdown (render-markdown)](https://github.com/MeanderingProgrammer/render-markdown.nvim) - Plugin to improve viewing Markdown files in Neovim.
- 2. [Postman-like (rest)](https://github.com/rest-nvim/rest.nvim) - A very fast, powerful, extensible and asynchronous Neovim HTTP client written in Lua.
+   1. [Markdown/Latex/YAML Previewer](https://github.com/OXY2DEV/markview.nvim) - A hackable markdown, Typst, latex, html(inline)
+   & YAML previewer for Neovim
+ 2. [Postman-like (rest)](https://github.com/rest-nvim/rest.nvim) - A very fast, powerful, extensible and asynchronous Neovim HTTP
+ client written in Lua.
  3. [Postman-like (kulala)](https://github.com/mistweaverco/kulala.nvim) - A minimal 🤏 HTTP-client 🐼 interface 🖥️ for Neovim ❤️..
  4. [Plugin Manager (lazy)](https://github.com/folke/lazy.nvim) - 💤 A modern plugin manager for Neovim.
  5. [Increment/Decrement (dial)](https://github.com/monaqa/dial.nvim) - Enhanced increment/decrement plugin for Neovim.
- 6. [Macros (NeoComposer)](https://github.com/ecthelionvi/NeoComposer.nvim) - Neovim plugin that simplifies macros, enhancing productivity with harmony.
+ 6. [Macros (NeoComposer)](https://github.com/ecthelionvi/NeoComposer.nvim) - Neovim plugin that simplifies macros, enhancing
+ productivity with harmony.
  7. [Package Info (package-info)](https://github.com/vuki656/package-info.nvim) - ✍️ All the npm/yarn/pnpm commands I don't want to type.
  8. [UI Components (nui)](https://github.com/MunifTanjim/nui.nvim) - UI Component Library for Neovim.
 
@@ -145,7 +158,8 @@ It's my view on Neovim
 1. [Search (telescope)](https://github.com/nvim-telescope/telescope.nvim) - Find, Filter, Preview, Pick. All lua, all the time.
 2. [Open Files (other)](https://github.com/rgroli/other.nvim) - Open alternative files for the current buffer.
 3. [Quickfix (nvim-bqf)](https://github.com/kevinhwang91/nvim-bqf) - Better quickfix window in Neovim, polish old quickfix window.
-4. [Search Undo (telescope-undo)](https://github.com/debugloop/telescope-undo.nvim) - A telescope extension to view and search your undo tree 🌴.
+4. [Search Undo (telescope-undo)](https://github.com/debugloop/telescope-undo.nvim) - A telescope extension to view and search your
+undo tree 🌴.
 5. [Highlight Search (nvim-hlslens)](https://github.com/kevinhwang91/nvim-hlslens) - Hlsearch Lens for Neovim.
 6. [Find and Replace (nvim-spectre)](https://github.com/nvim-pack/nvim-spectre) - Find the enemy and replace them with dark power.
 7. [Find and Replace (ssr)](https://github.com/cshuaimin/ssr.nvim) - Treesitter based structural search and replace plugin for Neovim.
@@ -155,9 +169,11 @@ It's my view on Neovim
 
 ### Remote
 
-1. [Remote (distant)](https://github.com/chipsenkbeil/distant.nvim) - 🚧 (Alpha stage software) Edit files, run programs, and work with LSP on a remote machine from the comfort of your local environment 🚧.
+1. [Remote (distant)](https://github.com/chipsenkbeil/distant.nvim) - 🚧 (Alpha stage software) Edit files, run programs, and work with
+LSP on a remote machine from the comfort of your local environment 🚧.
 2. [Remote (netman)](https://github.com/miversen33/netman.nvim) - Neovim (Lua powered) Network Resource Manager.
-3. [Inside Docker (nvim-remote-containers)](https://github.com/jamestthompson3/nvim-remote-containers) - Develop inside docker containers, just like VSCode.
+3. [Inside Docker (nvim-remote-containers)](https://github.com/jamestthompson3/nvim-remote-containers) - Develop inside docker containers,
+just like VSCode.
 
 ### Windows
 
@@ -193,39 +209,51 @@ It's my view on Neovim
 
 ### Notes
 
-1. [Notes Management (neorg)](https://github.com/nvim-neorg/neorg) - Modernity meets insane extensibility. The future of organizing your life in Neovim.
+1. [Notes Management (neorg)](https://github.com/nvim-neorg/neorg) - Modernity meets insane extensibility. The future of
+organizing your life in Neovim.
 2. [Notes Management (orgmode)](https://github.com/nvim-orgmode/orgmode) - Orgmode clone written in Lua for Neovim 0.9+.
-3. [Notes Management (telekasten)](https://github.com/nvim-telekasten/telekasten.nvim) - A Neovim (lua) plugin for working with a markdown zettelkasten / wiki and mixing it with a journal, based on telescope.nvim.
+3. [Notes Management (telekasten)](https://github.com/nvim-telekasten/telekasten.nvim) - A Neovim (lua) plugin for working with a markdown
+zettelkasten / wiki and mixing it with a journal, based on telescope.nvim.
 4. [zk Assistant (zk-nvim)](https://github.com/zk-org/zk-nvim) - Neovim extension for zk.
 5. [Markdown Management (mkdnflow)](https://github.com/jakewvincent/mkdnflow.nvim) - Fluent navigation and management of markdown notebooks.
 6. [Obsidian (obsidian)](https://github.com/epwalsh/obsidian.nvim) - Obsidian 🤝 Neovim.
 
 ### Debug
 
-1. [Diagnostics (tiny-inline-diagnostic)](https://github.com/rachartier/tiny-inline-diagnostic.nvim) - A Neovim plugin that display prettier diagnostic messages. Display diagnostic messages where the cursor is, with icons and colors.
-2. [Debug Virtual Text (nvim-dap-virtual-text)](https://github.com/theHamsta/nvim-dap-virtual-text) - This plugin adds virtual text support to nvim-dap. nvim-treesitter is used to find variable definitions.
+1. [Diagnostics (tiny-inline-diagnostic)](https://github.com/rachartier/tiny-inline-diagnostic.nvim) - A Neovim plugin that display prettier
+diagnostic messages. Display diagnostic messages where the cursor is, with icons
+and colors.
+2. [Debug Virtual Text (nvim-dap-virtual-text)](https://github.com/theHamsta/nvim-dap-virtual-text) - This plugin adds virtual text support
+to nvim-dap. nvim-treesitter is used to find variable definitions.
 3. [Debug (nvim-dap)](https://github.com/mfussenegger/nvim-dap) - Debug Adapter Protocol client implementation for Neovim.
-4. [Debug Python (nvim-dap-python)](https://github.com/mfussenegger/nvim-dap-python) - An extension for nvim-dap, providing default configurations
-for python and methods to debug individual test methods or
-classes.
+4. [Debug Python (nvim-dap-python)](https://github.com/mfussenegger/nvim-dap-python) - An extension for nvim-dap, providing default
+configurations for python and methods to debug individual test methods or classes.
 5. [Debug UI (nvim-dap-ui)](https://github.com/rcarriga/nvim-dap-ui) - A UI for nvim-dap.
 6. [Debug (nvim-gdb)](https://github.com/sakhnik/nvim-gdb) - Neovim thin wrapper for GDB, LLDB, PDB/PDB++ and BashDB.
 7. [LSP Actions (actions-preview)](https://github.com/aznhe21/actions-preview.nvim) - Fully customizable previewer for LSP code actions.
 8. [LSP Lightbulb Action (nvim-lightbulb)](https://github.com/kosayoda/nvim-lightbulb) - VSCode 💡 for neovim's built-in LSP.
-9. [LSP Diagnostic (trouble)](https://github.com/folke/trouble.nvim) - 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+9. [LSP Diagnostic (trouble)](https://github.com/folke/trouble.nvim) - 🚦 A pretty diagnostics, references, telescope results,
+quickfix and location list to help you solve all the trouble your code is causing.
 
 ### Tests
 
-1. [Tests (neotest)](https://github.com/nvim-neotest/neotest) - An extensible framework for interacting with tests within NeoVim.
-2. [Code Runner (sniprun)](https://github.com/michaelb/sniprun) - A Neovim plugin to run lines/blocs of code (independently of the rest of the file), supporting multiples languages.
+1. [Tests (neotest)](https://github.com/nvim-neotest/neotest) - An extensible framework for interacting with tests
+within NeoVim.
+2. [Code Runner (sniprun)](https://github.com/michaelb/sniprun) - A Neovim plugin to run lines/blocs of code
+(independently of the rest of the file), supporting multiples languages.
 3. [Build (overseer)](https://github.com/stevearc/overseer.nvim) - A task runner and job management plugin for Neovim.
 4. [REPL (iron)](https://github.com/Vigemus/iron.nvim) - Interactive Repl Over Neovim.
-5. [Compiler (compiler)](https://github.com/Zeioth/compiler.nvim) - Neovim compiler for building and running your code without having to configure anything.
-6. [Jupyter Notebook (molten-nvim)](https://github.com/benlubas/molten-nvim) - A neovim plugin for interactively running code with the jupyter kernel. Fork of magma-nvim with improvements in image rendering, performance, and more.
+5. [Compiler (compiler)](https://github.com/Zeioth/compiler.nvim) - Neovim compiler for building and running your code
+without having to configure anything.
+6. [Jupyter Notebook (molten-nvim)](https://github.com/benlubas/molten-nvim) - A neovim plugin for interactively running code
+with the jupyter kernel. Fork of magma-nvim with improvements in image rendering,
+performance, and more.
 
 ### Training
 
-1. [Tutorial (vim-be-good)](https://github.com/ThePrimeagen/vim-be-good) - vim-be-good is a nvim plugin designed to make you better at Vim Movements.
-2. [Crush Bad Habits (hardtime)](https://github.com/m4xshen/hardtime.nvim) - Establish good command workflow and quit bad habit.
-3. [Competition (competitest)](https://github.com/xeluxee/competitest.nvim) - CompetiTest.nvim is a Neovim plugin for Competitive Programming: it can manage and check testcases, download problems and contests from online judges and much more.
-4. [LeetCode (leetcode)](https://github.com/kawre/leetcode.nvim) - A Neovim plugin enabling you to solve LeetCode problems.
+1. [Tutorial (vim-be-good)](https://github.com/ThePrimeagen/vim-be-good) - vim-be-good is a nvim plugin designed to make
+you better at Vim Movements.
+2. [Competition (competitest)](https://github.com/xeluxee/competitest.nvim) - CompetiTest.nvim is a Neovim plugin for Competitive
+Programming: it can manage and check testcases, download problems and contests
+from online judges and much more.
+3. [LeetCode (leetcode)](https://github.com/kawre/leetcode.nvim) - A Neovim plugin enabling you to solve LeetCode problems.

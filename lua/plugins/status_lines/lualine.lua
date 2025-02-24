@@ -12,12 +12,6 @@ return {
       options = {
         icons_enabled = true,
         theme = 'catppuccin',
-        --theme = 'horizon',
-        -- theme = 'material',
-        -- theme = 'modus-vivendi',
-        -- theme = 'palenight',
-        -- theme = 'seoul256',
-        -- theme = 'dracula',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = {

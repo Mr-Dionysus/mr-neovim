@@ -32,7 +32,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 
 -- Relative numbers
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- Mouse
 vim.opt.mouse = 'a'
@@ -217,6 +217,13 @@ require('lazy').setup({
   --                                  ╭────────╮
   --                                  │ Themes │
   --                                  ╰────────╯
+  -- Theme can be changed in markview.lua (For colors in Markdown)
+  {
+    import = 'plugins/themes/tokyonight',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   {
     import = 'plugins/themes/sonokai',
     cond = function()
@@ -642,14 +649,6 @@ require('lazy').setup({
   -- at Vim Movements.
   {
     import = 'plugins/training/vim_be_good',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
-  -- Establish good command workflow and quit bad habit.
-  {
-    import = 'plugins/training/hardtime',
     cond = function()
       return not vim.g.vscode
     end,
@@ -1366,9 +1365,10 @@ require('lazy').setup({
     end,
   },
 
-  -- Plugin to improve viewing Markdown files in Neovim.
+  -- A hackable markdown, Typst, latex, html(inline)
+  -- & YAML previewer for Neovim
   {
-    import = 'plugins/utils/render_markdown',
+    import = 'plugins/utils/markview',
     cond = function()
       return not vim.g.vscode
     end,
@@ -1399,10 +1399,6 @@ require('lazy').setup({
     },
   },
 })
-
-vim.cmd.colorscheme 'dracula'
--- vim.cmd.colorscheme 'sonokai'
--- vim.cmd.colorscheme 'catppuccin-macchiato'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
