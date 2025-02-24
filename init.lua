@@ -939,9 +939,6 @@ require('lazy').setup({
   -- Vim-like modal editors.
   {
     import = 'plugins/motions/leap',
-    cond = function()
-      return not vim.g.vscode
-    end,
   },
 
   -- Navigate your code with search labels, enhanced
