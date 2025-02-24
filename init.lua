@@ -900,17 +900,10 @@ require('lazy').setup({
   --                                  ╭─────────╮
   --                                  │ Motions │
   --                                  ╰─────────╯
-  -- Hop is an EasyMotion-like plugin allowing you to jump
-  -- anywhere in a document with as few keystrokes as possible.
-  { import = 'plugins/motions/hop', cond = true },
-
   -- A Plugin that provides region selection using hints on
   -- the abstract syntax tree of a document.
   {
     import = 'plugins/motions/treehopper',
-    cond = function()
-      return not vim.g.vscode
-    end,
   },
 
   -- Syntax aware text-objects, select, move, swap, and peek support.
@@ -950,11 +943,16 @@ require('lazy').setup({
   -- the ultimate goal of establishing a new standard
   -- interface for moving around in the visible area in
   -- Vim-like modal editors.
-  -- { import = 'plugins/motions/leap', cond = (function() return not vim.g.vscode end) },
+  {
+    import = 'plugins/motions/leap',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- Navigate your code with search labels, enhanced
   -- character motions and Treesitter integration
-  -- { import = 'plugins/motions/flash', cond = (function() return not vim.g.vscode end) },
+  -- { import = 'plugins/motions/flash' },
   --                                   ╭───────╮
   --                                   │ Notes │
   --                                   ╰───────╯
