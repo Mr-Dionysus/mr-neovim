@@ -31,7 +31,7 @@ return {
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename' },
+        lualine_c = { 'filename', 'filetype' },
         lualine_x = {
           {
             require('noice').api.status.message.get_hl,
