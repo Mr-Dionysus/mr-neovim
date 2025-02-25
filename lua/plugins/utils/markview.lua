@@ -12,6 +12,7 @@ return {
     vim.cmd.colorscheme 'catppuccin-mocha'
     -- vim.cmd.colorscheme 'tokyonight-moon'
     -- vim.cmd.colorscheme 'tokyonight-night'
+
     local presets = require 'markview.presets'
 
     require('markview').setup {
@@ -20,11 +21,15 @@ return {
       },
     }
 
-    local presets = require('markview.presets').tables
+    require('markview').setup {
+      markdown = {
+        horizontal_rules = presets.horizontal_rules.thin,
+      },
+    }
 
     require('markview').setup {
       markdown = {
-        tables = presets.rounded,
+        tables = presets.tables.rounded,
       },
     }
   end,

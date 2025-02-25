@@ -195,9 +195,9 @@ return {
       builtin.find_files { cwd = '/mnt/d/Denis Samsung 870 EVO/', hidden = true }
     end, { desc = '[D] Disk' })
 
-    vim.keymap.set('n', '<leader>sw', function()
+    vim.keymap.set('n', '<leader>sl', function()
       builtin.find_files { cwd = '~/', hidden = true }
-    end, { desc = '[W]SL' })
+    end, { desc = '[L]inux' })
 
     -- Shortcut for searching your Neovim configuration files
     vim.keymap.set('n', '<leader>sn', function()

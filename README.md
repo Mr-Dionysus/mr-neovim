@@ -17,10 +17,10 @@ It's my view on Neovim
 
 1. [Text Objects (nvim-treesitter-textobjects)](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) - Syntax aware text-objects, select, move, swap, and peek support.
 2. [Text Objects (nvim-various-textobjs)](https://github.com/chrisgrieser/nvim-various-textobjs) - Bundle of more than 30 new textobjects for Neovim.
-3. [Go Forward/Backward (mini-bracketed)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md) - Go forward/backward with square brackets.
-4. [Motions (Leap)](https://github.com/ggandor/leap.nvim) - Leap is a general-purpose motion plugin for Neovim, building and improving primarily on vim-sneak, with the ultimate goal of establishing a new standard interface for moving around in the visible area in Vim-like modal editors.
-5. [Motions (Flash)](https://github.com/folke/flash.nvim) - Navigate your code with search labels, enhanced character motions and Treesitter integration
-6. [a/i textobjects (mini-ai)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md) - Enhances a/i textobjects.
+3. [a/i textobjects (mini-ai)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md) - Enhances a/i textobjects.
+4. [Go Forward/Backward (mini-bracketed)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md) - Go forward/backward with square brackets.
+5. [Motions (Leap)](https://github.com/ggandor/leap.nvim) - Leap is a general-purpose motion plugin for Neovim, building and improving primarily on vim-sneak, with the ultimate goal of establishing a new standard interface for moving around in the visible area in Vim-like modal editors.
+6. [Motions (Flash)](https://github.com/folke/flash.nvim) - Navigate your code with search labels, enhanced character motions and Treesitter integration
 
 ### Status Line
 

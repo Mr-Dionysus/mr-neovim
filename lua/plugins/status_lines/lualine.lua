@@ -12,15 +12,15 @@ return {
       options = {
         icons_enabled = true,
         theme = 'catppuccin',
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         disabled_filetypes = {
           statusline = {},
           winbar = {},
         },
         ignore_focus = {},
         always_divide_middle = true,
-        always_show_tabline = true,
+        always_show_tabline = false,
         globalstatus = false,
         refresh = {
           statusline = 100,
@@ -30,8 +30,8 @@ return {
       },
       sections = {
         lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename', 'filetype' },
+        lualine_b = { 'diagnostics' },
+        lualine_c = {},
         lualine_x = {
           {
             require('noice').api.status.message.get_hl,
