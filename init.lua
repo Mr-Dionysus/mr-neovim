@@ -31,6 +31,10 @@ vim.g.have_nerd_font = true
 -- Line numbers
 vim.opt.number = true
 
+-- For auto-sessions
+vim.o.sessionoptions =
+  'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+
 -- Relative numbers
 -- vim.opt.relativenumber = true
 
@@ -247,12 +251,12 @@ require('lazy').setup({
   --                                  │ Windows │
   --                                  ╰─────────╯
   -- A small automated session manager for Neovim.
-  -- {
-  --   import = 'plugins/windows/auto_session',
-  --   cond = function()
-  --     return not vim.g.vscode
-  --   end,
-  -- },
+  {
+    import = 'plugins/windows/auto_session',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
 
   -- The superior project management solution for neovim.
   {
@@ -317,14 +321,6 @@ require('lazy').setup({
   -- and annotation conventions.
   {
     import = 'plugins/comments/neogen',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
-  -- Documentation generator.
-  {
-    import = 'plugins/comments/mini_doc',
     cond = function()
       return not vim.g.vscode
     end,
@@ -574,15 +570,6 @@ require('lazy').setup({
     end,
   },
 
-  -- 🌈 A Neovim plugin to add vscode-style TailwindCSS completion
-  -- to nvim-cmp.
-  {
-    import = 'plugins/frontend/tailwindcss_colorizer_cmp',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
   -- A Neovim port of Matt Pocock's ts-error-translator for
   -- VSCode for turning messy and confusing TypeScript errors
   -- into plain English.
@@ -699,24 +686,6 @@ require('lazy').setup({
       return not vim.g.vscode
     end,
   },
-  --                                  ╭────────╮
-  --                                  │ Images │
-  --                                  ╰────────╯
-  -- 📸 Snapshot plugin with rich features that can make
-  -- pretty code snapshots for Neovim.
-  {
-    import = 'plugins/images/codesnap',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
-  -- 🖼️ Bringing images to Neovim.
-  -- { import = 'plugins/images/image', cond = (function() return not vim.g.vscode end) },
-
-  -- Effortlessly embed images into any markup language,
-  -- like LaTeX, Markdown or Typst.
-  -- { import = 'plugins/images/img-clip', cond = (function() return not vim.g.vscode end) },
   --                                  ╭─────────╮
   --                                  │ Keymaps │
   --                                  ╰─────────╯
@@ -1079,22 +1048,6 @@ require('lazy').setup({
 
   -- Automagical editing and creation of snippets.
   -- { import = 'plugins/snippets/scissors' },
-  --                                 ╭───────────╮
-  --                                 │ Dashboard │
-  --                                 ╰───────────╯
-  -- Vim dashboard.
-  {
-    import = 'plugins/dashboards/dashboard',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
-  -- A highly configurable neovim startup screen.
-  -- { import = 'plugins/dashboards/alpha', cond = (function() return not vim.g.vscode end) },
-
-  -- A highly configurable neovim startup screen
-  -- { import = 'plugins/dashboards/startup', cond = (function() return not vim.g.vscode end) },
   --                               ╭──────────────╮
   --                               │ Status Lines │
   --                               ╰──────────────╯
@@ -1201,15 +1154,6 @@ require('lazy').setup({
   -- terminal windows.
   {
     import = 'plugins/terminal/toggleterm',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
-  -- Open files and command output from wezterm, kitty,
-  -- and neovim terminals in your current neovim instance.
-  {
-    import = 'plugins/terminal/flatten',
     cond = function()
       return not vim.g.vscode
     end,

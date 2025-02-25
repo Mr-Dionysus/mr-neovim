@@ -94,16 +94,6 @@ return {
         icon = { icon = '', color = 'grey' },
       },
       {
-        '<leader>n',
-        name = '[N]ext Buffer',
-        icon = { icon = '', color = 'grey' },
-      },
-      {
-        '<leader>p',
-        name = '[P]revious Buffer',
-        icon = { icon = '', color = 'grey' },
-      },
-      {
         '<leader>q',
         name = '[Q]uit',
         icon = { icon = '', color = 'grey' },

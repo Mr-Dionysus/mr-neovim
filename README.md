@@ -91,8 +91,6 @@ into plain English.
 project-wide TypeScript type-checking using the TypeScript compiler (tsc).
 5. [Tailwind (tailwind-tools)](https://github.com/luckasRanarison/tailwind-tools.nvim) - An unofficial Tailwind CSS integration and tooling
 for Neovim.
-6. [Tailwind (tailwindcss-colorizer-cmp)](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim) - 🌈 A Neovim plugin to add
-vscode-style TailwindCSS completion to nvim-cmp.
 
 ### Comments
 
@@ -106,27 +104,10 @@ Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more.
 plugin for setting the commentstring based on the cursor location in a file.
 5. [Annotation Generator (neogen)](https://github.com/danymat/neogen) - A better annotation generator. Supports
 multiple languages and annotation conventions.
-6. [Documentation (mini-doc)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-doc.md) - To generate documentation.
-
-### Dashboards
-
-1. [Dashboard (dashboard-nvim)](https://github.com/nvimdev/dashboard-nvim) - Vim dashboard.
-2. [Custom Dashboard (startup)](https://github.com/max397574/startup.nvim) - A highly configurable neovim startup screen.
-3. [Custom Dashboard (alpha)](https://github.com/goolord/alpha-nvim) - a lua powered greeter like vim-startify / dashboard-nvim.
 
 ### Terminal
 
 1. [Terminal (toggleterm)](https://github.com/akinsho/toggleterm.nvim) - A neovim lua plugin to help easily manage multiple terminal windows.
-2. [Terminal Integration (flatten)](https://github.com/willothy/flatten.nvim) - Open files and command output from wezterm,
-kitty, and neovim terminals in your current neovim instance.
-
-### Images
-
-1. [Code Snapshots (codesnap)](https://github.com/mistricky/codesnap.nvim) - 📸 Snapshot plugin with rich features that can
-make pretty code snapshots for Neovim.
-2. [Image Viewer (image)](https://github.com/3rd/image.nvim) - 🖼️ Bringing images to Neovim.
-3. [Paste Images (img-clip)](https://github.com/HakonHarnes/img-clip.nvim) - Effortlessly embed images into any markup language,
-like LaTeX, Markdown or Typst.
 
 ### File Managers
 

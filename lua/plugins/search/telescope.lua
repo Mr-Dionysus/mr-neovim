@@ -2,7 +2,6 @@
 --                                  │ Search │
 --                                  ╰────────╯
 -- Find, Filter, Preview, Pick. All lua, all the time.
-
 return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
@@ -58,7 +57,13 @@ return {
       --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
       --   },
       -- },
-      -- pickers = {}
+
+      -- Show Hidden Files
+      -- pickers = {
+      --   find_files = {
+      --     hidden = true,
+      --   },
+      -- },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
