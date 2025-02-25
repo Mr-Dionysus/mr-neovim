@@ -15,70 +15,97 @@ It's my view on Neovim
 
 ### Motions
 
-1. [Text Objects (nvim-treesitter-textobjects)](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) - Syntax aware text-objects, select, move, swap, and peek support.
-2. [Text Objects (nvim-various-textobjs)](https://github.com/chrisgrieser/nvim-various-textobjs) - Bundle of more than 30 new textobjects for Neovim.
+1. [Text Objects (nvim-treesitter-textobjects)](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) - Syntax aware text-objects,
+select, move, swap, and peek support.
+2. [Text Objects (nvim-various-textobjs)](https://github.com/chrisgrieser/nvim-various-textobjs) - Bundle of more than 30
+new textobjects for Neovim.
 3. [a/i textobjects (mini-ai)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md) - Enhances a/i textobjects.
-4. [Go Forward/Backward (mini-bracketed)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md) - Go forward/backward with square brackets.
-5. [Motions (Leap)](https://github.com/ggandor/leap.nvim) - Leap is a general-purpose motion plugin for Neovim, building and improving primarily on vim-sneak, with the ultimate goal of establishing a new standard interface for moving around in the visible area in Vim-like modal editors.
-6. [Motions (Flash)](https://github.com/folke/flash.nvim) - Navigate your code with search labels, enhanced character motions and Treesitter integration
+4. [Go Forward/Backward (mini-bracketed)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md) - Go forward/backward
+with square brackets.
+5. [Motions (Leap)](https://github.com/ggandor/leap.nvim) - Leap is a general-purpose motion plugin for Neovim,
+building and improving primarily on vim-sneak, with the ultimate goal of
+establishing a new standard interface for moving around in the visible
+area in Vim-like modal editors.
+6. [Motions (Flash)](https://github.com/folke/flash.nvim) - Navigate your code with search labels,
+enhanced character motions and Treesitter integration
 
 ### Status Line
 
-1. [Status Line (lualine)](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure neovim statusline plugin written in pure lua.
-2. [Breadcrumbs (barbecue)](https://github.com/utilyre/barbecue.nvim) - Visual Studio Code inspired breadcrumbs plugin for the Neovim editor.
-3. [For Breadcrumbs (nvim-navic)](https://github.com/SmiteshP/nvim-navic) - Simple winbar/statusline plugin that shows your current code context.
+1. [Status Line (lualine)](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure
+neovim statusline plugin written in pure lua.
+2. [Breadcrumbs (barbecue)](https://github.com/utilyre/barbecue.nvim) - Visual Studio Code inspired breadcrumbs
+plugin for the Neovim editor.
+3. [For Breadcrumbs (nvim-navic)](https://github.com/SmiteshP/nvim-navic) - Simple winbar/statusline plugin that
+shows your current code context.
 
 ### Git
 
 1. [Git (gitsigns)](https://github.com/lewis6991/gitsigns.nvim) - Super fast git decorations implemented purely in Lua.
-2. [Git (mini-git)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-git.md) - Git commands inside Neovim.
-3. [Git UI (neogit)](https://github.com/NeogitOrg/neogit) - An interactive and powerful Git interface for Neovim, inspired by Magit.
-4. [Lazygit UI (lazygit)](https://github.com/kdheepak/lazygit.nvim) - Plugin for calling lazygit from within Neovim.
-5. [Git Diff (diffview)](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
-6. [Git Merge Conflicts (git-conflict)](https://github.com/akinsho/git-conflict.nvim) - A plugin to visualise and resolve merge conflicts in Neovim.
-7. [GitHub (octo)](https://github.com/pwntester/octo.nvim) - Edit and review GitHub issues and pull requests from the comfort of your favorite editor.
+2. [Git UI (neogit)](https://github.com/NeogitOrg/neogit) - An interactive and powerful Git interface for Neovim, inspired by Magit.
+3. [Lazygit UI (lazygit)](https://github.com/kdheepak/lazygit.nvim) - Plugin for calling lazygit from within Neovim.
+4. [Git Diff (diffview)](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling
+through diffs for all modified files for any git rev.
+5. [Git Merge Conflicts (git-conflict)](https://github.com/akinsho/git-conflict.nvim) - A plugin to visualise and resolve merge
+conflicts in Neovim.
+6. [GitHub (octo)](https://github.com/pwntester/octo.nvim) - Edit and review GitHub issues and pull
+requests from the comfort of your favorite editor.
 
 ### Syntax
 
-1. [Rainbow Delimiters (rainbow-delimiters)](https://github.com/HiPhish/rainbow-delimiters.nvim) - Rainbow delimiters for Neovim with Tree-sitter.
+1. [Rainbow Delimiters (rainbow-delimiters)](https://github.com/HiPhish/rainbow-delimiters.nvim) - Rainbow delimiters for Neovim with
+Tree-sitter.
 2. [Highlight (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-treesitter) - Nvim Treesitter configurations and abstraction layer.
-3. [Surrounding Pairs (nvim-surround)](https://github.com/kylechui/nvim-surround) - Add/change/delete surrounding delimiter pairs with ease. Written with ❤️ in Lua.
+3. [Surrounding Pairs (nvim-surround)](https://github.com/kylechui/nvim-surround) - Add/change/delete surrounding delimiter pairs
+with ease. Written with ❤️ in Lua.
 4. [Autopair (nvim-autopairs)](https://github.com/windwp/nvim-autopairs) - Autopairs for neovim written in lua.
-5. [Autopair/Rename HTML Tags (nvim-ts-autotag)](https://github.com/windwp/nvim-ts-autotag) - Use treesitter to autoclose and autorename html tag.
-6. [Folds (nvim-ufo)](https://github.com/kevinhwang91/nvim-ufo) - The goal of nvim-ufo is to make Neovim's fold look modern and keep high performance.
-7. [For Folds (promise-async)](https://github.com/kevinhwang91/promise-async) - The goal of promise-async is to port Promise & Async from JavaScript to Lua.
-8. [Scrollbar (nvim-scrollview)](https://github.com/dstein64/nvim-scrollview) - A Neovim plugin that displays interactive vertical scrollbars and signs.
+5. [Autopair/Rename HTML Tags (nvim-ts-autotag)](https://github.com/windwp/nvim-ts-autotag) - Use treesitter to autoclose and
+autorename html tag.
+6. [Folds (nvim-ufo)](https://github.com/kevinhwang91/nvim-ufo) - The goal of nvim-ufo is to make Neovim's fold look modern
+and keep high performance.
+7. [For Folds (promise-async)](https://github.com/kevinhwang91/promise-async) - The goal of promise-async is to port Promise & Async
+from JavaScript to Lua.
+8. [Scrollbar (nvim-scrollview)](https://github.com/dstein64/nvim-scrollview) - A Neovim plugin that displays interactive vertical
+scrollbars and signs.
 
 ### Cursor
 
 1. [Multi-Cursor (vim-visual-multi)](https://github.com/mg979/vim-visual-multi) - Multiple cursors plugin for Vim/Neovim.
-2. [Exit From Quotes, Brackets etc (tabout)](https://github.com/abecodes/tabout.nvim) - Supercharge your workflow and start tabbing out from parentheses, quotes, and similar contexts today.
-3. [Cursor Line (modicator)](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator plugin for Neovim.
-4. [Cursor Highlight (vim-illuminate)](https://github.com/RRethy/vim-illuminate) - (Neo)Vim plugin for automatically highlighting other uses of the word under the cursor using either LSP, Tree-sitter, or regex matching.
+2. [Exit From Quotes, Brackets etc (tabout)](https://github.com/abecodes/tabout.nvim) - Supercharge your workflow and start
+tabbing out from parentheses, quotes, and similar contexts today.
+3. [Cursor Highlight (vim-illuminate)](https://github.com/RRethy/vim-illuminate) - (Neo)Vim plugin for automatically highlighting
+other uses of the word under the cursor using either LSP, Tree-sitter, or regex matching.
 
 ### Marks
 
-1. [Marks (marks)](https://github.com/chentoast/marks.nvim) - A better user experience for viewing and interacting with Vim marks.
-2. [Fast File Switch (harpoon2)](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Pin files and switch between them with ease.
-3. [Pin Files (grapple)](https://github.com/cbochs/grapple.nvim) - Neovim plugin for tagging important files.
+1. [Fast File Switch (harpoon2)](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Pin files and switch between them with ease.
+2. [Pin Files (grapple)](https://github.com/cbochs/grapple.nvim) - Neovim plugin for tagging important files.
 
 ### Frontend
 
-1. [Highlighter (nvim-highlight-colors)](https://github.com/brenoprata10/nvim-highlight-colors) - Highlight colors for Neovim.
-2. [Color Picker (ccc)](https://github.com/uga-rosa/ccc.nvim) - Color picker and highlighter plugin for Neovim.
-3. [TypeScript (typescript-tools)](https://github.com/pmizio/typescript-tools.nvim) - ⚡ TypeScript integration NeoVim deserves ⚡.
-4. [TypeScript Errors (ts-error-translator)](https://github.com/dmmulroy/ts-error-translator.nvim) - A Neovim port of Matt Pocock's ts-error-translator for VSCode for turning messy and confusing TypeScript errors into plain English.
-5. [TypeScript Type Check (tsc)](https://github.com/dmmulroy/tsc.nvim) - A Neovim plugin for seamless, asynchronous project-wide TypeScript type-checking using the TypeScript compiler (tsc).
-6. [Tailwind (tailwind-tools)](https://github.com/luckasRanarison/tailwind-tools.nvim) - An unofficial Tailwind CSS integration and tooling for Neovim.
-7. [Tailwind (tailwindcss-colorizer-cmp)](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim) - 🌈 A Neovim plugin to add vscode-style TailwindCSS completion to nvim-cmp.
+1. [Color Picker (ccc)](https://github.com/uga-rosa/ccc.nvim) - Color picker and highlighter plugin for Neovim.
+2. [TypeScript (typescript-tools)](https://github.com/pmizio/typescript-tools.nvim) - ⚡ TypeScript integration NeoVim deserves ⚡.
+3. [TypeScript Errors (ts-error-translator)](https://github.com/dmmulroy/ts-error-translator.nvim) - A Neovim port of Matt Pocock's
+ts-error-translator for VSCode for turning messy and confusing TypeScript errors
+into plain English.
+4. [TypeScript Type Check (tsc)](https://github.com/dmmulroy/tsc.nvim) - A Neovim plugin for seamless, asynchronous
+project-wide TypeScript type-checking using the TypeScript compiler (tsc).
+5. [Tailwind (tailwind-tools)](https://github.com/luckasRanarison/tailwind-tools.nvim) - An unofficial Tailwind CSS integration and tooling
+for Neovim.
+6. [Tailwind (tailwindcss-colorizer-cmp)](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim) - 🌈 A Neovim plugin to add
+vscode-style TailwindCSS completion to nvim-cmp.
 
 ### Comments
 
-1. [Todo Comments (todo-comments)](https://github.com/folke/todo-comments.nvim) - ✅ Highlight, list and search todo comments in your projects.
-2. [Comment Boxes & Lines (comment-box)](https://github.com/LudoPinelli/comment-box.nvim) - ✨ Clarify and beautify your comments and plain text files using boxes and lines.
-3. [Comments Plus ULTRA (Comment)](https://github.com/numToStr/Comment.nvim) - 🧠 💪 // Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more.
-4. [Comment/Uncomment (nvim-ts-context-commentstring)](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) - Neovim treesitter plugin for setting the commentstring based on the cursor location in a file.
-5. [Annotation Generator (neogen)](https://github.com/danymat/neogen) - A better annotation generator. Supports multiple languages and annotation conventions.
+1. [Todo Comments (todo-comments)](https://github.com/folke/todo-comments.nvim) - ✅ Highlight, list and search todo comments
+in your projects.
+2. [Comment Boxes & Lines (comment-box)](https://github.com/LudoPinelli/comment-box.nvim) - ✨ Clarify and beautify your comments and plain
+text files using boxes and lines.
+3. [Comments Plus ULTRA (Comment)](https://github.com/numToStr/Comment.nvim) - 🧠 💪 // Smart and powerful comment plugin for neovim.
+Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more.
+4. [Comment/Uncomment (nvim-ts-context-commentstring)](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) - Neovim treesitter
+plugin for setting the commentstring based on the cursor location in a file.
+5. [Annotation Generator (neogen)](https://github.com/danymat/neogen) - A better annotation generator. Supports
+multiple languages and annotation conventions.
 6. [Documentation (mini-doc)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-doc.md) - To generate documentation.
 
 ### Dashboards
@@ -133,23 +160,24 @@ integrates with which-key.nvim, lazy.nvim, and more.
 
 ### Utils
 
-   1. [Markdown/Latex/YAML Previewer](https://github.com/OXY2DEV/markview.nvim) - A hackable markdown, Typst, latex, html(inline)
-   & YAML previewer for Neovim
- 2. [Postman-like (rest)](https://github.com/rest-nvim/rest.nvim) - A very fast, powerful, extensible and asynchronous Neovim HTTP
- client written in Lua.
- 3. [Postman-like (kulala)](https://github.com/mistweaverco/kulala.nvim) - A minimal 🤏 HTTP-client 🐼 interface 🖥️ for Neovim ❤️..
- 4. [Plugin Manager (lazy)](https://github.com/folke/lazy.nvim) - 💤 A modern plugin manager for Neovim.
- 5. [Increment/Decrement (dial)](https://github.com/monaqa/dial.nvim) - Enhanced increment/decrement plugin for Neovim.
- 6. [Macros (NeoComposer)](https://github.com/ecthelionvi/NeoComposer.nvim) - Neovim plugin that simplifies macros, enhancing
- productivity with harmony.
- 7. [Package Info (package-info)](https://github.com/vuki656/package-info.nvim) - ✍️ All the npm/yarn/pnpm commands I don't want to type.
- 8. [UI Components (nui)](https://github.com/MunifTanjim/nui.nvim) - UI Component Library for Neovim.
+1. [Markdown/Latex/YAML Previewer](https://github.com/OXY2DEV/markview.nvim) - A hackable markdown, Typst, latex, html(inline)
+& YAML previewer for Neovim
+2. [Postman-like (rest)](https://github.com/rest-nvim/rest.nvim) - A very fast, powerful, extensible and asynchronous Neovim HTTP
+client written in Lua.
+3. [Postman-like (kulala)](https://github.com/mistweaverco/kulala.nvim) - A minimal 🤏 HTTP-client 🐼 interface 🖥️ for Neovim ❤️..
+4. [Plugin Manager (lazy)](https://github.com/folke/lazy.nvim) - 💤 A modern plugin manager for Neovim.
+5. [Increment/Decrement (dial)](https://github.com/monaqa/dial.nvim) - Enhanced increment/decrement plugin for Neovim.
+6. [Macros (NeoComposer)](https://github.com/ecthelionvi/NeoComposer.nvim) - Neovim plugin that simplifies macros, enhancing
+productivity with harmony.
+7. [Package Info (package-info)](https://github.com/vuki656/package-info.nvim) - ✍️ All the npm/yarn/pnpm commands I don't want to type.
+8. [UI Components (nui)](https://github.com/MunifTanjim/nui.nvim) - UI Component Library for Neovim.
 
 ### Format
 
 1. [Split/Join (treesj)](https://github.com/Wansmer/treesj) - Neovim plugin for splitting/joining blocks of code.
 2. [Formatter (conform)](https://github.com/stevearc/conform.nvim) - Lightweight yet powerful formatter plugin for Neovim.
-3. [Refactoring (refactoring)](https://github.com/ThePrimeagen/refactoring.nvim) - The Refactoring library based off the Refactoring book by Martin Fowler.
+3. [Refactoring (refactoring)](https://github.com/ThePrimeagen/refactoring.nvim) - The Refactoring library based off the
+Refactoring book by Martin Fowler.
 
 ### Search
 
@@ -177,14 +205,17 @@ just like VSCode.
 
 1. [Auto-Session (auto-session)](https://github.com/rmagatti/auto-session) - A small automated session manager for Neovim.
 2. [Projects (project)](https://github.com/ahmedkhalf/project.nvim) - The superior project management solution for neovim.
-3. [Window Management (focus)](https://github.com/nvim-focus/focus.nvim) - Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua. A full suite of window management enhancements. Vim splits on steroids!
-4. [Splits (smart-splits)](https://github.com/mrjones2014/smart-splits.nvim) - 🧠 Smart, seamless, directional navigation and resizing of Neovim + terminal multiplexer splits. Supports tmux, Wezterm, and Kitty. Think about splits in terms of "up/down/left/right".
-5. [tmux (vim-tmux-navigator)](https://github.com/christoomey/vim-tmux-navigator) - tmux integration for nvim features pane movement and resizing from within nvim.
+3. [Splits (smart-splits)](https://github.com/mrjones2014/smart-splits.nvim) - 🧠 Smart, seamless, directional navigation and
+resizing of Neovim + terminal multiplexer splits. Supports tmux, Wezterm, and
+Kitty. Think about splits in terms of "up/down/left/right".
+4. [tmux (vim-tmux-navigator)](https://github.com/christoomey/vim-tmux-navigator) - tmux integration for nvim features pane movement
+and resizing from within nvim.
 
 ### Snippets
 
 1. [Snippets (LuaSnip)](https://github.com/L3MON4D3/LuaSnip) - Snippet Engine for Neovim written in Lua.
-2. [Predefined Snippets (friendly-snippets)](https://github.com/rafamadriz/friendly-snippets) - Set of preconfigured snippets for different languages.
+2. [Predefined Snippets (friendly-snippets)](https://github.com/rafamadriz/friendly-snippets) - Set of preconfigured snippets for
+different languages.
 3. [Auto-Snippets (nvim-scissors)](https://github.com/chrisgrieser/nvim-scissors) - Automagical editing and creation of snippets.
 
 ### LSP
@@ -192,16 +223,20 @@ just like VSCode.
 1. [All LSPs](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)
 2. [Faster Setup (lazydev)](https://github.com/folke/lazydev.nvim) - Faster LuaLS setup for Neovim.
 3. [Luvit (luvit-meta)](https://github.com/Bilal2453/luvit-meta) - Meta type definitions for the Lua platform Luvit.
-4. [Linter (nvim-lint)](https://github.com/mfussenegger/nvim-lint) - An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support.
+4. [Linter (nvim-lint)](https://github.com/mfussenegger/nvim-lint) - An asynchronous linter plugin for Neovim complementary
+to the built-in Language Server Protocol support.
 5. [Completion (nvim-cmp)](https://github.com/hrsh7th/nvim-cmp) - A completion plugin for neovim coded in Lua.
 6. [Completion Hints (lsp_signature)](https://github.com/ray-x/lsp_signature.nvim) - LSP signature hint as you type.
 7. [Completion Icons (lspkind)](https://github.com/onsails/lspkind.nvim) - vscode-like pictograms for neovim lsp completion items.
-8. [Package Manager (mason)](https://github.com/williamboman/mason.nvim) - Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters.
-9. [Java LSP 1 (nvim-jdtls)](https://github.com/mfussenegger/nvim-jdtls) - Extensions for the built-in LSP support in Neovim for eclipse.jdt.ls.
+8. [Package Manager (mason)](https://github.com/williamboman/mason.nvim) - Portable package manager for Neovim that runs everywhere
+Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters.
+9. [Java LSP 1 (nvim-jdtls)](https://github.com/mfussenegger/nvim-jdtls) - Extensions for the built-in LSP support in Neovim for
+eclipse.jdt.ls.
 10. [Java LSP 2 (nvim-java)](https://github.com/nvim-java/nvim-java) - Painless Java in Neovim.
 11. [Golang (go.nvim)](https://github.com/ray-x/go.nvim) - G'day Nvimer, Joyful Gopher: Discover the Feature-Rich Go Plugin for Neovim
 12. [LSP Configs (nvim-lspconfig)](https://github.com/neovim/nvim-lspconfig) - Quickstart configs for Nvim LSP.
-13. [LSP goto (goto-preview)](https://github.com/rmagatti/goto-preview) - A small Neovim plugin for previewing definitions using floating windows.
+13. [LSP goto (goto-preview)](https://github.com/rmagatti/goto-preview) - A small Neovim plugin for previewing
+definitions using floating windows.
 14. [LSP Notifications (fidget)](https://github.com/j-hui/fidget.nvim) - 💫 Extensible UI for Neovim notifications and LSP progress messages.
 15. [LSP Embedded (otter)](https://github.com/jmbuhr/otter.nvim) - Just ask an otter! 🦦.
 

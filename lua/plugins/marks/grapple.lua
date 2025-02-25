@@ -17,7 +17,7 @@ return {
       desc = '[T]oggle Tag',
     },
     {
-      '<leader>c',
+      '<C-e>',
       '<cmd>Grapple toggle_tags<cr>',
       desc = '[C]hange Buffers',
     },

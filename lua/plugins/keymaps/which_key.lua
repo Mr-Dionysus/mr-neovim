@@ -84,6 +84,11 @@ return {
         icon = { icon = '', color = 'grey' },
       },
       {
+        '<leader>a',
+        name = '[A]dd Buffer',
+        icon = { icon = '', color = 'grey' },
+      },
+      {
         '<leader>f',
         name = '[F]ormat',
         icon = { icon = '', color = 'grey' },

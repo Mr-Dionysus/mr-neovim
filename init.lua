@@ -246,15 +246,6 @@ require('lazy').setup({
   --                                  ╭─────────╮
   --                                  │ Windows │
   --                                  ╰─────────╯
-  -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua.
-  -- A full suite of window management enhancements. Vim splits on steroids!
-  {
-    import = 'plugins/windows/focus',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
   -- A small automated session manager for Neovim.
   -- {
   --   import = 'plugins/windows/auto_session',
@@ -353,14 +344,6 @@ require('lazy').setup({
   -- from parentheses, quotes, and similar contexts today.
   {
     import = 'plugins/cursor/tabout',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
-  -- Cursor line number mode indicator plugin for Neovim.
-  {
-    import = 'plugins/cursor/modicator',
     cond = function()
       return not vim.g.vscode
     end,
@@ -634,14 +617,6 @@ require('lazy').setup({
       return not vim.g.vscode
     end,
   },
-
-  -- Highlight colors for Neovim.
-  {
-    import = 'plugins/frontend/highlight_colors',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
   --                                 ╭──────────╮
   --                                 │ Training │
   --                                 ╰──────────╯
@@ -720,14 +695,6 @@ require('lazy').setup({
   -- comfort of your favorite editor.
   {
     import = 'plugins/git/octo',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
-  -- Git commands inside Neovim.
-  {
-    import = 'plugins/git/mini_git',
     cond = function()
       return not vim.g.vscode
     end,
@@ -878,25 +845,21 @@ require('lazy').setup({
   --                                   ╭───────╮
   --                                   │ Marks │
   --                                   ╰───────╯
-  -- A better user experience for viewing and interacting
-  -- with Vim marks.
-  {
-    import = 'plugins/marks/marks',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
   -- Neovim plugin for tagging important files.
-  {
-    import = 'plugins/marks/grapple',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
+  -- {
+  --   import = 'plugins/marks/grapple',
+  --   cond = function()
+  --     return not vim.g.vscode
+  --   end,
+  -- },
 
   -- Pin files and switch between them with ease.
-  -- { import = 'plugins/marks/harpoon', cond = (function() return not vim.g.vscode end) },
+  {
+    import = 'plugins/marks/harpoon',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
   --                                  ╭─────────╮
   --                                  │ Motions │
   --                                  ╰─────────╯

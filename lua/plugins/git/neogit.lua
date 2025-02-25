@@ -13,4 +13,12 @@ return {
     'nvim-telescope/telescope.nvim', -- optional
   },
   config = true,
+  init = function()
+    vim.keymap.set(
+      'n',
+      '<leader>gn',
+      ':Neogit help<CR>',
+      { desc = '[N]eogit', silent = true }
+    )
+  end,
 }

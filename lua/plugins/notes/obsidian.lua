@@ -7,6 +7,7 @@ return {
   version = '*', -- recommended, use latest release instead of latest commit
   lazy = true,
   ft = 'markdown',
+  -- Hide Markdown syntax
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
   -- event = {
   --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
@@ -28,7 +29,9 @@ return {
         path = '~/Zettlekasten/',
       },
     },
-
+    ui = {
+      enable = false,
+    },
     -- see below for full list of options 👇
   },
 }
