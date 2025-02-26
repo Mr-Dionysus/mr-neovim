@@ -2,10 +2,32 @@
 --                                 │ Terminal │
 --                                 ╰──────────╯
 -- A neovim lua plugin to help easily manage multiple terminal windows.
-
 return {
   'akinsho/toggleterm.nvim',
   version = '*',
+  keys = {
+    {
+      '<leader>tt',
+      ':ToggleTerm direction=float<CR>',
+      mode = { '' },
+      desc = '[T]erminal',
+      silent = true,
+    },
+    {
+      '<leader>t-',
+      ':ToggleTerm direction=horizontal<CR>',
+      mode = { '' },
+      desc = '[-] Terminal',
+      silent = true,
+    },
+    {
+      '<leader>t|',
+      ':ToggleTerm direction=vertical<CR>',
+      mode = { '' },
+      desc = '[|] Terminal',
+      silent = true,
+    },
+  },
   opts = {
     direction = 'float',
   },
@@ -24,23 +46,5 @@ return {
   end,
   config = function()
     require('toggleterm').setup()
-    vim.keymap.set(
-      '',
-      '<leader>tt',
-      ':ToggleTerm direction=float<CR>',
-      { desc = '[T]erminal', silent = true }
-    )
-    vim.keymap.set(
-      '',
-      '<leader>t-',
-      ':ToggleTerm direction=horizontal<CR>',
-      { desc = '[-] Terminal', silent = true }
-    )
-    vim.keymap.set(
-      '',
-      '<leader>t|',
-      ':ToggleTerm direction=vertical<CR>',
-      { desc = '[|] Terminal', silent = true }
-    )
   end,
 }

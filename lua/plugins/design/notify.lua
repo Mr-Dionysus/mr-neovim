@@ -7,7 +7,7 @@ return {
   'rcarriga/nvim-notify',
   config = function()
     require('notify').setup {
-      stages = 'fade', -- Options: "fade", "slide", "static", "fade_in_slide_out"
+      stages = 'slide', -- Options: "fade", "slide", "static", "fade_in_slide_out"
       timeout = 2000,
       fps = 165,
     }

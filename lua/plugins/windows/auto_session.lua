@@ -1,6 +1,15 @@
 return {
   'rmagatti/auto-session',
   lazy = false,
+  keys = {
+    {
+      '<leader>ss',
+      ':SessionSearch<CR>',
+      mode = { 'n' },
+      desc = '[S]essions',
+      silent = true,
+    },
+  },
 
   ---enables autocomplete for opts
   ---@module "auto-session"
@@ -10,12 +19,4 @@ return {
     -- log_level = 'debug',
     args_allow_files_auto_save = true,
   },
-  init = function()
-    vim.keymap.set(
-      'n',
-      '<leader>ss',
-      ':SessionSearch<CR>',
-      { desc = '[S]essions', silent = true }
-    )
-  end,
 }

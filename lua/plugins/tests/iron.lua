@@ -4,6 +4,26 @@
 -- Interactive Repl Over Neovim.
 return {
   'Vigemus/iron.nvim',
+  keys = {
+    {
+      '<space>oi',
+      '<cmd>IronRepl<cr>',
+      mode = { 'n' },
+      desc = '[I]ron REPL (Start)',
+    },
+    {
+      '<space>oR',
+      '<cmd>IronRestart<cr>',
+      mode = { 'n' },
+      desc = '[R]estart Iron REPL',
+    },
+    {
+      '<space>oH',
+      '<cmd>IronHide<cr>',
+      mode = { 'n' },
+      desc = '[H]ide Iron REPL',
+    },
+  },
   init = function()
     local iron = require 'iron.core'
 
@@ -52,25 +72,6 @@ return {
       },
       ignore_blank_lines = true, -- ignore blank lines when sending visual select lines
     }
-
     -- iron also has a list of commands, see :h iron-commands for all available commands
-    vim.keymap.set(
-      'n',
-      '<space>oi',
-      '<cmd>IronRepl<cr>',
-      { desc = '[I]ron REPL (Start)' }
-    )
-    vim.keymap.set(
-      'n',
-      '<space>oR',
-      '<cmd>IronRestart<cr>',
-      { desc = '[R]estart Iron REPL' }
-    )
-    vim.keymap.set(
-      'n',
-      '<space>oH',
-      '<cmd>IronHide<cr>',
-      { desc = '[H]ide Iron REPL' }
-    )
   end,
 }

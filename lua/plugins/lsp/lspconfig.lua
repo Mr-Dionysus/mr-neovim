@@ -12,7 +12,18 @@ return {
     -- Automatically install LSPs and related tools to stdpath for Neovim
     -- Portable package manager for Neovim that runs everywhere Neovim runs.
     -- Easily install and manage LSP servers, DAP servers, linters, and formatters.
-    { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+    {
+      'williamboman/mason.nvim',
+      init = function()
+        vim.keymap.set(
+          'n',
+          '<leader>tm',
+          ':Mason<CR>',
+          { desc = '[M]ason', silent = true }
+        )
+      end,
+      config = true,
+    }, -- NOTE: Must be loaded before dependants
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
 

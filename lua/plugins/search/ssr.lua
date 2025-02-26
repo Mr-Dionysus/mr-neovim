@@ -5,6 +5,16 @@
 return {
   'cshuaimin/ssr.nvim',
   module = 'ssr',
+  keys = {
+    {
+      '<leader>iR',
+      function()
+        require('ssr').open()
+      end,
+      mode = { 'n', 'x' },
+      desc = '[R]ename in Buffer via SSR',
+    },
+  },
   -- Calling setup is optional.
   config = function()
     require('ssr').setup {
@@ -22,8 +32,5 @@ return {
         replace_all = '<leader><cr>',
       },
     }
-    vim.keymap.set({ 'n', 'x' }, '<leader>iR', function()
-      require('ssr').open()
-    end, { desc = '[R]ename in Buffer via SSR' })
   end,
 }

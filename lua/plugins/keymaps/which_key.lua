@@ -27,6 +27,9 @@ return {
       col = 0.5,
       width = 0.7,
     },
+    plugins = {
+      marks = false,
+    },
     icons = {
       rules = false,
       notify = true,
@@ -132,5 +135,7 @@ return {
 -- <S + k> - Documentation
 -- g* - GOTO
 -- z* - Window/View Manipulations
+-- z= - Spelling
+-- " - Clipboard
 -- [ and ] - Move Between ...
 -- * / # - Search Current Word Forward/Backward

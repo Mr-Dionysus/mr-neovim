@@ -6,6 +6,149 @@ return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
   branch = '0.1.x',
+  keys = {
+    {
+      '<leader>oh',
+      require('telescope.builtin').help_tags,
+      mode = { 'n' },
+      desc = '[H]elp',
+    },
+    {
+      '<leader>ok',
+      require('telescope.builtin').keymaps,
+      mode = { 'n' },
+      desc = '[K]eymaps',
+    },
+    {
+      '<leader>sf',
+      require('telescope.builtin').find_files,
+      mode = { 'n' },
+      desc = '[F]iles',
+    },
+    {
+      '<leader>sp',
+      ':Telescope projects<CR>',
+      mode = { 'n' },
+      desc = '[P]rojects',
+      silent = true,
+    },
+    {
+      '<leader>oa',
+      require('telescope.builtin').builtin,
+      mode = { 'n' },
+      desc = '[A]nything',
+    },
+    {
+      '<leader>ig',
+      require('telescope.builtin').live_grep,
+      mode = { 'n' },
+      desc = '[G]rep in Files',
+    },
+    {
+      '<leader>ms',
+      require('telescope.builtin').diagnostics,
+      mode = { 'n' },
+      desc = '[S]earch',
+    },
+    {
+      '<leader>or',
+      require('telescope.builtin').resume,
+      mode = { 'n' },
+      desc = '[R]esume',
+    },
+    {
+      '<leader>mn',
+      ':Noice telescope<CR>',
+      mode = { 'n' },
+      desc = '[N]otifications',
+      silent = true,
+    },
+    {
+      '<leader>s.',
+      require('telescope.builtin').oldfiles,
+      mode = { 'n' },
+      desc = '[.] Recent Files',
+    },
+    {
+      '<leader>ot',
+      ':Telescope colorscheme<CR>',
+      mode = { 'n' },
+      desc = '[T]heme',
+      silent = true,
+    },
+    {
+      '<leader>oc',
+      ':Telescope neoclip<CR>',
+      mode = { 'n' },
+      desc = '[C]lipboard',
+    },
+    -- Slightly advanced example of overriding default behavior and theme
+    {
+      '<leader>ib',
+      function()
+        -- You can pass additional configuration to Telescope to change the theme, layout, etc.
+        require('telescope.builtin').current_buffer_fuzzy_find(
+          require('telescope.themes').get_dropdown {
+            winblend = 10,
+            previewer = false,
+          }
+        )
+      end,
+      mode = { 'n' },
+      desc = '[B]uffer',
+    },
+    {
+      '<leader>sD',
+      function()
+        require('telescope.builtin').find_files {
+          cwd = '~/.dotfiles/',
+          hidden = true,
+        }
+      end,
+      mode = { 'n' },
+      desc = '[D]otfiles',
+    },
+    {
+      '<leader>sc',
+      function()
+        require('telescope.builtin').find_files {
+          cwd = '/mnt/c/Denis/',
+          hidden = true,
+        }
+      end,
+      mode = { 'n' },
+      desc = '[C] Disk',
+    },
+    {
+      '<leader>sd',
+      function()
+        require('telescope.builtin').find_files {
+          cwd = '/mnt/d/Denis Samsung 870 EVO/',
+          hidden = true,
+        }
+      end,
+      mode = { 'n' },
+      desc = '[D] Disk',
+    },
+    {
+      '<leader>sl',
+      function()
+        require('telescope.builtin').find_files { cwd = '~/', hidden = true }
+      end,
+      mode = { 'n' },
+      desc = '[L]inux',
+    },
+    -- Shortcut for searching your Neovim configuration files
+    {
+      '<leader>sn',
+      function()
+        require('telescope.builtin').find_files { cwd = vim.fn.stdpath 'config' }
+      end,
+      mode = { 'n' },
+      desc = '[N]eovim Files',
+    },
+  },
+  -- See `:help telescope.builtin`
   dependencies = {
     'nvim-lua/plenary.nvim',
     { -- If encountering errors, see telescope-fzf-native README for installation instructions
@@ -74,139 +217,5 @@ return {
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
-
-    -- See `:help telescope.builtin`
-    local builtin = require 'telescope.builtin'
-    vim.keymap.set('n', '<leader>oh', builtin.help_tags, { desc = '[H]elp' })
-    vim.keymap.set('n', '<leader>ok', builtin.keymaps, { desc = '[K]eymaps' })
-    vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[F]iles' })
-    vim.keymap.set(
-      'n',
-      '<leader>sy',
-      ':Yazi<CR>',
-      { desc = '[Y]azy', silent = true }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>sp',
-      ':Telescope projects<CR>',
-      { desc = '[P]rojects', silent = true }
-    )
-    vim.keymap.set('n', '<leader>oa', builtin.builtin, { desc = '[A]nything' })
-    vim.keymap.set(
-      'n',
-      '<leader>ig',
-      builtin.live_grep,
-      { desc = '[G]rep in Files' }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>ms',
-      builtin.diagnostics,
-      { desc = '[S]earch' }
-    )
-    vim.keymap.set('n', '<leader>or', builtin.resume, { desc = '[R]esume' })
-    vim.keymap.set(
-      'n',
-      '<leader>mn',
-      ':Noice telescope<CR>',
-      { desc = '[N]otifications', silent = true }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>s.',
-      builtin.oldfiles,
-      { desc = '[.] Recent Files' }
-    )
-
-    vim.keymap.set(
-      'n',
-      '<leader>w',
-      ':w<CR>',
-      { desc = '[W]rite', silent = true }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>W',
-      ':wq<CR>',
-      { desc = '[W]rite and Quit', silent = true }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>q',
-      ':q<CR>',
-      { desc = '[Q]uit', silent = true }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>Q',
-      ':q!<CR>',
-      { desc = '[Q]uit Force', silent = true }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>ot',
-      ':Telescope colorscheme<CR>',
-      { desc = '[T]heme', silent = true }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>oc',
-      ':Telescope neoclip<CR>',
-      { desc = '[C]lipboard' }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>tl',
-      ':Lazy<CR>',
-      { desc = '[L]azy', silent = true }
-    )
-    vim.keymap.set(
-      'n',
-      '<leader>tm',
-      ':Mason<CR>',
-      { desc = '[M]ason', silent = true }
-    )
-
-    -- Slightly advanced example of overriding default behavior and theme
-    vim.keymap.set('n', '<leader>ib', function()
-      -- You can pass additional configuration to Telescope to change the theme, layout, etc.
-      builtin.current_buffer_fuzzy_find(
-        require('telescope.themes').get_dropdown {
-          winblend = 10,
-          previewer = false,
-        }
-      )
-    end, { desc = '[B]uffer' })
-
-    -- It's also possible to pass additional configuration options.
-    --  See `:help telescope.builtin.live_grep()` for information about particular keys
-    vim.keymap.set('n', '<leader>i/', function()
-      builtin.live_grep {
-        grep_open_files = true,
-        prompt_title = 'Live Grep in Open Files',
-      }
-    end, { desc = '[/] in Open Files' })
-
-    vim.keymap.set('n', '<leader>sD', function()
-      builtin.find_files { cwd = '~/.dotfiles/', hidden = true }
-    end, { desc = '[D]otfiles' })
-
-    vim.keymap.set('n', '<leader>sc', function()
-      builtin.find_files { cwd = '/mnt/c/Denis/', hidden = true }
-    end, { desc = '[C] Disk' })
-
-    vim.keymap.set('n', '<leader>sd', function()
-      builtin.find_files { cwd = '/mnt/d/Denis Samsung 870 EVO/', hidden = true }
-    end, { desc = '[D] Disk' })
-
-    vim.keymap.set('n', '<leader>sl', function()
-      builtin.find_files { cwd = '~/', hidden = true }
-    end, { desc = '[L]inux' })
-
-    -- Shortcut for searching your Neovim configuration files
-    vim.keymap.set('n', '<leader>sn', function()
-      builtin.find_files { cwd = vim.fn.stdpath 'config' }
-    end, { desc = '[N]eovim Files' })
   end,
 }

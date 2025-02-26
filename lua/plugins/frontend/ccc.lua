@@ -5,6 +5,15 @@
 
 return {
   'uga-rosa/ccc.nvim',
+  keys = {
+    {
+      '<leader>op',
+      ':CccPick<CR>',
+      mode = { 'n' },
+      desc = '[P]ick Color',
+      silent = true,
+    },
+  },
   init = function()
     require('ccc').setup {
       highlighter = {
@@ -12,11 +21,5 @@ return {
         lsp = true,
       },
     }
-    vim.keymap.set(
-      'n',
-      '<leader>op',
-      ':CccPick<CR>',
-      { desc = '[P]ick Color', silent = true }
-    )
   end,
 }

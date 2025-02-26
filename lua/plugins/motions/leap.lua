@@ -6,7 +6,6 @@
 -- the ultimate goal of establishing a new standard
 -- interface for moving around in the visible area in
 -- Vim-like modal editors.
-
 return {
   'ggandor/leap.nvim',
   init = function()
@@ -15,6 +14,8 @@ return {
     -- Use the traversal keys to repeat the previous motion without
     -- explicitly invoking Leap:
     require('leap.user').set_repeat_keys('<enter>', '<backspace>')
+    require('leap').opts.equivalence_classes =
+      { ' \t\r\n', '([{', ')]}', '\'"`' }
     -- Define a preview filter (skip the middle of alphanumeric words):
     require('leap').opts.preview_filter = function(ch0, ch1, ch2)
       return not (

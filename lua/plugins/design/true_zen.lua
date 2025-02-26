@@ -5,12 +5,13 @@
 
 return {
   'pocco81/true-zen.nvim',
-  config = function()
-    vim.keymap.set(
-      '',
+  keys = {
+    {
       '<leader>tf',
       ':TZFocus<CR>',
-      { desc = '[F]ocus', silent = true }
-    )
-  end,
+      mode = { '' },
+      desc = '[F]ocus',
+      silent = true,
+    },
+  },
 }

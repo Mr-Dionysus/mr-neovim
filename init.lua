@@ -96,6 +96,23 @@ vim.opt.scrolloff = 10
 --                             ╭──────────────────╮
 --                             │ Neovim's Keymaps │
 --                             ╰──────────────────╯
+vim.keymap.set('n', '<leader>w', ':w<CR>', {
+  desc = '[W]rite',
+  silent = true,
+})
+vim.keymap.set('n', '<leader>W', ':wq<CR>', {
+  desc = '[W]rite and Quit',
+  silent = true,
+})
+vim.keymap.set('n', '<leader>q', ':q<CR>', {
+  desc = '[Q]uit',
+  silent = true,
+})
+vim.keymap.set('n', '<leader>Q', ':q!<CR>', {
+  desc = '[Q]uit Force',
+  silent = true,
+})
+
 vim.keymap.set('i', 'kj', '<Esc>', {})
 vim.keymap.set('i', 'ло', '<Esc>', {})
 
@@ -180,6 +197,10 @@ vim.keymap.set(
   '<C-w><C-k>',
   { desc = 'Move focus to the upper window' }
 )
+vim.keymap.set('n', '<leader>tl', ':Lazy<CR>', {
+  desc = '[L]azy',
+  silent = true,
+})
 --                             ╭──────────────────╮
 --                             │   Autocommands   │
 --                             ╰──────────────────╯
@@ -456,12 +477,12 @@ require('lazy').setup({
   },
 
   --  Neovim plugin to improve the default vim.ui interfaces.
-  {
-    import = 'plugins/design/dressing',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
+  -- {
+  --   import = 'plugins/design/dressing',
+  --   cond = function()
+  --     return not vim.g.vscode
+  --   end,
+  -- },
 
   -- 🌅 Twilight is a Lua plugin for Neovim 0.5 that dims
   -- inactive portions of the code you're editing using TreeSitter.

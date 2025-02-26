@@ -10,7 +10,14 @@ return {
       -- Open in the current working directory
       '<leader>sh',
       '<cmd>Yazi cwd<cr>',
-      desc = '[H]ere via Yazy',
+      desc = '[H]ere via Yazi',
+    },
+    {
+      '<leader>sy',
+      ':Yazi<CR>',
+      mode = { 'n' },
+      desc = '[Y]azi',
+      silent = true,
     },
     {
       -- NOTE: this requires a version of yazi that includes

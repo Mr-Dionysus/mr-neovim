@@ -10,12 +10,13 @@ return {
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
   },
-  config = function()
-    vim.keymap.set(
-      '',
+  keys = {
+    {
       '<leader>tz',
       ':ZenMode<CR>',
-      { desc = '[Z]en', silent = true }
-    )
-  end,
+      mode = { 'n' },
+      desc = '[Z]en',
+      silent = true,
+    },
+  },
 }
