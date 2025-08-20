@@ -1327,7 +1327,8 @@ require('lazy').setup({
     },
   },
 })
-vim.api.nvim_set_hl(0, 'LeapBackdrop', {})
+-- Off grayish text when usin leap.nvim
+-- vim.api.nvim_set_hl(0, 'LeapBackdrop', {})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
