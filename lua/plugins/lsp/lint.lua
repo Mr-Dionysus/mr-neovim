@@ -13,6 +13,7 @@ return {
       markdown = { 'markdownlint' },
       javascript = { 'eslint' },
       html = { 'htmlhint' },
+      htmldjango = { 'htmlhint' },
     }
 
     local markdownlint = require('lint').linters.markdownlint

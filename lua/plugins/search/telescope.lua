@@ -200,8 +200,6 @@ return {
       --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
       --   },
       -- },
-
-      -- Show Hidden Files
       -- pickers = {
       --   find_files = {
       --     hidden = true,

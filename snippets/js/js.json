@@ -1,0 +1,32 @@
+{
+	"Test": {
+		"prefix": "test",
+		"body": [
+			"console.log('TEST ${1}')"
+		]
+	},
+	"Console.log": {
+		"prefix": "log",
+		"body": [
+			"console.log(`${1:foo} = `, ${1:foo})"
+		]
+	},
+	"querySelector": {
+		"prefix": "oneSelector",
+		"body": [
+			"const ${1:foo} = document.querySelector('${0}')"
+		]
+	},
+	"querySelectorAll": {
+		"prefix": "allSelector",
+		"body": [
+			"const ${1:foo} = document.querySelectorAll('${0}')"
+		]
+	},
+	"addEventListener": {
+		"prefix": "addEventListener",
+		"body": [
+			"${1:foo}.addEventListener('${2:event}', (e) => {${0}})"
+		]
+	}
+}

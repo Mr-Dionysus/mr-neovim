@@ -216,6 +216,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- Set Tab Width for HTML files to 4
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  pattern = 'html',
+  callback = function()
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+    vim.bo.softtabstop = 4
+    vim.bo.expandtab = true
+  end,
+})
 --                              ╭────────────────╮
 --                              │ Plugin Manager │
 --                              ╰────────────────╯
@@ -1316,6 +1327,7 @@ require('lazy').setup({
     },
   },
 })
+vim.api.nvim_set_hl(0, 'LeapBackdrop', {})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
