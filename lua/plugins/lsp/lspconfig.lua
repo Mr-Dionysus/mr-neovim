@@ -291,7 +291,7 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
-      'pyright', -- LSP for python
+      'basedpyright', -- LSP for python
       'ruff', -- linter & formatter (includes flake8, pep8, black, isort, etc.)
       'debugpy', -- debugger
       'taplo', -- LSP for toml (e.g., for pyproject.toml files)
