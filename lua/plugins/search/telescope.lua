@@ -140,12 +140,22 @@ return {
     },
     -- Shortcut for searching your Neovim configuration files
     {
-      '<leader>sn',
+      '<leader>sd',
       function()
         require('telescope.builtin').find_files { cwd = vim.fn.stdpath 'config' }
       end,
       mode = { 'n' },
       desc = '[N]eovim Files',
+    },
+    {
+      '<leader>sH',
+      function()
+        require('telescope.builtin').find_files {
+          no_ignore = true,
+          hidden = true,
+        }
+      end,
+      desc = '[H]idden Files',
     },
   },
   -- See `:help telescope.builtin`

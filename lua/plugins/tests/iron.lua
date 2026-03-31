@@ -18,10 +18,10 @@ return {
       desc = '[R]estart Iron REPL',
     },
     {
-      '<space>oH',
+      '<space>oI',
       '<cmd>IronHide<cr>',
       mode = { 'n' },
-      desc = '[H]ide Iron REPL',
+      desc = '[I]ron REPL (Hide)',
     },
   },
   init = function()

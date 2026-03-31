@@ -24,9 +24,13 @@ return {
   },
   opts = {
     workspaces = {
+      -- {
+      --   name = 'Arch BTW',
+      --   path = '~/Zettlekasten/',
+      -- },
       {
-        name = 'Personal',
-        path = '~/Zettlekasten/',
+        name = 'Windows',
+        path = '/mnt/c/Denis/Zettlekasten/',
       },
     },
     ui = {
