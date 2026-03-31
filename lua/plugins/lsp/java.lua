@@ -4,8 +4,8 @@
 -- Painless Java in Neovim.
 return {
   'nvim-java/nvim-java',
-  init = function()
+  config = function()
     require('java').setup()
-    require('lspconfig').jdtls.setup {}
+    vim.lsp.enable 'jdtls'
   end,
 }

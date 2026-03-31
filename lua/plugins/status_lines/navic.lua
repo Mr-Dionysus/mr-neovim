@@ -9,10 +9,12 @@ return {
   init = function()
     local navic = require 'nvim-navic'
 
-    require('lspconfig').clangd.setup {
+    vim.lsp.config('clangd', {
       on_attach = function(client, bufnr)
         navic.attach(client, bufnr)
       end,
-    }
+    })
+
+    vim.lsp.enable 'clangd'
   end,
 }
