@@ -400,12 +400,12 @@ require('lazy').setup({
   -- An extension for nvim-dap, providing default configurations
   -- for python and methods to debug individual test methods or
   -- classes.
-  {
-    import = 'plugins/debug/nvim_dap_python',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
+  -- {
+  --   import = 'plugins/debug/nvim_dap_python',
+  --   cond = function()
+  --     return not vim.g.vscode
+  --   end,
+  -- },
 
   -- A Neovim plugin that display prettier diagnostic messages.
   -- Display diagnostic messages where the cursor is, with icons
@@ -792,12 +792,12 @@ require('lazy').setup({
   },
 
   -- Painless Java in Neovim.
-  {
-    import = 'plugins/lsp/java',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
+  -- {
+  --   import = 'plugins/lsp/java',
+  --   cond = function()
+  --     return not vim.g.vscode
+  --   end,
+  -- },
 
   -- G'day Nvimer, Joyful Gopher: Discover the Feature-Rich Go Plugin for Neovim
   {
@@ -921,12 +921,12 @@ require('lazy').setup({
   },
 
   -- Orgmode clone written in Lua for Neovim 0.9+.
-  {
-    import = 'plugins/notes/orgmode',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
+  -- {
+  --   import = 'plugins/notes/orgmode',
+  --   cond = function()
+  --     return not vim.g.vscode
+  --   end,
+  -- },
 
   -- A Neovim (lua) plugin for working with a markdown
   -- zettelkasten / wiki and mixing it with a journal,

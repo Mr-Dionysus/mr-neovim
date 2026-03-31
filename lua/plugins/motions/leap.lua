@@ -9,8 +9,15 @@
 return {
   'ggandor/leap.nvim',
   init = function()
-    require('leap').create_default_mappings()
-    --
+    do
+      local clever_s = require('leap.user').with_traversal_keys('s', 'S')
+      vim.keymap.set({ 'n', 'x', 'o' }, 's', function()
+        require('leap').leap { opts = clever_s }
+      end)
+      vim.keymap.set({ 'n', 'x', 'o' }, 'S', function()
+        require('leap').leap { backward = true, opts = clever_s }
+      end)
+    end
     -- Use the traversal keys to repeat the previous motion without
     -- explicitly invoking Leap:
     require('leap.user').set_repeat_keys('<enter>', '<backspace>')
