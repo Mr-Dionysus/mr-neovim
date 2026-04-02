@@ -7,7 +7,7 @@
 -- interface for moving around in the visible area in
 -- Vim-like modal editors.
 return {
-  'ggandor/leap.nvim',
+  url = 'https://codeberg.org/andyg/leap.nvim',
   init = function()
     do
       local clever_s = require('leap.user').with_traversal_keys('s', 'S')

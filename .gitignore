@@ -4,6 +4,6 @@ test.sh
 nvim
 en.utf-8.add
 en.utf-8.add.spl
+node_modules/
 
 spell/
-
