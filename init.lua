@@ -883,6 +883,7 @@ require('lazy').setup({
   -- Bundle of more than 30 new textobjects for Neovim.
   {
     import = 'plugins/motions/various_textobjs',
+
     cond = function()
       return not vim.g.vscode
     end,
@@ -896,18 +897,9 @@ require('lazy').setup({
     end,
   },
 
-  -- Leap is a general-purpose motion plugin for Neovim,
-  -- building and improving primarily on vim-sneak, with
-  -- the ultimate goal of establishing a new standard
-  -- interface for moving around in the visible area in
-  -- Vim-like modal editors.
-  {
-    import = 'plugins/motions/leap',
-  },
-
   -- Navigate your code with search labels, enhanced
   -- character motions and Treesitter integration
-  -- { import = 'plugins/motions/flash' },
+  { import = 'plugins/motions/flash' },
   --                                   ╭───────╮
   --                                   │ Notes │
   --                                   ╰───────╯
@@ -1327,8 +1319,6 @@ require('lazy').setup({
     },
   },
 })
--- Off grayish text when usin leap.nvim
--- vim.api.nvim_set_hl(0, 'LeapBackdrop', {})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

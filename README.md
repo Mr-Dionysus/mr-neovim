@@ -22,10 +22,6 @@ new textobjects for Neovim.
 3. [a/i textobjects (mini-ai)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md) - Enhances a/i textobjects.
 4. [Go Forward/Backward (mini-bracketed)](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md) - Go forward/backward
 with square brackets.
-5. [Motions (Leap)](https://github.com/ggandor/leap.nvim) - Leap is a general-purpose motion plugin for Neovim,
-building and improving primarily on vim-sneak, with the ultimate goal of
-establishing a new standard interface for moving around in the visible
-area in Vim-like modal editors.
 6. [Motions (Flash)](https://github.com/folke/flash.nvim) - Navigate your code with search labels,
 enhanced character motions and Treesitter integration
 
