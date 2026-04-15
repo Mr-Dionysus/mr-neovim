@@ -213,7 +213,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     { clear = true }
   ),
   callback = function()
-    vim.highlight.on_yank()
+    vim.hl.on_yank()
   end,
 })
 
@@ -593,15 +593,6 @@ require('lazy').setup({
   --                                 ╭──────────╮
   --                                 │ Frontend │
   --                                 ╰──────────╯
-  -- An unofficial Tailwind CSS integration and tooling for
-  -- Neovim.
-  {
-    import = 'plugins/frontend/tailwind_tools',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
-
   -- A Neovim port of Matt Pocock's ts-error-translator for
   -- VSCode for turning messy and confusing TypeScript errors
   -- into plain English.

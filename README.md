@@ -85,8 +85,6 @@ ts-error-translator for VSCode for turning messy and confusing TypeScript errors
 into plain English.
 4. [TypeScript Type Check (tsc)](https://github.com/dmmulroy/tsc.nvim) - A Neovim plugin for seamless, asynchronous
 project-wide TypeScript type-checking using the TypeScript compiler (tsc).
-5. [Tailwind (tailwind-tools)](https://github.com/luckasRanarison/tailwind-tools.nvim) - An unofficial Tailwind CSS integration and tooling
-for Neovim.
 
 ### Comments
 
