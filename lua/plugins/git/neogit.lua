@@ -5,6 +5,13 @@
 
 return {
   'NeogitOrg/neogit',
+  lazy = true,
+  dependencies = {
+    'nvim-lua/plenary.nvim', -- required
+    'sindrets/diffview.nvim', -- optional - Diff integration
+    'nvim-telescope/telescope.nvim', -- optional
+  },
+  cmd = 'Neogit',
   keys = {
     {
       '<leader>gn',
@@ -14,12 +21,4 @@ return {
       silent = true,
     },
   },
-  dependencies = {
-    'nvim-lua/plenary.nvim', -- required
-    'sindrets/diffview.nvim', -- optional - Diff integration
-
-    -- Only one of these is needed.
-    'nvim-telescope/telescope.nvim', -- optional
-  },
-  config = true,
 }

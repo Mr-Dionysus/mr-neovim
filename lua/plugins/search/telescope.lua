@@ -202,6 +202,32 @@ return {
     -- [[ Configure Telescope ]]
     -- See `:help telescope` and `:help telescope.help()`
     require('telescope').setup {
+      vim.opt.wildignore:append {
+        'blue.*',
+        'pablo.*',
+        'zellner.*',
+        'zaibatsu.*',
+        'vim.*',
+        'torte.*',
+        'darkblue.*',
+        'shine.*',
+        'ron.*',
+        'murphy.*',
+        'morning.*',
+        'koehler.*',
+        'industry.*',
+        'evening.*',
+        'delek.*',
+        'tokyonight-storm.*',
+        'desert.*',
+        'elflord.*',
+        'habamax.*',
+        'lunaperche.*',
+        'quiet.*',
+        'retrobox.*',
+        'sorbet.*',
+        'wildcharm.*',
+      },
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.help()`
       --
@@ -210,11 +236,14 @@ return {
       --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
       --   },
       -- },
-      -- pickers = {
-      --   find_files = {
-      --     hidden = true,
-      --   },
-      -- },
+      pickers = {
+        colorscheme = {
+          enable_preview = true,
+        },
+        -- find_files = {
+        --   hidden = true,
+        -- },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
