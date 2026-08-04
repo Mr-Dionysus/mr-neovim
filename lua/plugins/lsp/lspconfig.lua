@@ -295,6 +295,8 @@ return {
       'ruff', -- linter & formatter (includes flake8, pep8, black, isort, etc.)
       'debugpy', -- debugger
       'taplo', -- LSP for toml (e.g., for pyproject.toml files)
+      'prettierd',
+      'djlint',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

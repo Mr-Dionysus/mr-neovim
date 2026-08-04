@@ -19,6 +19,14 @@ return { -- Autoformat
   },
   opts = {
     notify_on_error = false,
+    formatters = {
+      prettierd = {
+        prepend_args = {
+      '--tab-width=4',
+      '--use-tabs=false',
+        },
+      },
+    },
     format_on_save = function(bufnr)
       -- Disable "format_on_save lsp_fallback" for languages that don't
       -- have a well standardized coding style. You can add additional
@@ -39,7 +47,8 @@ return { -- Autoformat
       lua = { 'stylua' },
       -- Conform can also run multiple formatters sequentially
       python = { 'ruff_fix', 'ruff_format', 'isort', 'black' },
-
+      html = { 'prettierd', 'prettier', stop_after_first = true },
+      htmldjango = { 'djlint' },
       -- You can use 'stop_after_first' to run the first available formatter from the list
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
       java = { 'google-java-format' },
