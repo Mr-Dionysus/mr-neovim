@@ -15,9 +15,17 @@
 -- <space> as the leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
+vim.opt.linespace = 10
 -- Default line width
 vim.opt.textwidth = 80
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
+-- Default tab width
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
 
 -- Hide Markdown syntax
 vim.opt.conceallevel = 2
@@ -218,15 +226,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Set Tab Width for HTML files to 4
-vim.api.nvim_create_autocmd({ 'FileType' }, {
-  pattern = 'html',
-  callback = function()
-    vim.bo.shiftwidth = 4
-    vim.bo.tabstop = 4
-    vim.bo.softtabstop = 4
-    vim.bo.expandtab = true
-  end,
-})
+-- vim.api.nvim_create_autocmd({ 'FileType' }, {
+--   pattern = 'html',
+--   callback = function()
+--     vim.bo.shiftwidth = 2
+--     vim.bo.tabstop = 2
+--     vim.bo.softtabstop = 2
+--     vim.bo.expandtab = true
+--   end,
+-- })
 --                              ╭────────────────╮
 --                              │ Plugin Manager │
 --                              ╰────────────────╯
@@ -256,6 +264,12 @@ require('lazy').setup({
   -- Theme can be changed in markview.lua (For colors in Markdown)
   {
     import = 'plugins/themes/tokyonight',
+    cond = function()
+      return not vim.g.vscode
+    end,
+  },
+  {
+    import = 'plugins/themes/monokai_pro',
     cond = function()
       return not vim.g.vscode
     end,
@@ -799,12 +813,12 @@ require('lazy').setup({
   },
 
   -- LSP signature hint as you type.
-  {
-    import = 'plugins/lsp/lsp_signature',
-    cond = function()
-      return not vim.g.vscode
-    end,
-  },
+  -- {
+  --   import = 'plugins/lsp/lsp_signature',
+  --   cond = function()
+  --     return not vim.g.vscode
+  --   end,
+  -- },
 
   -- vscode-like pictograms for neovim lsp completion items.
   {
@@ -1311,5 +1325,7 @@ require('lazy').setup({
   },
 })
 
+-- Don't enter the new line after reaching 80 symbols
+vim.opt.formatoptions:remove 't'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

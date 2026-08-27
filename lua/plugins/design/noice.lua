@@ -11,8 +11,7 @@ return {
     -- add any options here
   },
   dependencies = {
-    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    'MunifTanjim/nui.nvim',
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries 'MunifTanjim/nui.nvim',
     -- OPTIONAL:
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
@@ -21,6 +20,18 @@ return {
   init = function()
     require('noice').setup {
       lsp = {
+        hover = {
+          silent = true,
+        },
+        signature = {
+          enabled = true,
+          auto_open = {
+            enabled = true,
+            trigger = true, -- Automatically show signature help when typing a trigger character from the LSP
+            luasnip = true, -- Will open signature help when jumping to Luasnip insert nodes
+            throttle = 50, -- Debounce lsp signature help request by 50ms
+          },
+        },
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
           ['vim.lsp.util.convert_input_to_markdown_lines'] = true,

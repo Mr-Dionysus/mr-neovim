@@ -87,6 +87,7 @@ return {
             { buffer = event.buf, desc = '' .. desc }
           )
         end
+        map('K', vim.lsp.buf.hover, 'Hover Documentation')
 
         -- Jump to the definition of the word under your cursor.
         --  This is where a variable was first declared, or where a function is defined, etc.
@@ -258,6 +259,21 @@ return {
       --
       -- But for many helps, the LSP (`ts_ls`) will work just fine
       --
+      basedpyright = {
+        settings = {
+          basedpyright = {
+            analysis = {
+              useLibraryCodeForTypes = true,
+              typeCheckingMode = 'basic',
+              diagnosticMode = 'workspace',
+              autoSearchPath = true,
+              inlayHints = {
+                callArgumentNames = true,
+              },
+            },
+          },
+        },
+      },
 
       lua_ls = {
         -- cmd = {...},

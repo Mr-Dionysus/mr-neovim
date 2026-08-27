@@ -5,4 +5,9 @@ return {
     -- You can configure highlights by doing something like:
     vim.cmd.hi 'Comment gui=none'
   end,
+  config = function()
+    vim.api.nvim_set_hl(0, 'LspInlayHint', {
+      fg = '#7f8490',
+    })
+  end,
 }

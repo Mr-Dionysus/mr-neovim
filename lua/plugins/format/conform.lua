@@ -20,10 +20,16 @@ return { -- Autoformat
   opts = {
     notify_on_error = false,
     formatters = {
-      prettierd = {
+      -- prettierd = {
+      --   prepend_args = {
+      --     '--tab-width=4',
+      --     '--use-tabs=false',
+      --   },
+      -- },
+      djlint = {
         prepend_args = {
-      '--tab-width=4',
-      '--use-tabs=false',
+          '--indent',
+          '2',
         },
       },
     },
